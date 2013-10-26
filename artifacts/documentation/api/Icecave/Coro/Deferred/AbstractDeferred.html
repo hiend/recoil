@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Icecave\Coro\Deferred\AbstractDeferred | Coro API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Coro API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Icecave/Coro/Deferred.html">Icecave\Coro\Deferred</a>\AbstractDeferred</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>AbstractDeferred</strong>        implements
+        <a href="../../../Icecave/Coro/Deferred/DeferredInterface.html"><abbr title="Icecave\Coro\Deferred\DeferredInterface">DeferredInterface</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_configure">configure</a>(<a href="../../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a> $engine, <a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $parent)
+                    <p>Configure the deferred object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_engine">engine</a>()
+                    <p>Fetch the co-routine engine on which this deferred object executes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_parent">parent</a>()
+                    <p>Fetch the object that spawned this deferred object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resume">resume</a>(<a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, mixed $value = null)
+                    <p>Resume execution.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Resume execution, with an exception.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resumeParent">resumeParent</a>(mixed $value = null)
+                    <p>Resume execution of this object's parent.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resumeParentWithException">resumeParentWithException</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Resume exeception of this object's parent, by throwing an exception.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 10</div>
+        <code>            public            
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_configure">
+        <div class="location">at line 21</div>
+        <code>            public            
+    <strong>configure</strong>(<a href="../../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a> $engine, <a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $parent)</code>
+    </h3>
+    <div class="details">
+        <p>Configure the deferred object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a></td>
+                <td>$engine</td>
+                <td>The co-routine engine on which to execute.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
+                <td>$parent</td>
+                <td>The object that spawned this deferred object.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_engine">
+        <div class="location">at line 35</div>
+        <code>            public            <a href="../../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a>
+    <strong>engine</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the co-routine engine on which this deferred object executes.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a></td>
+            <td>$engine The co-routine engine on which to execute.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>If $this->configure(...) has not been called.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parent">
+        <div class="location">at line 52</div>
+        <code>            public            <a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a>
+    <strong>parent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the object that spawned this deferred object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
+            <td>The object that spawned this deferred object.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>If $this->configure(...) has not been called.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resume">
+        <div class="location">at line 69</div>
+        <code>            public            
+    <strong>resume</strong>(<a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, mixed $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Resume execution.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
+                <td>$source</td>
+                <td>The object that produced the value.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value produced by $source.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resumeWithException">
+        <div class="location">at line 82</div>
+        <code>            public            
+    <strong>resumeWithException</strong>(<a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Resume execution, with an exception.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
+                <td>$source</td>
+                <td>The object that produced the exception.</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>The exception produced by $source.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resumeParent">
+        <div class="location">at line 98</div>
+        <code>            public            
+    <strong>resumeParent</strong>(mixed $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Resume execution of this object's parent.</p>
+        <p>This is a convenience method, generally equivalent to:</p>
+
+<p>$this->parent()->resume($this, $value)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to pass to the parent</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resumeParentWithException">
+        <div class="location">at line 114</div>
+        <code>            public            
+    <strong>resumeParentWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Resume exeception of this object's parent, by throwing an exception.</p>
+        <p>This is a convenience method, generally equivalent to:</p>
+
+<p>$this->parent()->resumeWithException($this, $exception)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>The exception to pass to the parent.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
