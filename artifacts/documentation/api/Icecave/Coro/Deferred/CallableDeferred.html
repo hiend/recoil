@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Coro\Deferred\GetThis | Coro API</title>
+        <title>Icecave\Coro\Deferred\CallableDeferred | Coro API</title>
                     <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
@@ -19,13 +19,13 @@
         <div id="title">Coro API</div>
 
             <div class="type">Class</div>
-    <h1><a href="../../../Icecave/Coro/Deferred.html">Icecave\Coro\Deferred</a>\GetThis</h1>
+    <h1><a href="../../../Icecave/Coro/Deferred.html">Icecave\Coro\Deferred</a>\CallableDeferred</h1>
     </div>
         <div class="content">
-                <p>class    <strong>GetThis</strong>        extends <a href="../../../Icecave/Coro/Deferred/AbstractDeferred.html"><abbr title="Icecave\Coro\Deferred\AbstractDeferred">AbstractDeferred</abbr></a></p>
+                <p>class    <strong>CallableDeferred</strong>        extends <a href="../../../Icecave/Coro/Deferred/AbstractDeferred.html"><abbr title="Icecave\Coro\Deferred\AbstractDeferred">AbstractDeferred</abbr></a></p>
 
             <div class="description">
-            <p>Resume the yielding co-routine with the deferred object that represents itself.</p>
+            <p>Invoke a callable upon execution.</p>
             <p>
 </p>
         </div>
@@ -40,11 +40,11 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>()
+                    <a href="#method___construct">__construct</a>(<abbr title="Icecave\Coro\Deferred\callable">callable</abbr> $callback)
                     <p>
 </p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Deferred/AbstractDeferred.html#method___construct"><abbr title="Icecave\Coro\Deferred\AbstractDeferred">AbstractDeferred</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -122,7 +122,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_execute">execute</a>()
-                    <p>Resume execution of the parent by passing it itself.</p>
+                    <p>Invoke the callback with $this as the only parameter.</p>
                 </td>
                 <td></td>
             </tr>
@@ -132,9 +132,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">in <a href="../../../Icecave/Coro/Deferred/AbstractDeferred.html#method___construct"><abbr title="Icecave\Coro\Deferred\AbstractDeferred">AbstractDeferred</abbr></a> at line 11</div>
+        <div class="location">at line 14</div>
         <code>            public            
-    <strong>__construct</strong>()</code>
+    <strong>__construct</strong>(<abbr title="Icecave\Coro\Deferred\callable">callable</abbr> $callback)</code>
     </h3>
     <div class="details">
         <p>
@@ -142,6 +142,17 @@
         <p>
 </p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Icecave\Coro\Deferred\callable">callable</abbr></td>
+                <td>$callback</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
             
             
             
@@ -364,12 +375,12 @@
     </div>
 
                 <h3 id="method_execute">
-        <div class="location">at line 15</div>
+        <div class="location">at line 26</div>
         <code>            public            
     <strong>execute</strong>()</code>
     </h3>
     <div class="details">
-        <p>Resume execution of the parent by passing it itself.</p>
+        <p>Invoke the callback with $this as the only parameter.</p>
         <p>
 </p>
         <div class="tags">
