@@ -22,8 +22,7 @@
     <h1><a href="../../Icecave/Coro.html">Icecave\Coro</a>\EngineInterface</h1>
     </div>
         <div class="content">
-                <p>interface    <strong>EngineInterface</strong>        implements
-        <a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></p>
+                <p>interface    <strong>EngineInterface</strong></p>
 
             <div class="description">
             <p>A co-routine engine.</p>
@@ -41,20 +40,30 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_resume">resume</a>(<a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, mixed $value = null)
-                    <p>Resume execution.</p>
+                    <a href="#method_execute">execute</a>(mixed $coroutine)
+                    <p>Execute a co-routine.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Icecave/Coro/Deferred/ResumableInterface.html#method_resume"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Resume execution, with an exception.</p>
+                    <a href="#method_enqueue">enqueue</a>(mixed $coroutine)
+                    <p>Enqueue a co-routine for execution on the next tick.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Icecave/Coro/Deferred/ResumableInterface.html#method_resumeWithException"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></small></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_enqueueCallback">enqueueCallback</a>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())
+                    <p>Enqueue a callback for execution on the next tick.</p>
+                </td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -86,28 +95,18 @@
                 </td>
                 <td></td>
             </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_execute">execute</a>(mixed $unitOfWork)
-                    <p>Execute a unit of work.</p>
-                </td>
-                <td></td>
-            </tr>
             </table>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method_resume">
-        <div class="location">in <a href="../../Icecave/Coro/Deferred/ResumableInterface.html#method_resume"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> at line 14</div>
+                        <h3 id="method_execute">
+        <div class="location">at line 16</div>
         <code>            public            
-    <strong>resume</strong>(<a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, mixed $value = null)</code>
+    <strong>execute</strong>(mixed $coroutine)</code>
     </h3>
     <div class="details">
-        <p>Resume execution.</p>
+        <p>Execute a co-routine.</p>
         <p>
 </p>
         <div class="tags">
@@ -115,14 +114,9 @@
 
                     <table>
                     <tr>
-                <td><a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
-                <td>$source</td>
-                <td>The object that produced the value.</td>
-            </tr>
-                    <tr>
                 <td>mixed</td>
-                <td>$value</td>
-                <td>The value produced by $source.</td>
+                <td>$coroutine</td>
+                <td>Anything that the specific engine implementation can execute as a co-routine.</td>
             </tr>
             </table>
 
@@ -132,13 +126,13 @@
                     </div>
     </div>
 
-                <h3 id="method_resumeWithException">
-        <div class="location">in <a href="../../Icecave/Coro/Deferred/ResumableInterface.html#method_resumeWithException"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> at line 22</div>
+                <h3 id="method_enqueue">
+        <div class="location">at line 23</div>
         <code>            public            
-    <strong>resumeWithException</strong>(<a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    <strong>enqueue</strong>(mixed $coroutine)</code>
     </h3>
     <div class="details">
-        <p>Resume execution, with an exception.</p>
+        <p>Enqueue a co-routine for execution on the next tick.</p>
         <p>
 </p>
         <div class="tags">
@@ -146,14 +140,40 @@
 
                     <table>
                     <tr>
-                <td><a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
-                <td>$source</td>
-                <td>The object that produced the exception.</td>
+                <td>mixed</td>
+                <td>$coroutine</td>
+                <td>Anything that can be adapted into a co-routine using the provided adaptor.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enqueueCallback">
+        <div class="location">at line 31</div>
+        <code>            public            
+    <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())</code>
+    </h3>
+    <div class="details">
+        <p>Enqueue a callback for execution on the next tick.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Icecave\Coro\callable">callable</abbr></td>
+                <td>$callback</td>
+                <td>The callable to invoke.</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
-                <td>$exception</td>
-                <td>The exception produced by $source.</td>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>Arguments to pass to the callable.</td>
             </tr>
             </table>
 
@@ -164,7 +184,7 @@
     </div>
 
                 <h3 id="method_eventLoop">
-        <div class="location">at line 17</div>
+        <div class="location">at line 38</div>
         <code>            public            <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
     <strong>eventLoop</strong>()</code>
     </h3>
@@ -189,7 +209,7 @@
     </div>
 
                 <h3 id="method_run">
-        <div class="location">at line 22</div>
+        <div class="location">at line 43</div>
         <code>            public            
     <strong>run</strong>()</code>
     </h3>
@@ -205,7 +225,7 @@
     </div>
 
                 <h3 id="method_stop">
-        <div class="location">at line 27</div>
+        <div class="location">at line 48</div>
         <code>            public            
     <strong>stop</strong>()</code>
     </h3>
@@ -214,33 +234,6 @@
         <p>
 </p>
         <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_execute">
-        <div class="location">at line 34</div>
-        <code>            public            
-    <strong>execute</strong>(mixed $unitOfWork)</code>
-    </h3>
-    <div class="details">
-        <p>Execute a unit of work.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>mixed</td>
-                <td>$unitOfWork</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
             
             
             

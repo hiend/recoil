@@ -41,9 +41,39 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Deferred/DeferredAdaptorInterface.html"><abbr title="Icecave\Coro\Deferred\DeferredAdaptorInterface">DeferredAdaptorInterface</abbr></a> $deferredAdaptor = null)
+                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $rootNode = null)
                     <p>
 </p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_execute">execute</a>(mixed $coroutine)
+                    <p>Execute a co-routine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_enqueue">enqueue</a>(mixed $coroutine)
+                    <p>Enqueue a co-routine for execution on the next tick.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_enqueueCallback">enqueueCallback</a>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())
+                    <p>Enqueue a callback for execution on the next tick.</p>
                 </td>
                 <td></td>
             </tr>
@@ -59,11 +89,21 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../Icecave/Coro/Deferred/DeferredAdaptorInterface.html"><abbr title="Icecave\Coro\Deferred\DeferredAdaptorInterface">DeferredAdaptorInterface</abbr></a>
+                    <abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_deferredAdaptor">deferredAdaptor</a>()
-                    <p>Fetch the adaptor used to convert values into deferred units of work.</p>
+                    <a href="#method_rootNode">rootNode</a>()
+                    <p>Fetch the root node of the co-routine graph.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Icecave\Coro\CoroutineAdaptorInterface">CoroutineAdaptorInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_nodeAdaptor">nodeAdaptor</a>()
+                    <p>Fetch the adaptor used to convert values into co-routines.</p>
                 </td>
                 <td></td>
             </tr>
@@ -87,55 +127,15 @@
                 </td>
                 <td></td>
             </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_execute">execute</a>(mixed $unitOfWork)
-                    <p>Execute a unit of work.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_resume">resume</a>(<a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, mixed $value = null)
-                    <p>Resume execution.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Resume execution, with an exception.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <abbr title="Icecave\Collections\Set">Set</abbr>
-                </td>
-                <td class="last">
-                    <a href="#method_pendingResumables">pendingResumables</a>()
-                    <p>Fetch the set of pending resumables that are direct children of the engine.</p>
-                </td>
-                <td></td>
-            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 23</div>
+        <div class="location">at line 24</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Deferred/DeferredAdaptorInterface.html"><abbr title="Icecave\Coro\Deferred\DeferredAdaptorInterface">DeferredAdaptorInterface</abbr></a> $deferredAdaptor = null)</code>
+    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $rootNode = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -152,9 +152,97 @@
                 <td>The ReactPHP event loop to used by the engine for IO and timers.</td>
             </tr>
                     <tr>
-                <td><a href="../../Icecave/Coro/Deferred/DeferredAdaptorInterface.html"><abbr title="Icecave\Coro\Deferred\DeferredAdaptorInterface">DeferredAdaptorInterface</abbr></a></td>
-                <td>$deferredAdaptor</td>
-                <td>The adaptor used to convert values into deferred units of work.</td>
+                <td><a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></td>
+                <td>$nodeAdaptor</td>
+                <td>The adaptor used to convert values into nodes.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a></td>
+                <td>$rootNode</td>
+                <td>The root node of the call tree.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_execute">
+        <div class="location">at line 55</div>
+        <code>            public            
+    <strong>execute</strong>(mixed $coroutine)</code>
+    </h3>
+    <div class="details">
+        <p>Execute a co-routine.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$coroutine</td>
+                <td>Anything that can be adapted into a co-routine using the provided adaptor.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enqueue">
+        <div class="location">at line 68</div>
+        <code>            public            
+    <strong>enqueue</strong>(mixed $coroutine)</code>
+    </h3>
+    <div class="details">
+        <p>Enqueue a co-routine for execution on the next tick.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$coroutine</td>
+                <td>Anything that can be adapted into a co-routine using the provided adaptor.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enqueueCallback">
+        <div class="location">at line 84</div>
+        <code>            public            
+    <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())</code>
+    </h3>
+    <div class="details">
+        <p>Enqueue a callback for execution on the next tick.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Icecave\Coro\callable">callable</abbr></td>
+                <td>$callback</td>
+                <td>The callable to invoke.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>Arguments to pass to the callable.</td>
             </tr>
             </table>
 
@@ -165,7 +253,7 @@
     </div>
 
                 <h3 id="method_eventLoop">
-        <div class="location">at line 47</div>
+        <div class="location">at line 107</div>
         <code>            public            <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
     <strong>eventLoop</strong>()</code>
     </h3>
@@ -189,13 +277,13 @@
                     </div>
     </div>
 
-                <h3 id="method_deferredAdaptor">
-        <div class="location">at line 59</div>
-        <code>            public            <a href="../../Icecave/Coro/Deferred/DeferredAdaptorInterface.html"><abbr title="Icecave\Coro\Deferred\DeferredAdaptorInterface">DeferredAdaptorInterface</abbr></a>
-    <strong>deferredAdaptor</strong>()</code>
+                <h3 id="method_rootNode">
+        <div class="location">at line 119</div>
+        <code>            public            <abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr>
+    <strong>rootNode</strong>()</code>
     </h3>
     <div class="details">
-        <p>Fetch the adaptor used to convert values into deferred units of work.</p>
+        <p>Fetch the root node of the co-routine graph.</p>
         <p>
 </p>
         <div class="tags">
@@ -204,8 +292,33 @@
 
                     <table>
         <tr>
-            <td><a href="../../Icecave/Coro/Deferred/DeferredAdaptorInterface.html"><abbr title="Icecave\Coro\Deferred\DeferredAdaptorInterface">DeferredAdaptorInterface</abbr></a></td>
-            <td>The adaptor used to convert values into deferred units of work.</td>
+            <td><abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr></td>
+            <td>The root node of the co-routine graph.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_nodeAdaptor">
+        <div class="location">at line 131</div>
+        <code>            public            <abbr title="Icecave\Coro\CoroutineAdaptorInterface">CoroutineAdaptorInterface</abbr>
+    <strong>nodeAdaptor</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the adaptor used to convert values into co-routines.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Icecave\Coro\CoroutineAdaptorInterface">CoroutineAdaptorInterface</abbr></td>
+            <td>The adaptor used to convert values into co-routines.</td>
         </tr>
     </table>
 
@@ -215,7 +328,7 @@
     </div>
 
                 <h3 id="method_run">
-        <div class="location">at line 69</div>
+        <div class="location">at line 141</div>
         <code>            public            
     <strong>run</strong>()</code>
     </h3>
@@ -231,7 +344,7 @@
     </div>
 
                 <h3 id="method_stop">
-        <div class="location">at line 88</div>
+        <div class="location">at line 152</div>
         <code>            public            
     <strong>stop</strong>()</code>
     </h3>
@@ -241,120 +354,6 @@
 </p>
         <div class="tags">
             
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_execute">
-        <div class="location">at line 100</div>
-        <code>            public            
-    <strong>execute</strong>(mixed $unitOfWork)</code>
-    </h3>
-    <div class="details">
-        <p>Execute a unit of work.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>mixed</td>
-                <td>$unitOfWork</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_resume">
-        <div class="location">at line 118</div>
-        <code>            public            
-    <strong>resume</strong>(<a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, mixed $value = null)</code>
-    </h3>
-    <div class="details">
-        <p>Resume execution.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
-                <td>$source</td>
-                <td>The object that produced the value.</td>
-            </tr>
-                    <tr>
-                <td>mixed</td>
-                <td>$value</td>
-                <td>The value produced by $source.</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_resumeWithException">
-        <div class="location">at line 131</div>
-        <code>            public            
-    <strong>resumeWithException</strong>(<a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
-    </h3>
-    <div class="details">
-        <p>Resume execution, with an exception.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
-                <td>$source</td>
-                <td>The object that produced the exception.</td>
-            </tr>
-                    <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
-                <td>$exception</td>
-                <td>The exception produced by $source.</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_pendingResumables">
-        <div class="location">at line 143</div>
-        <code>            public            <abbr title="Icecave\Collections\Set">Set</abbr>
-    <strong>pendingResumables</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Fetch the set of pending resumables that are direct children of the engine.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><abbr title="Icecave\Collections\Set">Set</abbr></td>
-            <td>The set of pending resumables that are direct children of the engine.</td>
-        </tr>
-    </table>
-
             
             
                     </div>

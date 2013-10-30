@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Icecave\Coro\Coroutine\ScopedResumable | Coro API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Coro API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Icecave/Coro/Coroutine.html">Icecave\Coro\Coroutine</a>\ScopedResumable</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ScopedResumable</strong>        implements
+        <a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a></p>
+
+            <div class="description">
+            <p>Wraps a resumable, and automatically cancels it if this object goes out of scope before manually being resumed or cancelled.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a> $resumable)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___destruct">__destruct</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resume">resume</a>(mixed $value = null)
+                    <p>Resume execution of the suspended co-routine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Resume execution of the suspended co-routine with an error.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_cancel">cancel</a>()
+                    <p>Cancel execution of a suspended co-routine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_release">release</a>()
+                    <p>Release the inner resumable object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_innerResumable">innerResumable</a>()
+                    <p>Fetch the inner resumable object.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 16</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a> $resumable)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a></td>
+                <td>$resumable</td>
+                <td>The suspended co-routine.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___destruct">
+        <div class="location">at line 23</div>
+        <code>            public            
+    <strong>__destruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resume">
+        <div class="location">at line 35</div>
+        <code>            public            
+    <strong>resume</strong>(mixed $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Resume execution of the suspended co-routine.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resumeWithException">
+        <div class="location">at line 51</div>
+        <code>            public            
+    <strong>resumeWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Resume execution of the suspended co-routine with an error.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>The exception to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cancel">
+        <div class="location">at line 65</div>
+        <code>            public            
+    <strong>cancel</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Cancel execution of a suspended co-routine.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_release">
+        <div class="location">at line 79</div>
+        <code>            public            
+    <strong>release</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Release the inner resumable object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerResumable">
+        <div class="location">at line 91</div>
+        <code>            public            <a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a>|null
+    <strong>innerResumable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the inner resumable object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a>|null</td>
+            <td>The inner resumable object, or null if it has already been released.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Coro\Coroutine\Adaptor | Coro API</title>
+        <title>Icecave\Coro\Tree\NodeAdaptor | Coro API</title>
                     <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
@@ -19,14 +19,14 @@
         <div id="title">Coro API</div>
 
             <div class="type">Class</div>
-    <h1><a href="../../../Icecave/Coro/Coroutine.html">Icecave\Coro\Coroutine</a>\Adaptor</h1>
+    <h1><a href="../../../Icecave/Coro/Tree.html">Icecave\Coro\Tree</a>\NodeAdaptor</h1>
     </div>
         <div class="content">
-                <p>class    <strong>Adaptor</strong>        implements
-        <a href="../../../Icecave/Coro/Coroutine/AdaptorInterface.html"><abbr title="Icecave\Coro\Coroutine\AdaptorInterface">AdaptorInterface</abbr></a></p>
+                <p>class    <strong>NodeAdaptor</strong>        implements
+        <a href="../../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></p>
 
             <div class="description">
-            <p>The default implementation of a node adaptor.</p>
+            <p>The default node adaptor.</p>
             <p>
 </p>
         </div>
@@ -49,31 +49,21 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>
+                    <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_adapt">adapt</a>(mixed $value)
-                    <p>Adapt a value into a co-routine.</p>
+                    <p>Adapt a value into a node.</p>
                 </td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_adaptStrict">adaptStrict</a>(mixed $value)
-                    <p>Attempt to adapt a value into a co-routine.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>|null
+                    <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a>|null
                 </td>
                 <td class="last">
                     <a href="#method_tryAdapt">tryAdapt</a>(mixed $value)
-                    <p>Attempt to adapt a value into a co-routine.</p>
+                    <p>Attempt to adapt a value into a node.</p>
                 </td>
                 <td></td>
             </tr>
@@ -83,7 +73,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 14</div>
+        <div class="location">at line 17</div>
         <code>            public            
     <strong>__construct</strong>()</code>
     </h3>
@@ -100,47 +90,12 @@
     </div>
 
                 <h3 id="method_adapt">
-        <div class="location">at line 29</div>
-        <code>            public            <a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>
+        <div class="location">at line 30</div>
+        <code>            public            <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a>
     <strong>adapt</strong>(mixed $value)</code>
     </h3>
     <div class="details">
-        <p>Adapt a value into a co-routine.</p>
-        <p>Any value that can not be adapted into a meaningful co-routine object
-will be adapted into a 0-second sleep operation.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>mixed</td>
-                <td>$value</td>
-                <td>The value to adapt.</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a></td>
-            <td>The resulting co-routine.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_adaptStrict">
-        <div class="location">at line 50</div>
-        <code>            public            <a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>
-    <strong>adaptStrict</strong>(mixed $value)</code>
-    </h3>
-    <div class="details">
-        <p>Attempt to adapt a value into a co-routine.</p>
+        <p>Adapt a value into a node.</p>
         <p>
 </p>
         <div class="tags">
@@ -159,8 +114,8 @@ will be adapted into a 0-second sleep operation.</p>
 
                     <table>
         <tr>
-            <td><a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a></td>
-            <td>The resulting co-routine.</td>
+            <td><a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></td>
+            <td>The resulting node.</td>
         </tr>
     </table>
 
@@ -179,12 +134,12 @@ will be adapted into a 0-second sleep operation.</p>
     </div>
 
                 <h3 id="method_tryAdapt">
-        <div class="location">at line 70</div>
-        <code>            public            <a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>|null
+        <div class="location">at line 50</div>
+        <code>            public            <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a>|null
     <strong>tryAdapt</strong>(mixed $value)</code>
     </h3>
     <div class="details">
-        <p>Attempt to adapt a value into a co-routine.</p>
+        <p>Attempt to adapt a value into a node.</p>
         <p>
 </p>
         <div class="tags">
@@ -203,8 +158,8 @@ will be adapted into a 0-second sleep operation.</p>
 
                     <table>
         <tr>
-            <td><a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>|null</td>
-            <td>The resulting co-routine, or null if there is no meaningful adaptation.</td>
+            <td><a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a>|null</td>
+            <td>The resulting node, or null if there is no meaningful adaptation.</td>
         </tr>
     </table>
 

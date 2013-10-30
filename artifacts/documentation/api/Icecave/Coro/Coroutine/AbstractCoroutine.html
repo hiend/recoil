@@ -22,7 +22,7 @@
     <h1><a href="../../../Icecave/Coro/Coroutine.html">Icecave\Coro\Coroutine</a>\AbstractCoroutine</h1>
     </div>
         <div class="content">
-                <p>abstract class    <strong>AbstractCoroutine</strong>        extends <a href="../../../Icecave/Coro/Graph/AbstractNode.html"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a>        implements
+                <p>abstract class    <strong>AbstractCoroutine</strong>        extends <a href="../../../Icecave/Coro/Tree/AbstractExecutableNode.html"><abbr title="Icecave\Coro\Tree\AbstractExecutableNode">AbstractExecutableNode</abbr></a>        implements
         <a href="../../../Icecave/Coro/Coroutine/CoroutineInterface.html"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a></p>
 
     
@@ -36,9 +36,39 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>()
+                    <a href="#method_attach">attach</a>(<a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $parent)
+                    <p>Attach this node to a parent.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/AbstractExecutableNode.html#method_attach"><abbr title="Icecave\Coro\Tree\AbstractExecutableNode">AbstractExecutableNode</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor)
                     <p>
 </p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Coroutine/CoroutineStatus.html"><abbr title="Icecave\Coro\Coroutine\CoroutineStatus">CoroutineStatus</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_status">status</a>()
+                    <p>Fetch the co-routine's current status.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_returnValue">returnValue</a>()
+                    <p>Fetch the value that will be sent to the parent node when the co-routine completes successfully.</p>
                 </td>
                 <td></td>
             </tr>
@@ -47,107 +77,71 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_attach">attach</a>(<a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a> $parent)
-                    <p>Attach this node to a parent.</p>
+                    <a href="#method_setReturnValue">setReturnValue</a>(mixed $returnValue)
+                    <p>Set the value that will be sent to the parent node when the co-routine completes successfully.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_attach"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method_detach">detach</a>()
-                    <p>Detach this node from its parent.</p>
+                    <a href="#method_sendValue">sendValue</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)
+                    <p>Send this node a value.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_detach"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_engine">engine</a>()
-                    <p>Fetch the engine to which this node is attached.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_engine"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_parent">parent</a>()
-                    <p>Fetch the parent of this node.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_parent"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method_resume">resume</a>(<a href="../../../Icecave/Coro/Graph/NodeInterface.html"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a> $child, mixed $value = null)
-                    <p>Resume execution.</p>
+                    <a href="#method_sendError">sendError</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Send this node an error.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_resume"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="../../../Icecave/Coro/Graph/NodeInterface.html"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Resume execution, with an exception.</p>
+                    <a href="#method_cancel">cancel</a>()
+                    <p>Cancel execution of a suspended co-routine.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_resumeWithException"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method_abort">abort</a>()
-                    <p>Abort all waiting nodes recursively.</p>
+                    <a href="#method_destroy">destroy</a>()
+                    <p>Destroy this node.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_abort"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a></small></td>
+                <td></td>
             </tr>
             </table>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 9</div>
+                        <h3 id="method_attach">
+        <div class="location">in <a href="../../../Icecave/Coro/Tree/AbstractExecutableNode.html#method_attach"><abbr title="Icecave\Coro\Tree\AbstractExecutableNode">AbstractExecutableNode</abbr></a> at line 21</div>
         <code>            public            
-    <strong>__construct</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_attach">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_attach"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a> at line 26</div>
-        <code>            public            
-    <strong>attach</strong>(<a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a> $parent)</code>
+    <strong>attach</strong>(<a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $parent)</code>
     </h3>
     <div class="details">
         <p>Attach this node to a parent.</p>
-        <p>A node can only be attached to a parent once, even if it has since been detached.</p>
+        <p>
+</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a></td>
+                <td><a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a></td>
                 <td>$parent</td>
                 <td>The new parent of this node.</td>
             </tr>
@@ -160,7 +154,7 @@
                     <table>
                     <tr>
                 <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
-                <td>If this node has previously been attached to a parent.</td>
+                <td>If this node is currently attached to a parent.</td>
             </tr>
             </table>
 
@@ -168,111 +162,131 @@
                     </div>
     </div>
 
-                <h3 id="method_detach">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_detach"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a> at line 43</div>
+                <h3 id="method___construct">
+        <div class="location">at line 21</div>
         <code>            public            
-    <strong>detach</strong>()</code>
+    <strong>__construct</strong>(<a href="../../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor)</code>
     </h3>
     <div class="details">
-        <p>Detach this node from its parent.</p>
         <p>
 </p>
-        <div class="tags">
-            
-            
-                            <h4>Exceptions</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
-                <td>If this node has not been attached to a parent.</td>
-            </tr>
-            </table>
-
-            
-                    </div>
-    </div>
-
-                <h3 id="method_engine">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_engine"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a> at line 56</div>
-        <code>            public            <a href="../../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a>
-    <strong>engine</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Fetch the engine to which this node is attached.</p>
         <p>
 </p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a></td>
-            <td>The engine to which this node is attached.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_parent">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_parent"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a> at line 69</div>
-        <code>            public            <a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a>
-    <strong>parent</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Fetch the parent of this node.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a></td>
-            <td>The parent of this node.</td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
-                <td>If this node has not been attached to a parent.</td>
-            </tr>
-            </table>
-
-            
-                    </div>
-    </div>
-
-                <h3 id="method_resume">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_resume"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a> at line 88</div>
-        <code>            public            
-    <strong>resume</strong>(<a href="../../../Icecave/Coro/Graph/NodeInterface.html"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a> $child, mixed $value = null)</code>
-    </h3>
-    <div class="details">
-        <p>Resume execution.</p>
-        <p>The default implementation forwards the value to this node's parent.</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Graph/NodeInterface.html"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a></td>
+                <td><a href="../../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></td>
+                <td>$nodeAdaptor</td>
+                <td>The adaptor used to convert yielded values into nodes.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_status">
+        <div class="location">at line 34</div>
+        <code>            public            <a href="../../../Icecave/Coro/Coroutine/CoroutineStatus.html"><abbr title="Icecave\Coro\Coroutine\CoroutineStatus">CoroutineStatus</abbr></a>
+    <strong>status</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the co-routine's current status.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Coroutine/CoroutineStatus.html"><abbr title="Icecave\Coro\Coroutine\CoroutineStatus">CoroutineStatus</abbr></a></td>
+            <td>The co-routine's status.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_returnValue">
+        <div class="location">at line 47</div>
+        <code>            public            mixed
+    <strong>returnValue</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the value that will be sent to the parent node when the co-routine completes successfully.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The value to send to the parent.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setReturnValue">
+        <div class="location">at line 60</div>
+        <code>            public            
+    <strong>setReturnValue</strong>(mixed $returnValue)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value that will be sent to the parent node when the co-routine completes successfully.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$returnValue</td>
+                <td>The value to send to the parent.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendValue">
+        <div class="location">at line 73</div>
+        <code>            public            
+    <strong>sendValue</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send this node a value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></td>
                 <td>$child</td>
-                <td>The object that produced the value.</td>
+                <td>The child that is sending the value.</td>
             </tr>
                     <tr>
                 <td>mixed</td>
                 <td>$value</td>
-                <td>The value produced by $child.</td>
+                <td>The value to send.</td>
             </tr>
             </table>
 
@@ -282,27 +296,28 @@
                     </div>
     </div>
 
-                <h3 id="method_resumeWithException">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_resumeWithException"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a> at line 104</div>
+                <h3 id="method_sendError">
+        <div class="location">at line 87</div>
         <code>            public            
-    <strong>resumeWithException</strong>(<a href="../../../Icecave/Coro/Graph/NodeInterface.html"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    <strong>sendError</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Resume execution, with an exception.</p>
-        <p>The default implementation forwards the exception to this node's parent.</p>
+        <p>Send this node an error.</p>
+        <p>
+</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Graph/NodeInterface.html"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a></td>
+                <td><a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></td>
                 <td>$child</td>
-                <td>The object that produced the exception.</td>
+                <td>The child that is sending the error.</td>
             </tr>
                     <tr>
                 <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>$exception</td>
-                <td>The exception produced by $child.</td>
+                <td>The error to send.</td>
             </tr>
             </table>
 
@@ -312,13 +327,29 @@
                     </div>
     </div>
 
-                <h3 id="method_abort">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/AbstractNode.html#method_abort"><abbr title="Icecave\Coro\Graph\AbstractNode">AbstractNode</abbr></a> at line 115</div>
+                <h3 id="method_cancel">
+        <div class="location">at line 98</div>
         <code>            public            
-    <strong>abort</strong>()</code>
+    <strong>cancel</strong>()</code>
     </h3>
     <div class="details">
-        <p>Abort all waiting nodes recursively.</p>
+        <p>Cancel execution of a suspended co-routine.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_destroy">
+        <div class="location">at line 109</div>
+        <code>            public            
+    <strong>destroy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Destroy this node.</p>
         <p>
 </p>
         <div class="tags">

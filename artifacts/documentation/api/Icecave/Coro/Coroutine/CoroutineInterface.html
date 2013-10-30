@@ -23,7 +23,7 @@
     </div>
         <div class="content">
                 <p>interface    <strong>CoroutineInterface</strong>        implements
-        <a href="../../../Icecave/Coro/Graph/NodeInterface.html"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a></p>
+        <a href="../../../Icecave/Coro/Tree/IntermediateNodeInterface.html"><abbr title="Icecave\Coro\Tree\IntermediateNodeInterface">IntermediateNodeInterface</abbr></a>, <a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a></p>
 
     
     
@@ -36,38 +36,58 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_attach">attach</a>(<a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a> $parent)
-                    <p>Attach this node to a parent.</p>
+                    <a href="#method_resume">resume</a>(mixed $value = null)
+                    <p>Resume execution of this co-routine.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/NodeInterface.html#method_attach"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html#method_resume"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method_detach">detach</a>()
-                    <p>Detach this node from its parent.</p>
+                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Resume execution of this co-routine with an error.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/NodeInterface.html#method_detach"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_parent">parent</a>()
-                    <p>Fetch the parent of this node.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Graph/NodeInterface.html#method_parent"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html#method_resumeWithException"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method_execute">execute</a>()
-                    <p>Begin execution of this co-routine.</p>
+                    <a href="#method_cancel">cancel</a>()
+                    <p>Cancel execution of a suspended co-routine.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html#method_cancel"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Coroutine/CoroutineStatus.html"><abbr title="Icecave\Coro\Coroutine\CoroutineStatus">CoroutineStatus</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_status">status</a>()
+                    <p>Fetch the co-routine's current status.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_returnValue">returnValue</a>()
+                    <p>Fetch the value that will be sent to the parent node when the co-routine completes successfully.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setReturnValue">setReturnValue</a>(mixed $returnValue)
+                    <p>Set the value that will be sent to the parent node when the co-routine completes successfully.</p>
                 </td>
                 <td></td>
             </tr>
@@ -76,72 +96,82 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method_attach">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/NodeInterface.html#method_attach"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a> at line 19</div>
+                        <h3 id="method_resume">
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html#method_resume"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a> at line 13</div>
         <code>            public            
-    <strong>attach</strong>(<a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a> $parent)</code>
+    <strong>resume</strong>(mixed $value = null)</code>
     </h3>
     <div class="details">
-        <p>Attach this node to a parent.</p>
-        <p>A node can only be attached to a parent once, even if it has since been detached.</p>
+        <p>Resume execution of this co-routine.</p>
+        <p>
+</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a></td>
-                <td>$parent</td>
-                <td>The new parent of this node.</td>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to send.</td>
             </tr>
             </table>
 
             
             
-                            <h4>Exceptions</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
-                <td>If this node has previously been attached to a parent.</td>
-            </tr>
-            </table>
-
             
                     </div>
     </div>
 
-                <h3 id="method_detach">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/NodeInterface.html#method_detach"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a> at line 26</div>
+                <h3 id="method_resumeWithException">
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html#method_resumeWithException"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a> at line 20</div>
         <code>            public            
-    <strong>detach</strong>()</code>
+    <strong>resumeWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Detach this node from its parent.</p>
+        <p>Resume execution of this co-routine with an error.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cancel">
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/ResumableInterface.html#method_cancel"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">ResumableInterface</abbr></a> at line 25</div>
+        <code>            public            
+    <strong>cancel</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Cancel execution of a suspended co-routine.</p>
         <p>
 </p>
         <div class="tags">
             
             
-                            <h4>Exceptions</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
-                <td>If this node has not been attached to a parent.</td>
-            </tr>
-            </table>
-
             
                     </div>
     </div>
 
-                <h3 id="method_parent">
-        <div class="location">in <a href="../../../Icecave/Coro/Graph/NodeInterface.html#method_parent"><abbr title="Icecave\Coro\Graph\NodeInterface">NodeInterface</abbr></a> at line 34</div>
-        <code>            public            <a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a>
-    <strong>parent</strong>()</code>
+                <h3 id="method_status">
+        <div class="location">at line 13</div>
+        <code>            public            <a href="../../../Icecave/Coro/Coroutine/CoroutineStatus.html"><abbr title="Icecave\Coro\Coroutine\CoroutineStatus">CoroutineStatus</abbr></a>
+    <strong>status</strong>()</code>
     </h3>
     <div class="details">
-        <p>Fetch the parent of this node.</p>
+        <p>Fetch the co-routine's current status.</p>
         <p>
 </p>
         <div class="tags">
@@ -150,35 +180,61 @@
 
                     <table>
         <tr>
-            <td><a href="../../../Icecave/Coro/Graph/BaseNodeInterface.html"><abbr title="Icecave\Coro\Graph\BaseNodeInterface">BaseNodeInterface</abbr></a></td>
-            <td>The parent of this node.</td>
+            <td><a href="../../../Icecave/Coro/Coroutine/CoroutineStatus.html"><abbr title="Icecave\Coro\Coroutine\CoroutineStatus">CoroutineStatus</abbr></a></td>
+            <td>The co-routine's status.</td>
         </tr>
     </table>
 
             
-                            <h4>Exceptions</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
-                <td>If this node has not been attached to a parent.</td>
-            </tr>
-            </table>
-
             
                     </div>
     </div>
 
-                <h3 id="method_execute">
-        <div class="location">at line 11</div>
-        <code>            public            
-    <strong>execute</strong>()</code>
+                <h3 id="method_returnValue">
+        <div class="location">at line 21</div>
+        <code>            public            mixed
+    <strong>returnValue</strong>()</code>
     </h3>
     <div class="details">
-        <p>Begin execution of this co-routine.</p>
+        <p>Fetch the value that will be sent to the parent node when the co-routine completes successfully.</p>
         <p>
 </p>
         <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The value to send to the parent.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setReturnValue">
+        <div class="location">at line 29</div>
+        <code>            public            
+    <strong>setReturnValue</strong>(mixed $returnValue)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value that will be sent to the parent node when the co-routine completes successfully.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$returnValue</td>
+                <td>The value to send to the parent.</td>
+            </tr>
+            </table>
+
             
             
             

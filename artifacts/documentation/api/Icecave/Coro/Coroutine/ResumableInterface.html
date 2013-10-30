@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Coro\Deferred\ResumableInterface | Coro API</title>
+        <title>Icecave\Coro\Coroutine\ResumableInterface | Coro API</title>
                     <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
@@ -19,7 +19,7 @@
         <div id="title">Coro API</div>
 
             <div class="type">Interface</div>
-    <h1><a href="../../../Icecave/Coro/Deferred.html">Icecave\Coro\Deferred</a>\ResumableInterface</h1>
+    <h1><a href="../../../Icecave/Coro/Coroutine.html">Icecave\Coro\Coroutine</a>\ResumableInterface</h1>
     </div>
         <div class="content">
                 <p>interface    <strong>ResumableInterface</strong></p>
@@ -35,8 +35,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_resume">resume</a>(<a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, mixed $value = null)
-                    <p>Resume execution.</p>
+                    <a href="#method_resume">resume</a>(mixed $value = null)
+                    <p>Resume execution of this co-routine.</p>
                 </td>
                 <td></td>
             </tr>
@@ -45,8 +45,18 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Resume execution, with an exception.</p>
+                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Resume execution of this co-routine with an error.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_cancel">cancel</a>()
+                    <p>Cancel execution of a suspended co-routine.</p>
                 </td>
                 <td></td>
             </tr>
@@ -56,12 +66,12 @@
         <h2>Details</h2>
 
                         <h3 id="method_resume">
-        <div class="location">at line 14</div>
+        <div class="location">at line 13</div>
         <code>            public            
-    <strong>resume</strong>(<a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, mixed $value = null)</code>
+    <strong>resume</strong>(mixed $value = null)</code>
     </h3>
     <div class="details">
-        <p>Resume execution.</p>
+        <p>Resume execution of this co-routine.</p>
         <p>
 </p>
         <div class="tags">
@@ -69,14 +79,9 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
-                <td>$source</td>
-                <td>The object that produced the value.</td>
-            </tr>
-                    <tr>
                 <td>mixed</td>
                 <td>$value</td>
-                <td>The value produced by $source.</td>
+                <td>The value to send.</td>
             </tr>
             </table>
 
@@ -87,12 +92,12 @@
     </div>
 
                 <h3 id="method_resumeWithException">
-        <div class="location">at line 22</div>
+        <div class="location">at line 20</div>
         <code>            public            
-    <strong>resumeWithException</strong>(<a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a> $source, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    <strong>resumeWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Resume execution, with an exception.</p>
+        <p>Resume execution of this co-routine with an error.</p>
         <p>
 </p>
         <div class="tags">
@@ -100,17 +105,29 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Deferred/ResumableInterface.html"><abbr title="Icecave\Coro\Deferred\ResumableInterface">ResumableInterface</abbr></a></td>
-                <td>$source</td>
-                <td>The object that produced the exception.</td>
-            </tr>
-                    <tr>
                 <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>$exception</td>
-                <td>The exception produced by $source.</td>
+                <td>
+</td>
             </tr>
             </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cancel">
+        <div class="location">at line 25</div>
+        <code>            public            
+    <strong>cancel</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Cancel execution of a suspended co-routine.</p>
+        <p>
+</p>
+        <div class="tags">
             
             
             
