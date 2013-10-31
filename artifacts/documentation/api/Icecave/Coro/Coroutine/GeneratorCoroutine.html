@@ -76,6 +76,36 @@
                     
                 </td>
                 <td class="last">
+                    <a href="#method_resume">resume</a>(mixed $value = null)
+                    <p>Resume execution of this co-routine.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_resume"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Resume execution of this co-routine with an error.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_resumeWithException"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_cancel">cancel</a>()
+                    <p>Cancel execution of a suspended co-routine.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_cancel"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
                     <a href="#method_sendValue">sendValue</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)
                     <p>Send this node a value.</p>
                 </td>
@@ -96,40 +126,10 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_cancel">cancel</a>()
-                    <p>Cancel execution of a suspended co-routine.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_cancel"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
                     <a href="#method_destroy">destroy</a>()
                     <p>Destroy this node.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_destroy"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_resume">resume</a>(mixed $value = null)
-                    <p>Resume execution of this co-routine.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Resume execution of this co-routine with an error.</p>
-                </td>
-                <td></td>
             </tr>
             </table>
 
@@ -137,7 +137,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 16</div>
+        <div class="location">at line 15</div>
         <code>            public            
     <strong>__construct</strong>(<a href="http://php.net/Generator"><abbr title="Generator">Generator</abbr></a> $generator, <a href="../../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor)</code>
     </h3>
@@ -169,7 +169,7 @@
     </div>
 
                 <h3 id="method_status">
-        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_status"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 34</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_status"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 35</div>
         <code>            public            <a href="../../../Icecave/Coro/Coroutine/CoroutineStatus.html"><abbr title="Icecave\Coro\Coroutine\CoroutineStatus">CoroutineStatus</abbr></a>
     <strong>status</strong>()</code>
     </h3>
@@ -194,7 +194,7 @@
     </div>
 
                 <h3 id="method_returnValue">
-        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_returnValue"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 47</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_returnValue"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 48</div>
         <code>            public            mixed
     <strong>returnValue</strong>()</code>
     </h3>
@@ -219,7 +219,7 @@
     </div>
 
                 <h3 id="method_setReturnValue">
-        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_setReturnValue"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 60</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_setReturnValue"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 61</div>
         <code>            public            
     <strong>setReturnValue</strong>(mixed $returnValue)</code>
     </h3>
@@ -244,8 +244,76 @@
                     </div>
     </div>
 
+                <h3 id="method_resume">
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_resume"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 110</div>
+        <code>            public            
+    <strong>resume</strong>(mixed $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Resume execution of this co-routine.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resumeWithException">
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_resumeWithException"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 138</div>
+        <code>            public            
+    <strong>resumeWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Resume execution of this co-routine with an error.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>The exception to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cancel">
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_cancel"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 164</div>
+        <code>            public            
+    <strong>cancel</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Cancel execution of a suspended co-routine.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_sendValue">
-        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_sendValue"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 73</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_sendValue"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 198</div>
         <code>            public            
     <strong>sendValue</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)</code>
     </h3>
@@ -276,7 +344,7 @@
     </div>
 
                 <h3 id="method_sendError">
-        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_sendError"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 87</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_sendError"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 212</div>
         <code>            public            
     <strong>sendError</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
@@ -306,24 +374,8 @@
                     </div>
     </div>
 
-                <h3 id="method_cancel">
-        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_cancel"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 98</div>
-        <code>            public            
-    <strong>cancel</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Cancel execution of a suspended co-routine.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_destroy">
-        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_destroy"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 118</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Coroutine/AbstractCoroutine.html#method_destroy"><abbr title="Icecave\Coro\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 223</div>
         <code>            public            
     <strong>destroy</strong>()</code>
     </h3>
@@ -332,58 +384,6 @@
         <p>
 </p>
         <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_resume">
-        <div class="location">at line 61</div>
-        <code>            public            
-    <strong>resume</strong>(mixed $value = null)</code>
-    </h3>
-    <div class="details">
-        <p>Resume execution of this co-routine.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>mixed</td>
-                <td>$value</td>
-                <td>The value to send.</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_resumeWithException">
-        <div class="location">at line 86</div>
-        <code>            public            
-    <strong>resumeWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
-    </h3>
-    <div class="details">
-        <p>Resume execution of this co-routine with an error.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
-                <td>$exception</td>
-                <td>The exception to send.</td>
-            </tr>
-            </table>
-
             
             
             
