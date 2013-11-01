@@ -41,7 +41,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $rootNode = null)
+                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)
                     <p>
 </p>
                 </td>
@@ -99,11 +99,11 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Icecave\Coro\CoroutineAdaptorInterface">CoroutineAdaptorInterface</abbr>
+                    boolean
                 </td>
                 <td class="last">
-                    <a href="#method_nodeAdaptor">nodeAdaptor</a>()
-                    <p>Fetch the adaptor used to convert values into co-routines.</p>
+                    <a href="#method_isRunning">isRunning</a>()
+                    <p>Check if the engine is currently running.</p>
                 </td>
                 <td></td>
             </tr>
@@ -112,7 +112,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_run">run</a>()
+                    <a href="#method_run">run</a>(mixed $coroutine = null)
                     <p>Run the co-routine engine.</p>
                 </td>
                 <td></td>
@@ -127,6 +127,16 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Icecave\Coro\CoroutineAdaptorInterface">CoroutineAdaptorInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_nodeAdaptor">nodeAdaptor</a>()
+                    <p>Fetch the adaptor used to convert values into co-routines.</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
@@ -135,7 +145,7 @@
                         <h3 id="method___construct">
         <div class="location">at line 24</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $rootNode = null)</code>
+    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -157,7 +167,7 @@
                 <td>The adaptor used to convert values into nodes.</td>
             </tr>
                     <tr>
-                <td><a href="../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a></td>
+                <td><a href="../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a></td>
                 <td>$rootNode</td>
                 <td>The root node of the call tree.</td>
             </tr>
@@ -170,14 +180,13 @@
     </div>
 
                 <h3 id="method_execute">
-        <div class="location">at line 55</div>
+        <div class="location">at line 60</div>
         <code>            public            
     <strong>execute</strong>(mixed $coroutine)</code>
     </h3>
     <div class="details">
         <p>Execute a co-routine.</p>
-        <p>
-</p>
+        <p>The engine must be running in order to execute a co-routine.</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -192,11 +201,20 @@
             
             
             
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>EngineInterface::enqueue()</td>
+                <td></td>
+            </tr>
+            </table>
+
                     </div>
     </div>
 
                 <h3 id="method_enqueue">
-        <div class="location">at line 68</div>
+        <div class="location">at line 77</div>
         <code>            public            
     <strong>enqueue</strong>(mixed $coroutine)</code>
     </h3>
@@ -222,7 +240,7 @@
     </div>
 
                 <h3 id="method_enqueueCallback">
-        <div class="location">at line 84</div>
+        <div class="location">at line 93</div>
         <code>            public            
     <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
@@ -253,7 +271,7 @@
     </div>
 
                 <h3 id="method_eventLoop">
-        <div class="location">at line 107</div>
+        <div class="location">at line 116</div>
         <code>            public            <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
     <strong>eventLoop</strong>()</code>
     </h3>
@@ -278,7 +296,7 @@
     </div>
 
                 <h3 id="method_rootNode">
-        <div class="location">at line 119</div>
+        <div class="location">at line 128</div>
         <code>            public            <abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr>
     <strong>rootNode</strong>()</code>
     </h3>
@@ -302,8 +320,75 @@
                     </div>
     </div>
 
+                <h3 id="method_isRunning">
+        <div class="location">at line 140</div>
+        <code>            public            boolean
+    <strong>isRunning</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the engine is currently running.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the engine is running; otherwise, false.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_run">
+        <div class="location">at line 152</div>
+        <code>            public            
+    <strong>run</strong>(mixed $coroutine = null)</code>
+    </h3>
+    <div class="details">
+        <p>Run the co-routine engine.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$coroutine</td>
+                <td>A coroutine to run immediately after starting the engine.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_stop">
+        <div class="location">at line 179</div>
+        <code>            public            
+    <strong>stop</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Stop the co-routine engine.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_nodeAdaptor">
-        <div class="location">at line 131</div>
+        <div class="location">at line 192</div>
         <code>            public            <abbr title="Icecave\Coro\CoroutineAdaptorInterface">CoroutineAdaptorInterface</abbr>
     <strong>nodeAdaptor</strong>()</code>
     </h3>
@@ -322,38 +407,6 @@
         </tr>
     </table>
 
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_run">
-        <div class="location">at line 141</div>
-        <code>            public            
-    <strong>run</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Run the co-routine engine.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_stop">
-        <div class="location">at line 152</div>
-        <code>            public            
-    <strong>stop</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Stop the co-routine engine.</p>
-        <p>
-</p>
-        <div class="tags">
-            
             
             
                     </div>
