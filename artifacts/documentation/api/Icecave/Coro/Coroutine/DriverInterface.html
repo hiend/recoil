@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Coro\Coroutine\ResumableInterface | Coro API</title>
+        <title>Icecave\Coro\Coroutine\DriverInterface | Coro API</title>
                     <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
@@ -19,12 +19,17 @@
         <div id="title">Coro API</div>
 
             <div class="type">Interface</div>
-    <h1><a href="../../../Icecave/Coro/Coroutine.html">Icecave\Coro\Coroutine</a>\ResumableInterface</h1>
+    <h1><a href="../../../Icecave/Coro/Coroutine.html">Icecave\Coro\Coroutine</a>\DriverInterface</h1>
     </div>
         <div class="content">
-                <p>interface    <strong>ResumableInterface</strong>        implements
+                <p>interface    <strong>DriverInterface</strong>        implements
         <a href="../../../Icecave/Coro/Coroutine/BaseResumableInterface.html"><abbr title="Icecave\Coro\Coroutine\BaseResumableInterface">BaseResumableInterface</abbr></a></p>
 
+            <div class="description">
+            <p>Low-level driver for co-routine implementations.</p>
+            <p>
+</p>
+        </div>
     
     
     
@@ -60,6 +65,16 @@
                     <p>Cancel execution of a suspended co-routine.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Icecave/Coro/Coroutine/BaseResumableInterface.html#method_cancel"><abbr title="Icecave\Coro\Coroutine\BaseResumableInterface">BaseResumableInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Icecave\Coro\Coroutine\tuple&lt;boolean,">tuple&lt;boolean,</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_fetch">fetch</a>()
+                    <p>Fetch the current value from the co-routine.</p>
+                </td>
+                <td></td>
             </tr>
             </table>
 
@@ -129,6 +144,31 @@
 </p>
         <div class="tags">
             
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetch">
+        <div class="location">at line 14</div>
+        <code>            public            <abbr title="Icecave\Coro\Coroutine\tuple&lt;boolean,">tuple&lt;boolean,</abbr>
+    <strong>fetch</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the current value from the co-routine.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Icecave\Coro\Coroutine\tuple&lt;boolean,">tuple&lt;boolean,</abbr></td>
+            <td>mixed> A 2-tuple containing a boolean indicating if there are more values to read, and the current value.</td>
+        </tr>
+    </table>
+
             
             
                     </div>
