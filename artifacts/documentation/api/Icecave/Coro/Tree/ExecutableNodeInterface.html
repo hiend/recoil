@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Icecave\Coro\Tree\ExecutableNodeInterface | Coro API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Coro API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../Icecave/Coro/Tree.html">Icecave\Coro\Tree</a>\ExecutableNodeInterface</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>ExecutableNodeInterface</strong>        implements
+        <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></p>
+
+            <div class="description">
+            <p>A node that has side-effects.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_attach">attach</a>(<a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $parent)
+                    <p>Attach this node to a parent.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_attach"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_detach">detach</a>()
+                    <p>Detach this node from its parent.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_detach"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_parent">parent</a>()
+                    <p>Fetch the parent of this node.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_parent"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sendValueToParent">sendValueToParent</a>(mixed $value = null)
+                    <p>Send this node's parent a value.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_sendValueToParent"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sendErrorToParent">sendErrorToParent</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Send this node's parent an error.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_sendErrorToParent"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sendValueToParentAndDestroy">sendValueToParentAndDestroy</a>(mixed $value = null)
+                    <p>Send this node's parent a value.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_sendValueToParentAndDestroy"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sendErrorToParentAndDestroy">sendErrorToParentAndDestroy</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Send this node's parent an error.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_sendErrorToParentAndDestroy"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_execute">execute</a>()
+                    <p>Execute the action associated with this node.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_attach">
+        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_attach"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 18</div>
+        <code>            public            
+    <strong>attach</strong>(<a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $parent)</code>
+    </h3>
+    <div class="details">
+        <p>Attach this node to a parent.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a></td>
+                <td>$parent</td>
+                <td>The new parent of this node.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>If this node is currently attached to a parent.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_detach">
+        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_detach"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 25</div>
+        <code>            public            
+    <strong>detach</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Detach this node from its parent.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>If this node has not been attached to a parent.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parent">
+        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_parent"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 33</div>
+        <code>            public            <a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a>
+    <strong>parent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the parent of this node.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a></td>
+            <td>The parent of this node.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>If this node has not been attached to a parent.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendValueToParent">
+        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_sendValueToParent"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 40</div>
+        <code>            public            
+    <strong>sendValueToParent</strong>(mixed $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send this node's parent a value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendErrorToParent">
+        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_sendErrorToParent"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 47</div>
+        <code>            public            
+    <strong>sendErrorToParent</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Send this node's parent an error.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>The error to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendValueToParentAndDestroy">
+        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_sendValueToParentAndDestroy"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 54</div>
+        <code>            public            
+    <strong>sendValueToParentAndDestroy</strong>(mixed $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send this node's parent a value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendErrorToParentAndDestroy">
+        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_sendErrorToParentAndDestroy"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 61</div>
+        <code>            public            
+    <strong>sendErrorToParentAndDestroy</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Send this node's parent an error.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>The error to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_execute">
+        <div class="location">at line 12</div>
+        <code>            public            
+    <strong>execute</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Execute the action associated with this node.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
