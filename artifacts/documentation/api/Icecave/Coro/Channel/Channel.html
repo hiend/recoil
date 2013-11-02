@@ -97,8 +97,8 @@
                     boolean
                 </td>
                 <td class="last">
-                    <a href="#method_readWillBlock">readWillBlock</a>()
-                    <p>Check if a read operation will block.</p>
+                    <a href="#method_readyToRead">readyToRead</a>()
+                    <p>Check if a value can be read from the channel without blocking.</p>
                 </td>
                 <td></td>
             </tr>
@@ -107,8 +107,8 @@
                     boolean
                 </td>
                 <td class="last">
-                    <a href="#method_writeWillBlock">writeWillBlock</a>()
-                    <p>Check if a write operation will block.</p>
+                    <a href="#method_readyForWrite">readyForWrite</a>()
+                    <p>Check if a value can be written to the channel without blocking.</p>
                 </td>
                 <td></td>
             </tr>
@@ -311,13 +311,13 @@
                     </div>
     </div>
 
-                <h3 id="method_readWillBlock">
+                <h3 id="method_readyToRead">
         <div class="location">at line 153</div>
         <code>            public            boolean
-    <strong>readWillBlock</strong>()</code>
+    <strong>readyToRead</strong>()</code>
     </h3>
     <div class="details">
-        <p>Check if a read operation will block.</p>
+        <p>Check if a value can be read from the channel without blocking.</p>
         <p>
 </p>
         <div class="tags">
@@ -327,7 +327,7 @@
                     <table>
         <tr>
             <td>boolean</td>
-            <td>True if a call to read() will block; otherwise, false.</td>
+            <td>False if a call to read() will block; otherwise, true.</td>
         </tr>
     </table>
 
@@ -336,13 +336,13 @@
                     </div>
     </div>
 
-                <h3 id="method_writeWillBlock">
+                <h3 id="method_readyForWrite">
         <div class="location">at line 165</div>
         <code>            public            boolean
-    <strong>writeWillBlock</strong>()</code>
+    <strong>readyForWrite</strong>()</code>
     </h3>
     <div class="details">
-        <p>Check if a write operation will block.</p>
+        <p>Check if a value can be written to the channel without blocking.</p>
         <p>
 </p>
         <div class="tags">
@@ -352,7 +352,7 @@
                     <table>
         <tr>
             <td>boolean</td>
-            <td>True if a call to write() will block; otherwise, false.</td>
+            <td>False if a call to write() will block; otherwise, true.</td>
         </tr>
     </table>
 
