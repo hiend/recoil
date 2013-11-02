@@ -46,6 +46,16 @@
                     boolean
                 </td>
                 <td class="last">
+                    <a href="#method_tryRead">tryRead</a>($value)
+                    <p>Attempt a non-blocking read from this channel.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Channel/ReadableChannelInterface.html#method_tryRead"><abbr title="Icecave\Coro\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
                     <a href="#method_readWillBlock">readWillBlock</a>()
                     <p>Check if a read operation will block.</p>
                 </td>
@@ -60,6 +70,16 @@
                     <p>Write to this channel.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Icecave/Coro/Channel/WritableChannelInterface.html#method_write"><abbr title="Icecave\Coro\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_tryWrite">tryWrite</a>($value)
+                    <p>Attempt a non-blocking write to this channel.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Channel/WritableChannelInterface.html#method_tryWrite"><abbr title="Icecave\Coro\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -101,8 +121,53 @@
                     </div>
     </div>
 
+                <h3 id="method_tryRead">
+        <div class="location">in <a href="../../../Icecave/Coro/Channel/ReadableChannelInterface.html#method_tryRead"><abbr title="Icecave\Coro\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a> at line 26</div>
+        <code>            public            boolean
+    <strong>tryRead</strong>($value)</code>
+    </h3>
+    <div class="details">
+        <p>Attempt a non-blocking read from this channel.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if a value was read from the channel; otherwise, false.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Exception\ChannelClosedException">ChannelClosedException</abbr></td>
+                <td>if the channel has been closed.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
                 <h3 id="method_readWillBlock">
-        <div class="location">in <a href="../../../Icecave/Coro/Channel/ReadableChannelInterface.html#method_readWillBlock"><abbr title="Icecave\Coro\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a> at line 21</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Channel/ReadableChannelInterface.html#method_readWillBlock"><abbr title="Icecave\Coro\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a> at line 33</div>
         <code>            public            boolean
     <strong>readWillBlock</strong>()</code>
     </h3>
@@ -127,7 +192,7 @@
     </div>
 
                 <h3 id="method_write">
-        <div class="location">in <a href="../../../Icecave/Coro/Channel/WritableChannelInterface.html#method_write"><abbr title="Icecave\Coro\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 14</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Channel/WritableChannelInterface.html#method_write"><abbr title="Icecave\Coro\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 15</div>
         <code>            public            
     <strong>write</strong>($value)</code>
     </h3>
@@ -162,8 +227,53 @@
                     </div>
     </div>
 
+                <h3 id="method_tryWrite">
+        <div class="location">in <a href="../../../Icecave/Coro/Channel/WritableChannelInterface.html#method_tryWrite"><abbr title="Icecave\Coro\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 27</div>
+        <code>            public            boolean
+    <strong>tryWrite</strong>($value)</code>
+    </h3>
+    <div class="details">
+        <p>Attempt a non-blocking write to this channel.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the value was written to the channel; otherwise, false.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Exception\ChannelClosedException">ChannelClosedException</abbr></td>
+                <td>if the channel has been closed.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
                 <h3 id="method_writeWillBlock">
-        <div class="location">in <a href="../../../Icecave/Coro/Channel/WritableChannelInterface.html#method_writeWillBlock"><abbr title="Icecave\Coro\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 21</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Channel/WritableChannelInterface.html#method_writeWillBlock"><abbr title="Icecave\Coro\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 34</div>
         <code>            public            boolean
     <strong>writeWillBlock</strong>()</code>
     </h3>
