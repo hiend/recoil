@@ -6,7 +6,7 @@
         <title>Icecave\Coro\Engine | Coro API</title>
                     <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
                             </head>
-        <body id="class">
+        <body id="overview">
             <div class="header">
         <ul>
             <li><a href="../../classes.html">Classes</a></li>
@@ -18,337 +18,28 @@
 
         <div id="title">Coro API</div>
 
-            <div class="type">Class</div>
-    <h1><a href="../../Icecave/Coro.html">Icecave\Coro</a>\Engine</h1>
+            <div class="type">Namespace</div>
+    <h1>Icecave\Coro\Engine</h1>
     </div>
         <div class="content">
-                <p>class    <strong>Engine</strong>        implements
-        <a href="../../Icecave/Coro/EngineInterface.html"><abbr title="Icecave\Coro\EngineInterface">EngineInterface</abbr></a></p>
-
-            <div class="description">
-            <p>Coro's default co-routine engine.</p>
-            <p>
-</p>
-        </div>
+                        <table>
+                            <tr>
+                    <td><a href="../../Icecave/Coro/Engine/AbstractNodeAdaptor.html"><abbr title="Icecave\Coro\Engine\AbstractNodeAdaptor">AbstractNodeAdaptor</abbr></a></td>
+                    <td class="last">Abstract base class for node adaptor implementations.</td>
+                </tr>
+                    </table>
     
-    
-    
-            <h2>Methods</h2>
-
-            <table>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)
-                    <p>
-</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method___destruct">__destruct</a>()
-                    <p>
-</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_enqueue">enqueue</a>(mixed $coroutine)
-                    <p>Enqueue a co-routine for execution.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_enqueueCallback">enqueueCallback</a>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())
-                    <p>Enqueue a callback for execution.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_enqueueDelayedCallback">enqueueDelayedCallback</a>(integer|<abbr title="Icecave\Coro\float">float</abbr> $delay, <abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())
-                    <p>Enqueue a callback for execution after a given timeout.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr>
-                </td>
-                <td class="last">
-                    <a href="#method_rootNode">rootNode</a>()
-                    <p>Fetch the root node of the co-routine graph.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_nodeAdaptor">nodeAdaptor</a>()
-                    <p>Fetch the adaptor used to convert values into co-routines.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
-                </td>
-                <td class="last">
-                    <a href="#method_eventLoop">eventLoop</a>()
-                    <p>Fetch the ReactPHP event loop to used by the engine for IO and timers.</p>
-                </td>
-                <td></td>
-            </tr>
-            </table>
-
-
-        <h2>Details</h2>
-
-                        <h3 id="method___construct">
-        <div class="location">at line 22</div>
-        <code>            public            
-    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
-                <td>$eventLoop</td>
-                <td>The ReactPHP event loop to used by the engine for IO and timers.</td>
-            </tr>
-                    <tr>
-                <td><a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></td>
-                <td>$nodeAdaptor</td>
-                <td>The adaptor used to convert values into nodes.</td>
-            </tr>
-                    <tr>
-                <td><a href="../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a></td>
-                <td>$rootNode</td>
-                <td>The root node of the call tree.</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method___destruct">
-        <div class="location">at line 51</div>
-        <code>            public            
-    <strong>__destruct</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_enqueue">
-        <div class="location">at line 64</div>
-        <code>            public            
-    <strong>enqueue</strong>(mixed $coroutine)</code>
-    </h3>
-    <div class="details">
-        <p>Enqueue a co-routine for execution.</p>
-        <p>Co-routines are guaranteed to be started in the order they are enqueued.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>mixed</td>
-                <td>$coroutine</td>
-                <td>The co-routine to execute.</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_enqueueCallback">
-        <div class="location">at line 89</div>
-        <code>            public            
-    <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())</code>
-    </h3>
-    <div class="details">
-        <p>Enqueue a callback for execution.</p>
-        <p>Callbacks are guaranteed to be executed in the order they are enqueued.</p>
-
-<p>If the callback returns a value that can be adapted to a co-routine it is
-executed.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><abbr title="Icecave\Coro\callable">callable</abbr></td>
-                <td>$callback</td>
-                <td>The callable to invoke.</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$arguments</td>
-                <td>Arguments to pass to the callable.</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_enqueueDelayedCallback">
-        <div class="location">at line 118</div>
-        <code>            public            
-    <strong>enqueueDelayedCallback</strong>(integer|<abbr title="Icecave\Coro\float">float</abbr> $delay, <abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())</code>
-    </h3>
-    <div class="details">
-        <p>Enqueue a callback for execution after a given timeout.</p>
-        <p>There is no guarantee made about the order of execution of callbacks that
-are scheduled for execution at the same time.</p>
-
-<p>If the callback returns a value that can be adapted to a co-routine it is
-executed.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>integer|<abbr title="Icecave\Coro\float">float</abbr></td>
-                <td>$delay</td>
-                <td>The number of seconds to wait before invoking the callback.</td>
-            </tr>
-                    <tr>
-                <td><abbr title="Icecave\Coro\callable">callable</abbr></td>
-                <td>$callback</td>
-                <td>The callable to invoke.</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$arguments</td>
-                <td>Arguments to pass to the callable.</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_rootNode">
-        <div class="location">at line 135</div>
-        <code>            public            <abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr>
-    <strong>rootNode</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Fetch the root node of the co-routine graph.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr></td>
-            <td>The root node of the co-routine graph.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_nodeAdaptor">
-        <div class="location">at line 147</div>
-        <code>            public            <a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a>
-    <strong>nodeAdaptor</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Fetch the adaptor used to convert values into co-routines.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></td>
-            <td>The adaptor used to convert values into co-routines.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_eventLoop">
-        <div class="location">at line 159</div>
-        <code>            public            <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
-    <strong>eventLoop</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Fetch the ReactPHP event loop to used by the engine for IO and timers.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
-            <td>The ReactPHP event loop to used by the engine for IO and timers.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
+            <h2>Interfaces</h2>
+        <table>
+                            <tr>
+                    <td><a href="../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a></td>
+                    <td class="last">A co-routine engine.</td>
+                </tr>
+                            <tr>
+                    <td><a href="../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></td>
+                    <td class="last">Adapts arbitrary values into executable nodes.</td>
+                </tr>
+                    </table>
     
             </div>
             <div id="footer">

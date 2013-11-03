@@ -3,23 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Coro\EngineInterface | Coro API</title>
-                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+        <title>Icecave\Coro\Engine\EngineInterface | Coro API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
             <div class="header">
         <ul>
-            <li><a href="../../classes.html">Classes</a></li>
-                            <li><a href="../../namespaces.html">Namespaces</a></li>
-                        <li><a href="../../interfaces.html">Interfaces</a></li>
-            <li><a href="../../doc-index.html">Index</a></li>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
             
         </ul>
 
         <div id="title">Coro API</div>
 
             <div class="type">Interface</div>
-    <h1><a href="../../Icecave/Coro.html">Icecave\Coro</a>\EngineInterface</h1>
+    <h1><a href="../../../Icecave/Coro/Engine.html">Icecave\Coro\Engine</a>\EngineInterface</h1>
     </div>
         <div class="content">
                 <p>interface    <strong>EngineInterface</strong></p>
@@ -50,7 +50,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_enqueueCallback">enqueueCallback</a>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())
+                    <a href="#method_enqueueCallback">enqueueCallback</a>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())
                     <p>Enqueue a callback for execution.</p>
                 </td>
                 <td></td>
@@ -60,14 +60,14 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_enqueueDelayedCallback">enqueueDelayedCallback</a>(integer|<abbr title="Icecave\Coro\float">float</abbr> $delay, <abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())
+                    <a href="#method_enqueueDelayedCallback">enqueueDelayedCallback</a>(integer|<abbr title="Icecave\Coro\Engine\float">float</abbr> $delay, <abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())
                     <p>Enqueue a callback for execution after a given timeout.</p>
                 </td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr>
+                    <abbr title="Icecave\Coro\Engine\NodeInterface">NodeInterface</abbr>
                 </td>
                 <td class="last">
                     <a href="#method_rootNode">rootNode</a>()
@@ -77,7 +77,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Icecave\Coro\NodeAdaptorInterface">NodeAdaptorInterface</abbr>
+                    <a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_nodeAdaptor">nodeAdaptor</a>()
@@ -118,7 +118,7 @@
                 <h3 id="method_enqueueCallback">
         <div class="location">at line 29</div>
         <code>            public            
-    <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())</code>
+    <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
     <div class="details">
         <p>Enqueue a callback for execution.</p>
@@ -131,7 +131,7 @@ executed.</p>
 
                     <table>
                     <tr>
-                <td><abbr title="Icecave\Coro\callable">callable</abbr></td>
+                <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
                 <td>$callback</td>
                 <td>The callable to invoke.</td>
             </tr>
@@ -151,7 +151,7 @@ executed.</p>
                 <h3 id="method_enqueueDelayedCallback">
         <div class="location">at line 44</div>
         <code>            public            
-    <strong>enqueueDelayedCallback</strong>(integer|<abbr title="Icecave\Coro\float">float</abbr> $delay, <abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())</code>
+    <strong>enqueueDelayedCallback</strong>(integer|<abbr title="Icecave\Coro\Engine\float">float</abbr> $delay, <abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
     <div class="details">
         <p>Enqueue a callback for execution after a given timeout.</p>
@@ -165,12 +165,12 @@ executed.</p>
 
                     <table>
                     <tr>
-                <td>integer|<abbr title="Icecave\Coro\float">float</abbr></td>
+                <td>integer|<abbr title="Icecave\Coro\Engine\float">float</abbr></td>
                 <td>$delay</td>
                 <td>The number of seconds to wait before invoking the callback.</td>
             </tr>
                     <tr>
-                <td><abbr title="Icecave\Coro\callable">callable</abbr></td>
+                <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
                 <td>$callback</td>
                 <td>The callable to invoke.</td>
             </tr>
@@ -189,7 +189,7 @@ executed.</p>
 
                 <h3 id="method_rootNode">
         <div class="location">at line 51</div>
-        <code>            public            <abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr>
+        <code>            public            <abbr title="Icecave\Coro\Engine\NodeInterface">NodeInterface</abbr>
     <strong>rootNode</strong>()</code>
     </h3>
     <div class="details">
@@ -202,7 +202,7 @@ executed.</p>
 
                     <table>
         <tr>
-            <td><abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr></td>
+            <td><abbr title="Icecave\Coro\Engine\NodeInterface">NodeInterface</abbr></td>
             <td>The root node of the co-routine graph.</td>
         </tr>
     </table>
@@ -214,7 +214,7 @@ executed.</p>
 
                 <h3 id="method_nodeAdaptor">
         <div class="location">at line 58</div>
-        <code>            public            <abbr title="Icecave\Coro\NodeAdaptorInterface">NodeAdaptorInterface</abbr>
+        <code>            public            <a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a>
     <strong>nodeAdaptor</strong>()</code>
     </h3>
     <div class="details">
@@ -227,7 +227,7 @@ executed.</p>
 
                     <table>
         <tr>
-            <td><abbr title="Icecave\Coro\NodeAdaptorInterface">NodeAdaptorInterface</abbr></td>
+            <td><a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></td>
             <td>The adaptor used to convert values into co-routines.</td>
         </tr>
     </table>
