@@ -25,9 +25,14 @@
                 <p>abstract class    <strong>Coro</strong></p>
 
             <div class="description">
-            <p>Utility operations for co-routines.</p>
-            <p>
-</p>
+            <p>Public facade for co-routine operations.</p>
+            <p>This class contains no implementation; it is a proxy for the facade
+implementation provided by whichever co-routine engine is currently being
+used for execution.</p>
+
+<p>The interface {see Icecave\Coro\Engine\FacadeInterface} details the
+operations that are available; some engines may provide additional
+operations.</p>
         </div>
     
     
@@ -40,58 +45,8 @@
                     static&nbsp;
                 </td>
                 <td class="last">
-                    <a href="#method_get">get</a>()
-                    <p>Get the currently executing co-routine.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    static&nbsp;mixed
-                </td>
-                <td class="last">
                     <a href="#method___callStatic">__callStatic</a>($name, array $arguments)
-                    <p>Call a method on the currently executing co-routine.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    static&nbsp;
-                </td>
-                <td class="last">
-                    <a href="#method_sleep">sleep</a>($timeout)
-                    <p>Sleep for a specified period.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    static&nbsp;
-                </td>
-                <td class="last">
-                    <a href="#method_suspend">suspend</a>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback)
-                    <p>Suspend the current co-routine.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    static&nbsp;
-                </td>
-                <td class="last">
-                    <a href="#method_detach">detach</a>($value = null)
-                    <p>Detach from the parent co-routine and continue executing.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    static&nbsp;
-                </td>
-                <td class="last">
-                    <a href="#method_detachWithException">detachWithException</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Detach the current co-routine from it's parent, and re-attach to the root node.</p>
+                    <p>Invoke a method on the current engine's facade implementation.</p>
                 </td>
                 <td></td>
             </tr>
@@ -100,29 +55,13 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method_get">
-        <div class="location">at line 20</div>
+                        <h3 id="method___callStatic">
+        <div class="location">at line 30</div>
         <code>        static    public            
-    <strong>get</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Get the currently executing co-routine.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method___callStatic">
-        <div class="location">at line 37</div>
-        <code>        static    public            mixed
     <strong>__callStatic</strong>($name, array $arguments)</code>
     </h3>
     <div class="details">
-        <p>Call a method on the currently executing co-routine.</p>
+        <p>Invoke a method on the current engine's facade implementation.</p>
         <p>
 </p>
         <div class="tags">
@@ -144,125 +83,17 @@
             </table>
 
             
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>mixed</td>
-            <td>
-</td>
-        </tr>
-    </table>
-
             
             
-                    </div>
-    </div>
-
-                <h3 id="method_sleep">
-        <div class="location">at line 61</div>
-        <code>        static    public            
-    <strong>sleep</strong>($timeout)</code>
-    </h3>
-    <div class="details">
-        <p>Sleep for a specified period.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
+                            <h4>See also</h4>
 
                     <table>
                     <tr>
+                <td>Icecave\Coro\Engine\FacadeInterface</td>
                 <td></td>
-                <td>$timeout</td>
-                <td>
-</td>
             </tr>
             </table>
 
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_suspend">
-        <div class="location">at line 75</div>
-        <code>        static    public            
-    <strong>suspend</strong>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback)</code>
-    </h3>
-    <div class="details">
-        <p>Suspend the current co-routine.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><abbr title="Icecave\Coro\callable">callable</abbr></td>
-                <td>$callback</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_detach">
-        <div class="location">at line 91</div>
-        <code>        static    public            
-    <strong>detach</strong>($value = null)</code>
-    </h3>
-    <div class="details">
-        <p>Detach from the parent co-routine and continue executing.</p>
-        <p>The parent co-routine is resumed with the given value.</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td></td>
-                <td>$value</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_detachWithException">
-        <div class="location">at line 105</div>
-        <code>        static    public            
-    <strong>detachWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
-    </h3>
-    <div class="details">
-        <p>Detach the current co-routine from it's parent, and re-attach to the root node.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
-                <td>$exception</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
-            
-            
-            
                     </div>
     </div>
 

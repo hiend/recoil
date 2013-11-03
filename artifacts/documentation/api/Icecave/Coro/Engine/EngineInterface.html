@@ -60,7 +60,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_enqueueDelayedCallback">enqueueDelayedCallback</a>(integer|<abbr title="Icecave\Coro\Engine\float">float</abbr> $delay, <abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())
+                    <a href="#method_enqueueDelayedCallback">enqueueDelayedCallback</a>(<abbr title="Icecave\Coro\Engine\number">number</abbr> $delay, <abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())
                     <p>Enqueue a callback for execution after a given timeout.</p>
                 </td>
                 <td></td>
@@ -82,6 +82,16 @@
                 <td class="last">
                     <a href="#method_nodeAdaptor">nodeAdaptor</a>()
                     <p>Fetch the adaptor used to convert values into co-routines.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_facadeImplementation">facadeImplementation</a>()
+                    <p>Fetch the object that implements the behaviour of the static Coro facade.</p>
                 </td>
                 <td></td>
             </tr>
@@ -151,7 +161,7 @@ executed.</p>
                 <h3 id="method_enqueueDelayedCallback">
         <div class="location">at line 44</div>
         <code>            public            
-    <strong>enqueueDelayedCallback</strong>(integer|<abbr title="Icecave\Coro\Engine\float">float</abbr> $delay, <abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
+    <strong>enqueueDelayedCallback</strong>(<abbr title="Icecave\Coro\Engine\number">number</abbr> $delay, <abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
     <div class="details">
         <p>Enqueue a callback for execution after a given timeout.</p>
@@ -165,7 +175,7 @@ executed.</p>
 
                     <table>
                     <tr>
-                <td>integer|<abbr title="Icecave\Coro\Engine\float">float</abbr></td>
+                <td><abbr title="Icecave\Coro\Engine\number">number</abbr></td>
                 <td>$delay</td>
                 <td>The number of seconds to wait before invoking the callback.</td>
             </tr>
@@ -229,6 +239,31 @@ executed.</p>
         <tr>
             <td><a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></td>
             <td>The adaptor used to convert values into co-routines.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_facadeImplementation">
+        <div class="location">at line 65</div>
+        <code>            public            <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
+    <strong>facadeImplementation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the object that implements the behaviour of the static Coro facade.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a></td>
+            <td>The object that implements the behaviour of the static Coro facade.</td>
         </tr>
     </table>
 

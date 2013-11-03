@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Icecave\Coro\Engine\FacadeInterface | Coro API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Coro API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../Icecave/Coro/Engine.html">Icecave\Coro\Engine</a>\FacadeInterface</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>FacadeInterface</strong></p>
+
+            <div class="description">
+            <p>A helper object for use through the static Coro facade.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>()
+                    <p>Get the currently executing co-routine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_result">result</a>($value)
+                    <p>Set the value that will be sent to the parent co-routine when this co-routine completes without throwing an exception.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_enqueue">enqueue</a>(mixed $coroutine)
+                    <p>Enqueue a co-routine for execution.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_enqueueCallback">enqueueCallback</a>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())
+                    <p>Enqueue a callback for execution.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_engine">engine</a>()
+                    <p>Fetch the engine on which the current co-routine is executing.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sleep">sleep</a>($timeout)
+                    <p>Suspend execution for a specified period of time.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_suspend">suspend</a>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback)
+                    <p>Suspend the current co-routine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_detach">detach</a>($value = null)
+                    <p>Return a value to the calling co-routine and continue executing.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_detachWithException">detachWithException</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Throw an exception to the calling co-routine and continue executing.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_get">
+        <div class="location">at line 19</div>
+        <code>            public            
+    <strong>get</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the currently executing co-routine.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_result">
+        <div class="location">at line 35</div>
+        <code>            public            
+    <strong>result</strong>($value)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value that will be sent to the parent co-routine when this co-routine completes without throwing an exception.</p>
+        <p>Note that the parent co-routine IS NOT RESUMED until execution of this
+co-routine is completed.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>FacadeInterface::detach()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>FacadeInterface::detachWithException()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_enqueue">
+        <div class="location">at line 44</div>
+        <code>            public            
+    <strong>enqueue</strong>(mixed $coroutine)</code>
+    </h3>
+    <div class="details">
+        <p>Enqueue a co-routine for execution.</p>
+        <p>Co-routines are guaranteed to be started in the order they are enqueued.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$coroutine</td>
+                <td>The co-routine to execute.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enqueueCallback">
+        <div class="location">at line 57</div>
+        <code>            public            
+    <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
+    </h3>
+    <div class="details">
+        <p>Enqueue a callback for execution.</p>
+        <p>Callbacks are guaranteed to be executed in the order they are enqueued.</p>
+
+<p>If the callable returns a value that can be adapted to a co-routine it is
+executed.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
+                <td>$callback</td>
+                <td>The callable to invoke.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>Arguments to pass to the callable.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_engine">
+        <div class="location">at line 64</div>
+        <code>            public            <a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a>
+    <strong>engine</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the engine on which the current co-routine is executing.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a></td>
+            <td>The engine on which the current co-routine is executing.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sleep">
+        <div class="location">at line 73</div>
+        <code>            public            
+    <strong>sleep</strong>($timeout)</code>
+    </h3>
+    <div class="details">
+        <p>Suspend execution for a specified period of time.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$timeout</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_suspend">
+        <div class="location">at line 85</div>
+        <code>            public            
+    <strong>suspend</strong>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback)</code>
+    </h3>
+    <div class="details">
+        <p>Suspend the current co-routine.</p>
+        <p>The callback is invoked with a ResumableInterface object that can be used
+to resume or cancel execution.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
+                <td>$callback</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_detach">
+        <div class="location">at line 96</div>
+        <code>            public            
+    <strong>detach</strong>($value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return a value to the calling co-routine and continue executing.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>FacadeInterface::result()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_detachWithException">
+        <div class="location">at line 107</div>
+        <code>            public            
+    <strong>detachWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Throw an exception to the calling co-routine and continue executing.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>FacadeInterface::result()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

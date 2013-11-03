@@ -41,7 +41,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)
+                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null)
                     <p>
 </p>
                 </td>
@@ -83,7 +83,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_enqueueDelayedCallback">enqueueDelayedCallback</a>(integer|<abbr title="Icecave\Coro\React\float">float</abbr> $delay, <abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())
+                    <a href="#method_enqueueDelayedCallback">enqueueDelayedCallback</a>(<abbr title="Icecave\Coro\React\number">number</abbr> $delay, <abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())
                     <p>Enqueue a callback for execution after a given timeout.</p>
                 </td>
                 <td></td>
@@ -110,6 +110,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_facadeImplementation">facadeImplementation</a>()
+                    <p>Fetch the object that implements the behaviour of the static Coro facade.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
                 </td>
                 <td class="last">
@@ -124,9 +134,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 22</div>
+        <div class="location">at line 24</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)</code>
+    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor = null, <a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -152,6 +162,11 @@
                 <td>$rootNode</td>
                 <td>The root node of the call tree.</td>
             </tr>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a></td>
+                <td>$facadeImplementation</td>
+                <td>The object that implements the behaviour of the static Coro facade.</td>
+            </tr>
             </table>
 
             
@@ -161,7 +176,7 @@
     </div>
 
                 <h3 id="method___destruct">
-        <div class="location">at line 51</div>
+        <div class="location">at line 58</div>
         <code>            public            
     <strong>__destruct</strong>()</code>
     </h3>
@@ -178,7 +193,7 @@
     </div>
 
                 <h3 id="method_enqueue">
-        <div class="location">at line 64</div>
+        <div class="location">at line 71</div>
         <code>            public            
     <strong>enqueue</strong>(mixed $coroutine)</code>
     </h3>
@@ -203,7 +218,7 @@
     </div>
 
                 <h3 id="method_enqueueCallback">
-        <div class="location">at line 89</div>
+        <div class="location">at line 96</div>
         <code>            public            
     <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
@@ -236,9 +251,9 @@ executed.</p>
     </div>
 
                 <h3 id="method_enqueueDelayedCallback">
-        <div class="location">at line 118</div>
+        <div class="location">at line 125</div>
         <code>            public            
-    <strong>enqueueDelayedCallback</strong>(integer|<abbr title="Icecave\Coro\React\float">float</abbr> $delay, <abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())</code>
+    <strong>enqueueDelayedCallback</strong>(<abbr title="Icecave\Coro\React\number">number</abbr> $delay, <abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
     <div class="details">
         <p>Enqueue a callback for execution after a given timeout.</p>
@@ -252,7 +267,7 @@ executed.</p>
 
                     <table>
                     <tr>
-                <td>integer|<abbr title="Icecave\Coro\React\float">float</abbr></td>
+                <td><abbr title="Icecave\Coro\React\number">number</abbr></td>
                 <td>$delay</td>
                 <td>The number of seconds to wait before invoking the callback.</td>
             </tr>
@@ -275,7 +290,7 @@ executed.</p>
     </div>
 
                 <h3 id="method_rootNode">
-        <div class="location">at line 135</div>
+        <div class="location">at line 142</div>
         <code>            public            <abbr title="Icecave\Coro\React\NodeInterface">NodeInterface</abbr>
     <strong>rootNode</strong>()</code>
     </h3>
@@ -300,7 +315,7 @@ executed.</p>
     </div>
 
                 <h3 id="method_nodeAdaptor">
-        <div class="location">at line 147</div>
+        <div class="location">at line 154</div>
         <code>            public            <a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a>
     <strong>nodeAdaptor</strong>()</code>
     </h3>
@@ -324,8 +339,33 @@ executed.</p>
                     </div>
     </div>
 
+                <h3 id="method_facadeImplementation">
+        <div class="location">at line 166</div>
+        <code>            public            <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
+    <strong>facadeImplementation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the object that implements the behaviour of the static Coro facade.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a></td>
+            <td>The object that implements the behaviour of the static Coro facade.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_eventLoop">
-        <div class="location">at line 159</div>
+        <div class="location">at line 178</div>
         <code>            public            <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
     <strong>eventLoop</strong>()</code>
     </h3>
