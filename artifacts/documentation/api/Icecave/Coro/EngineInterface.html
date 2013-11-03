@@ -57,6 +57,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_enqueueDelayedCallback">enqueueDelayedCallback</a>(integer|<abbr title="Icecave\Coro\float">float</abbr> $delay, <abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())
+                    <p>Enqueue a callback for execution after a given timeout.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     <abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr>
                 </td>
                 <td class="last">
@@ -75,23 +85,13 @@
                 </td>
                 <td></td>
             </tr>
-                    <tr>
-                <td class="type">
-                    <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
-                </td>
-                <td class="last">
-                    <a href="#method_eventLoop">eventLoop</a>()
-                    <p>Fetch the ReactPHP event loop to used by the engine for IO and timers.</p>
-                </td>
-                <td></td>
-            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method_enqueue">
-        <div class="location">at line 18</div>
+        <div class="location">at line 16</div>
         <code>            public            
     <strong>enqueue</strong>(mixed $coroutine)</code>
     </h3>
@@ -116,7 +116,7 @@
     </div>
 
                 <h3 id="method_enqueueCallback">
-        <div class="location">at line 31</div>
+        <div class="location">at line 29</div>
         <code>            public            
     <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
@@ -124,7 +124,7 @@
         <p>Enqueue a callback for execution.</p>
         <p>Callbacks are guaranteed to be executed in the order they are enqueued.</p>
 
-<p>If the function returns a value that can be adapted to a co-routine it is
+<p>If the callable returns a value that can be adapted to a co-routine it is
 executed.</p>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -148,8 +148,47 @@ executed.</p>
                     </div>
     </div>
 
+                <h3 id="method_enqueueDelayedCallback">
+        <div class="location">at line 44</div>
+        <code>            public            
+    <strong>enqueueDelayedCallback</strong>(integer|<abbr title="Icecave\Coro\float">float</abbr> $delay, <abbr title="Icecave\Coro\callable">callable</abbr> $callback, array $arguments = array())</code>
+    </h3>
+    <div class="details">
+        <p>Enqueue a callback for execution after a given timeout.</p>
+        <p>There is no guarantee made about the order of execution of callbacks that
+are scheduled for execution at the same time.</p>
+
+<p>If the callback returns a value that can be adapted to a co-routine it is
+executed.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer|<abbr title="Icecave\Coro\float">float</abbr></td>
+                <td>$delay</td>
+                <td>The number of seconds to wait before invoking the callback.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Icecave\Coro\callable">callable</abbr></td>
+                <td>$callback</td>
+                <td>The callable to invoke.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>Arguments to pass to the callable.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_rootNode">
-        <div class="location">at line 38</div>
+        <div class="location">at line 51</div>
         <code>            public            <abbr title="Icecave\Coro\NodeInterface">NodeInterface</abbr>
     <strong>rootNode</strong>()</code>
     </h3>
@@ -174,7 +213,7 @@ executed.</p>
     </div>
 
                 <h3 id="method_nodeAdaptor">
-        <div class="location">at line 45</div>
+        <div class="location">at line 58</div>
         <code>            public            <abbr title="Icecave\Coro\NodeAdaptorInterface">NodeAdaptorInterface</abbr>
     <strong>nodeAdaptor</strong>()</code>
     </h3>
@@ -190,31 +229,6 @@ executed.</p>
         <tr>
             <td><abbr title="Icecave\Coro\NodeAdaptorInterface">NodeAdaptorInterface</abbr></td>
             <td>The adaptor used to convert values into co-routines.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_eventLoop">
-        <div class="location">at line 52</div>
-        <code>            public            <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
-    <strong>eventLoop</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Fetch the ReactPHP event loop to used by the engine for IO and timers.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
-            <td>The ReactPHP event loop to used by the engine for IO and timers.</td>
         </tr>
     </table>
 
