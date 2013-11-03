@@ -36,7 +36,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<a href="../../../Icecave/Coro/Coroutine/DriverInterface.html"><abbr title="Icecave\Coro\Coroutine\DriverInterface">DriverInterface</abbr></a> $driver, <a href="../../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor)
+                    <a href="#method___construct">__construct</a>(<a href="../../../Icecave/Coro/Coroutine/DriverInterface.html"><abbr title="Icecave\Coro\Coroutine\DriverInterface">DriverInterface</abbr></a> $driver)
                     <p>
 </p>
                 </td>
@@ -148,9 +148,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 23</div>
+        <div class="location">at line 21</div>
         <code>            public            
-    <strong>__construct</strong>(<a href="../../../Icecave/Coro/Coroutine/DriverInterface.html"><abbr title="Icecave\Coro\Coroutine\DriverInterface">DriverInterface</abbr></a> $driver, <a href="../../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a> $nodeAdaptor)</code>
+    <strong>__construct</strong>(<a href="../../../Icecave/Coro/Coroutine/DriverInterface.html"><abbr title="Icecave\Coro\Coroutine\DriverInterface">DriverInterface</abbr></a> $driver)</code>
     </h3>
     <div class="details">
         <p>
@@ -166,11 +166,6 @@
                 <td>$driver</td>
                 <td>The co-routine driver that implements the low-level co-routine logic.</td>
             </tr>
-                    <tr>
-                <td><a href="../../../Icecave/Coro/Tree/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Tree\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></td>
-                <td>$nodeAdaptor</td>
-                <td>The adaptor used to convert yielded values into nodes.</td>
-            </tr>
             </table>
 
             
@@ -180,7 +175,7 @@
     </div>
 
                 <h3 id="method_status">
-        <div class="location">at line 37</div>
+        <div class="location">at line 34</div>
         <code>            public            <a href="../../../Icecave/Coro/Coroutine/CoroutineStatus.html"><abbr title="Icecave\Coro\Coroutine\CoroutineStatus">CoroutineStatus</abbr></a>
     <strong>status</strong>()</code>
     </h3>
@@ -205,7 +200,7 @@
     </div>
 
                 <h3 id="method_returnValue">
-        <div class="location">at line 50</div>
+        <div class="location">at line 47</div>
         <code>            public            mixed
     <strong>returnValue</strong>()</code>
     </h3>
@@ -230,7 +225,7 @@
     </div>
 
                 <h3 id="method_setReturnValue">
-        <div class="location">at line 63</div>
+        <div class="location">at line 60</div>
         <code>            public            
     <strong>setReturnValue</strong>(mixed $returnValue)</code>
     </h3>
@@ -256,7 +251,7 @@
     </div>
 
                 <h3 id="method_execute">
-        <div class="location">at line 73</div>
+        <div class="location">at line 70</div>
         <code>            public            
     <strong>execute</strong>()</code>
     </h3>
@@ -272,7 +267,7 @@
     </div>
 
                 <h3 id="method_resume">
-        <div class="location">at line 115</div>
+        <div class="location">at line 112</div>
         <code>            public            
     <strong>resume</strong>(mixed $value = null)</code>
     </h3>
@@ -298,7 +293,7 @@
     </div>
 
                 <h3 id="method_resumeWithException">
-        <div class="location">at line 143</div>
+        <div class="location">at line 140</div>
         <code>            public            
     <strong>resumeWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
@@ -324,7 +319,7 @@
     </div>
 
                 <h3 id="method_cancel">
-        <div class="location">at line 169</div>
+        <div class="location">at line 166</div>
         <code>            public            
     <strong>cancel</strong>()</code>
     </h3>
@@ -340,7 +335,7 @@
     </div>
 
                 <h3 id="method_sendValue">
-        <div class="location">at line 203</div>
+        <div class="location">at line 200</div>
         <code>            public            
     <strong>sendValue</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)</code>
     </h3>
@@ -371,7 +366,7 @@
     </div>
 
                 <h3 id="method_sendError">
-        <div class="location">at line 217</div>
+        <div class="location">at line 214</div>
         <code>            public            
     <strong>sendError</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
@@ -402,7 +397,7 @@
     </div>
 
                 <h3 id="method_destroy">
-        <div class="location">at line 228</div>
+        <div class="location">at line 225</div>
         <code>            public            
     <strong>destroy</strong>()</code>
     </h3>
