@@ -173,18 +173,10 @@
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Engine/AbstractFacade.html" target="main"><abbr title="Icecave\Coro\Engine\AbstractFacade">Icecave\Coro\Engine\AbstractFacade</abbr></a>
+                                        <a href="Icecave/Coro/Engine/AbstractEngine.html" target="main"><abbr title="Icecave\Coro\Engine\AbstractEngine">Icecave\Coro\Engine\AbstractEngine</abbr></a>
                                     </td>
                 <td>
-                    A helper object for use through the static Coro facade.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Engine/AbstractNodeAdaptor.html" target="main"><abbr title="Icecave\Coro\Engine\AbstractNodeAdaptor">Icecave\Coro\Engine\AbstractNodeAdaptor</abbr></a>
-                                    </td>
-                <td>
-                    Abstract base class for node adaptor implementations.
+                    Base class for engines.
                 </td>
             </tr>
                     <tr>
@@ -193,6 +185,14 @@
                     </em>                </td>
                 <td>
                     A co-routine engine.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Engine/Facade.html" target="main"><abbr title="Icecave\Coro\Engine\Facade">Icecave\Coro\Engine\Facade</abbr></a>
+                                    </td>
+                <td>
+                    A helper object for use through the static Coro facade.
                 </td>
             </tr>
                     <tr>
@@ -213,10 +213,26 @@
             </tr>
                     <tr>
                 <td>
+                                        <a href="Icecave/Coro/Engine/NodeAdaptor.html" target="main"><abbr title="Icecave\Coro\Engine\NodeAdaptor">Icecave\Coro\Engine\NodeAdaptor</abbr></a>
+                                    </td>
+                <td>
+                    Base class for node adaptor implementations.
+                </td>
+            </tr>
+                    <tr>
+                <td>
                     <em>                    <a href="Icecave/Coro/Engine/NodeAdaptorInterface.html" target="main"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">Icecave\Coro\Engine\NodeAdaptorInterface</abbr></a>
                     </em>                </td>
                 <td>
                     Adapts arbitrary values into executable nodes.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Engine/SynchronousEngine.html" target="main"><abbr title="Icecave\Coro\Engine\SynchronousEngine">Icecave\Coro\Engine\SynchronousEngine</abbr></a>
+                                    </td>
+                <td>
+                    A simple synchronous co-routine interface.
                 </td>
             </tr>
                     <tr>
@@ -297,7 +313,7 @@
                                         <a href="Icecave/Coro/React/EventLoopEngine.html" target="main"><abbr title="Icecave\Coro\React\EventLoopEngine">Icecave\Coro\React\EventLoopEngine</abbr></a>
                                     </td>
                 <td>
-                    Coro's default co-routine engine.
+                    A co-routine engine based on ReactPHP's event loop.
                 </td>
             </tr>
                     <tr>
