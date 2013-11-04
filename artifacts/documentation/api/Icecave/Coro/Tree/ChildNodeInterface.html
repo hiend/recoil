@@ -51,16 +51,6 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_destroy">destroy</a>()
-                    <p>Destroy this node.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/NodeInterface.html#method_destroy"><abbr title="Icecave\Coro\Tree\NodeInterface">NodeInterface</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
                     <a href="#method_attach">attach</a>(<a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $parent)
                     <p>Attach this node to a parent.</p>
                 </td>
@@ -91,7 +81,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_sendValueToParent">sendValueToParent</a>(mixed $value = null)
+                    <a href="#method_emitValue">emitValue</a>(mixed $value = null)
                     <p>Send this node's parent a value.</p>
                 </td>
                 <td></td>
@@ -101,7 +91,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_sendErrorToParent">sendErrorToParent</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <a href="#method_emitError">emitError</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
                     <p>Send this node's parent an error.</p>
                 </td>
                 <td></td>
@@ -111,7 +101,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_sendValueToParentAndDestroy">sendValueToParentAndDestroy</a>(mixed $value = null)
+                    <a href="#method_emitValueAndDetach">emitValueAndDetach</a>(mixed $value = null)
                     <p>Send this node's parent a value.</p>
                 </td>
                 <td></td>
@@ -121,7 +111,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_sendErrorToParentAndDestroy">sendErrorToParentAndDestroy</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <a href="#method_emitErrorAndDetach">emitErrorAndDetach</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
                     <p>Send this node's parent an error.</p>
                 </td>
                 <td></td>
@@ -151,22 +141,6 @@
         </tr>
     </table>
 
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_destroy">
-        <div class="location">in <a href="../../../Icecave/Coro/Tree/NodeInterface.html#method_destroy"><abbr title="Icecave\Coro\Tree\NodeInterface">NodeInterface</abbr></a> at line 21</div>
-        <code>            public            
-    <strong>destroy</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Destroy this node.</p>
-        <p>
-</p>
-        <div class="tags">
-            
             
             
                     </div>
@@ -266,10 +240,10 @@
                     </div>
     </div>
 
-                <h3 id="method_sendValueToParent">
+                <h3 id="method_emitValue">
         <div class="location">at line 40</div>
         <code>            public            
-    <strong>sendValueToParent</strong>(mixed $value = null)</code>
+    <strong>emitValue</strong>(mixed $value = null)</code>
     </h3>
     <div class="details">
         <p>Send this node's parent a value.</p>
@@ -292,10 +266,10 @@
                     </div>
     </div>
 
-                <h3 id="method_sendErrorToParent">
+                <h3 id="method_emitError">
         <div class="location">at line 47</div>
         <code>            public            
-    <strong>sendErrorToParent</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    <strong>emitError</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
         <p>Send this node's parent an error.</p>
@@ -318,10 +292,10 @@
                     </div>
     </div>
 
-                <h3 id="method_sendValueToParentAndDestroy">
+                <h3 id="method_emitValueAndDetach">
         <div class="location">at line 54</div>
         <code>            public            
-    <strong>sendValueToParentAndDestroy</strong>(mixed $value = null)</code>
+    <strong>emitValueAndDetach</strong>(mixed $value = null)</code>
     </h3>
     <div class="details">
         <p>Send this node's parent a value.</p>
@@ -344,10 +318,10 @@
                     </div>
     </div>
 
-                <h3 id="method_sendErrorToParentAndDestroy">
+                <h3 id="method_emitErrorAndDetach">
         <div class="location">at line 61</div>
         <code>            public            
-    <strong>sendErrorToParentAndDestroy</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    <strong>emitErrorAndDetach</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
         <p>Send this node's parent an error.</p>

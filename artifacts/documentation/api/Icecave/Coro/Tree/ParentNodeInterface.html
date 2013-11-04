@@ -51,18 +51,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_destroy">destroy</a>()
-                    <p>Destroy this node.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/NodeInterface.html#method_destroy"><abbr title="Icecave\Coro\Tree\NodeInterface">NodeInterface</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_addChild">addChild</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)
-                    <p>Add a child to the list of children.</p>
+                    <a href="#method_onAttach">onAttach</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)
+                    <p>Notify the node that a child has been attached.</p>
                 </td>
                 <td></td>
             </tr>
@@ -71,18 +61,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_removeChild">removeChild</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)
-                    <p>Remove a child from the list of children.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <abbr title="Icecave\Coro\Tree\mixed&lt;ChildNodeInterface&gt;">mixed&lt;ChildNodeInterface&gt;</abbr>
-                </td>
-                <td class="last">
-                    <a href="#method_children">children</a>()
-                    <p>Fetch the children attached to the root.</p>
+                    <a href="#method_onDetach">onDetach</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)
+                    <p>Notify the node that a child has been detached.</p>
                 </td>
                 <td></td>
             </tr>
@@ -91,8 +71,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_sendValue">sendValue</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)
-                    <p>Send this node a value.</p>
+                    <a href="#method_onValue">onValue</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)
+                    <p>Notify the node of a value.</p>
                 </td>
                 <td></td>
             </tr>
@@ -101,8 +81,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_sendError">sendError</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Send this node an error.</p>
+                    <a href="#method_onError">onError</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Notify the node of an error.</p>
                 </td>
                 <td></td>
             </tr>
@@ -136,29 +116,13 @@
                     </div>
     </div>
 
-                <h3 id="method_destroy">
-        <div class="location">in <a href="../../../Icecave/Coro/Tree/NodeInterface.html#method_destroy"><abbr title="Icecave\Coro\Tree\NodeInterface">NodeInterface</abbr></a> at line 21</div>
-        <code>            public            
-    <strong>destroy</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Destroy this node.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_addChild">
+                <h3 id="method_onAttach">
         <div class="location">at line 16</div>
         <code>            public            
-    <strong>addChild</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)</code>
+    <strong>onAttach</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)</code>
     </h3>
     <div class="details">
-        <p>Add a child to the list of children.</p>
+        <p>Notify the node that a child has been attached.</p>
         <p>
 </p>
         <div class="tags">
@@ -168,7 +132,7 @@
                     <tr>
                 <td><a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></td>
                 <td>$child</td>
-                <td>The child to add.</td>
+                <td>The child that has been attached.</td>
             </tr>
             </table>
 
@@ -178,13 +142,13 @@
                     </div>
     </div>
 
-                <h3 id="method_removeChild">
+                <h3 id="method_onDetach">
         <div class="location">at line 23</div>
         <code>            public            
-    <strong>removeChild</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)</code>
+    <strong>onDetach</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)</code>
     </h3>
     <div class="details">
-        <p>Remove a child from the list of children.</p>
+        <p>Notify the node that a child has been detached.</p>
         <p>
 </p>
         <div class="tags">
@@ -194,7 +158,7 @@
                     <tr>
                 <td><a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></td>
                 <td>$child</td>
-                <td>The child to remove.</td>
+                <td>The child that has been detached.</td>
             </tr>
             </table>
 
@@ -204,38 +168,13 @@
                     </div>
     </div>
 
-                <h3 id="method_children">
-        <div class="location">at line 30</div>
-        <code>            public            <abbr title="Icecave\Coro\Tree\mixed&lt;ChildNodeInterface&gt;">mixed&lt;ChildNodeInterface&gt;</abbr>
-    <strong>children</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Fetch the children attached to the root.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><abbr title="Icecave\Coro\Tree\mixed&lt;ChildNodeInterface&gt;">mixed&lt;ChildNodeInterface&gt;</abbr></td>
-            <td>The children attached to the root.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_sendValue">
-        <div class="location">at line 38</div>
+                <h3 id="method_onValue">
+        <div class="location">at line 31</div>
         <code>            public            
-    <strong>sendValue</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)</code>
+    <strong>onValue</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)</code>
     </h3>
     <div class="details">
-        <p>Send this node a value.</p>
+        <p>Notify the node of a value.</p>
         <p>
 </p>
         <div class="tags">
@@ -260,13 +199,13 @@
                     </div>
     </div>
 
-                <h3 id="method_sendError">
-        <div class="location">at line 46</div>
+                <h3 id="method_onError">
+        <div class="location">at line 39</div>
         <code>            public            
-    <strong>sendError</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    <strong>onError</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Send this node an error.</p>
+        <p>Notify the node of an error.</p>
         <p>
 </p>
         <div class="tags">

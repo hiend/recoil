@@ -72,8 +72,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_destroy">destroy</a>()
-                    <p>Destroy this node.</p>
+                    <a href="#method_onValue">onValue</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)
+                    <p>Notify the node of a value.</p>
                 </td>
                 <td></td>
             </tr>
@@ -82,18 +82,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_sendValue">sendValue</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)
-                    <p>Send this node a value.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_sendError">sendError</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Send this node an error.</p>
+                    <a href="#method_onError">onError</a>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Notify the node of an error.</p>
                 </td>
                 <td></td>
             </tr>
@@ -170,29 +160,13 @@
                     </div>
     </div>
 
-                <h3 id="method_destroy">
-        <div class="location">at line 53</div>
+                <h3 id="method_onValue">
+        <div class="location">at line 56</div>
         <code>            public            
-    <strong>destroy</strong>()</code>
+    <strong>onValue</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)</code>
     </h3>
     <div class="details">
-        <p>Destroy this node.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_sendValue">
-        <div class="location">at line 68</div>
-        <code>            public            
-    <strong>sendValue</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)</code>
-    </h3>
-    <div class="details">
-        <p>Send this node a value.</p>
+        <p>Notify the node of a value.</p>
         <p>
 </p>
         <div class="tags">
@@ -217,13 +191,13 @@
                     </div>
     </div>
 
-                <h3 id="method_sendError">
-        <div class="location">at line 81</div>
+                <h3 id="method_onError">
+        <div class="location">at line 67</div>
         <code>            public            
-    <strong>sendError</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    <strong>onError</strong>(<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Send this node an error.</p>
+        <p>Notify the node of an error.</p>
         <p>
 </p>
         <div class="tags">
