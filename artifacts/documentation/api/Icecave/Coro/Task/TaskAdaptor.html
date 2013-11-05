@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Coro\Engine\NodeAdaptor | Coro API</title>
+        <title>Icecave\Coro\Task\TaskAdaptor | Coro API</title>
                     <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
@@ -19,14 +19,14 @@
         <div id="title">Coro API</div>
 
             <div class="type">Class</div>
-    <h1><a href="../../../Icecave/Coro/Engine.html">Icecave\Coro\Engine</a>\NodeAdaptor</h1>
+    <h1><a href="../../../Icecave/Coro/Task.html">Icecave\Coro\Task</a>\TaskAdaptor</h1>
     </div>
         <div class="content">
-                <p>class    <strong>NodeAdaptor</strong>        implements
-        <a href="../../../Icecave/Coro/Engine/NodeAdaptorInterface.html"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">NodeAdaptorInterface</abbr></a></p>
+                <p>class    <strong>TaskAdaptor</strong>        implements
+        <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a></p>
 
             <div class="description">
-            <p>Base class for node adaptor implementations.</p>
+            <p>The base/default task adaptor implementation.</p>
             <p>
 </p>
         </div>
@@ -38,32 +38,21 @@
             <table>
                     <tr>
                 <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method___construct">__construct</a>()
-                    <p>
-</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../Icecave/Coro/Tree/ExecutableNodeInterface.html"><abbr title="Icecave\Coro\Tree\ExecutableNodeInterface">ExecutableNodeInterface</abbr></a>
+                    <a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_adapt">adapt</a>(mixed $value)
-                    <p>Adapt a value into a node.</p>
+                    <p>Adapt a value into a task.</p>
                 </td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../Icecave/Coro/Tree/ExecutableNodeInterface.html"><abbr title="Icecave\Coro\Tree\ExecutableNodeInterface">ExecutableNodeInterface</abbr></a>|null
+                    <a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a>|null
                 </td>
                 <td class="last">
                     <a href="#method_tryAdapt">tryAdapt</a>(mixed $value)
-                    <p>Attempt to adapt a value into a node.</p>
+                    <p>Attempt to adapt a value into a task.</p>
                 </td>
                 <td></td>
             </tr>
@@ -72,30 +61,13 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 19</div>
-        <code>            public            
-    <strong>__construct</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_adapt">
-        <div class="location">at line 32</div>
-        <code>            public            <a href="../../../Icecave/Coro/Tree/ExecutableNodeInterface.html"><abbr title="Icecave\Coro\Tree\ExecutableNodeInterface">ExecutableNodeInterface</abbr></a>
+                        <h3 id="method_adapt">
+        <div class="location">at line 24</div>
+        <code>            public            <a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a>
     <strong>adapt</strong>(mixed $value)</code>
     </h3>
     <div class="details">
-        <p>Adapt a value into a node.</p>
+        <p>Adapt a value into a task.</p>
         <p>
 </p>
         <div class="tags">
@@ -114,8 +86,8 @@
 
                     <table>
         <tr>
-            <td><a href="../../../Icecave/Coro/Tree/ExecutableNodeInterface.html"><abbr title="Icecave\Coro\Tree\ExecutableNodeInterface">ExecutableNodeInterface</abbr></a></td>
-            <td>The resulting node.</td>
+            <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+            <td>The resulting task.</td>
         </tr>
     </table>
 
@@ -125,7 +97,7 @@
                     <table>
                     <tr>
                 <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
-                <td>if there is no meaningful adaptation.</td>
+                <td>if the given value can not be adapted into a task.</td>
             </tr>
             </table>
 
@@ -134,12 +106,12 @@
     </div>
 
                 <h3 id="method_tryAdapt">
-        <div class="location">at line 52</div>
-        <code>            public            <a href="../../../Icecave/Coro/Tree/ExecutableNodeInterface.html"><abbr title="Icecave\Coro\Tree\ExecutableNodeInterface">ExecutableNodeInterface</abbr></a>|null
+        <div class="location">at line 42</div>
+        <code>            public            <a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a>|null
     <strong>tryAdapt</strong>(mixed $value)</code>
     </h3>
     <div class="details">
-        <p>Attempt to adapt a value into a node.</p>
+        <p>Attempt to adapt a value into a task.</p>
         <p>
 </p>
         <div class="tags">
@@ -158,8 +130,8 @@
 
                     <table>
         <tr>
-            <td><a href="../../../Icecave/Coro/Tree/ExecutableNodeInterface.html"><abbr title="Icecave\Coro\Tree\ExecutableNodeInterface">ExecutableNodeInterface</abbr></a>|null</td>
-            <td>The resulting node, or null if there is no meaningful adaptation.</td>
+            <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a>|null</td>
+            <td>The resulting task, or null if there is no meaningful adaptation.</td>
         </tr>
     </table>
 

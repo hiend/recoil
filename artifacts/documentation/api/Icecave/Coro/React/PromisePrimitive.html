@@ -22,7 +22,7 @@
     <h1><a href="../../../Icecave/Coro/React.html">Icecave\Coro\React</a>\PromisePrimitive</h1>
     </div>
         <div class="content">
-                <p>class    <strong>PromisePrimitive</strong>        extends <a href="../../../Icecave/Coro/Primitive/AbstractPrimitive.html"><abbr title="Icecave\Coro\Primitive\AbstractPrimitive">AbstractPrimitive</abbr></a></p>
+                <p>class    <strong>PromisePrimitive</strong>        extends <a href="../../../Icecave/Coro/Task/Primitives/AbstractPrimitive.html"><abbr title="Icecave\Coro\Task\Primitives\AbstractPrimitive">AbstractPrimitive</abbr></a></p>
 
             <div class="description">
             <p>Send a value or error to the parent node when a promise is fulfilled.</p>
@@ -43,16 +43,6 @@
                     <a href="#method___construct">__construct</a>(<abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr> $promise, <abbr title="Icecave\Coro\React\callable">callable</abbr> $progressCallback = null)
                     <p>
 </p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_execute">execute</a>()
-                    <p>Execute the action associated with this node.</p>
                 </td>
                 <td></td>
             </tr>
@@ -95,7 +85,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 19</div>
+        <div class="location">at line 18</div>
         <code>            public            
     <strong>__construct</strong>(<abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr> $promise, <abbr title="Icecave\Coro\React\callable">callable</abbr> $progressCallback = null)</code>
     </h3>
@@ -126,24 +116,8 @@
                     </div>
     </div>
 
-                <h3 id="method_execute">
-        <div class="location">at line 30</div>
-        <code>            public            
-    <strong>execute</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Execute the action associated with this node.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
                 <h3 id="method_onPromiseFulfilled">
-        <div class="location">at line 44</div>
+        <div class="location">at line 41</div>
         <code>            public            
     <strong>onPromiseFulfilled</strong>(mixed $value)</code>
     </h3>
@@ -171,7 +145,7 @@
     </div>
 
                 <h3 id="method_onPromiseRejected">
-        <div class="location">at line 56</div>
+        <div class="location">at line 51</div>
         <code>            public            
     <strong>onPromiseRejected</strong>(mixed $reason)</code>
     </h3>
@@ -199,7 +173,7 @@
     </div>
 
                 <h3 id="method_onPromiseProgress">
-        <div class="location">at line 73</div>
+        <div class="location">at line 67</div>
         <code>            public            
     <strong>onPromiseProgress</strong>(mixed $value)</code>
     </h3>

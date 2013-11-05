@@ -95,15 +95,6 @@
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Coroutine/BaseResumableInterface.html" target="main"><abbr title="Icecave\Coro\Coroutine\BaseResumableInterface">Icecave\Coro\Coroutine\BaseResumableInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td>
                                         <a href="Icecave/Coro/Coroutine/Coroutine.html" target="main"><abbr title="Icecave\Coro\Coroutine\Coroutine">Icecave\Coro\Coroutine\Coroutine</abbr></a>
                                     </td>
                 <td>
@@ -122,11 +113,10 @@
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Coroutine/CoroutineStatus.html" target="main"><abbr title="Icecave\Coro\Coroutine\CoroutineStatus">Icecave\Coro\Coroutine\CoroutineStatus</abbr></a>
+                                        <a href="Icecave/Coro/Coroutine/CoroutineResumer.html" target="main"><abbr title="Icecave\Coro\Coroutine\CoroutineResumer">Icecave\Coro\Coroutine\CoroutineResumer</abbr></a>
                                     </td>
                 <td>
-                    
-
+                    Public interface for resuming or cancelling suspended co-routines.
                 </td>
             </tr>
                     <tr>
@@ -147,23 +137,6 @@
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Coroutine/ResumableInterface.html" target="main"><abbr title="Icecave\Coro\Coroutine\ResumableInterface">Icecave\Coro\Coroutine\ResumableInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Coroutine/ScopedResumable.html" target="main"><abbr title="Icecave\Coro\Coroutine\ScopedResumable">Icecave\Coro\Coroutine\ScopedResumable</abbr></a>
-                                    </td>
-                <td>
-                    Wraps a resumable, and automatically cancels it if this object goes out of scope before manually being resumed or cancelled.
-                </td>
-            </tr>
-                    <tr>
-                <td>
                                         <a href="Icecave/Coro/Engine/AbstractEngine.html" target="main"><abbr title="Icecave\Coro\Engine\AbstractEngine">Icecave\Coro\Engine\AbstractEngine</abbr></a>
                                     </td>
                 <td>
@@ -180,24 +153,6 @@
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Engine/Exception/CancelException.html" target="main"><abbr title="Icecave\Coro\Engine\Exception\CancelException">Icecave\Coro\Engine\Exception\CancelException</abbr></a>
-                                    </td>
-                <td>
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Engine/Exception/TimeoutException.html" target="main"><abbr title="Icecave\Coro\Engine\Exception\TimeoutException">Icecave\Coro\Engine\Exception\TimeoutException</abbr></a>
-                                    </td>
-                <td>
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td>
                                         <a href="Icecave/Coro/Engine/Facade.html" target="main"><abbr title="Icecave\Coro\Engine\Facade">Icecave\Coro\Engine\Facade</abbr></a>
                                     </td>
                 <td>
@@ -210,30 +165,6 @@
                     </em>                </td>
                 <td>
                     A helper object for use through the static Coro facade.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Engine/FacadeOperation.html" target="main"><abbr title="Icecave\Coro\Engine\FacadeOperation">Icecave\Coro\Engine\FacadeOperation</abbr></a>
-                                    </td>
-                <td>
-                    Abstract base class for node adaptor implementations.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Engine/NodeAdaptor.html" target="main"><abbr title="Icecave\Coro\Engine\NodeAdaptor">Icecave\Coro\Engine\NodeAdaptor</abbr></a>
-                                    </td>
-                <td>
-                    Base class for node adaptor implementations.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                    <em>                    <a href="Icecave/Coro/Engine/NodeAdaptorInterface.html" target="main"><abbr title="Icecave\Coro\Engine\NodeAdaptorInterface">Icecave\Coro\Engine\NodeAdaptorInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    Adapts arbitrary values into executable nodes.
                 </td>
             </tr>
                     <tr>
@@ -255,98 +186,10 @@
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Primitive/AbstractDetachPrimitive.html" target="main"><abbr title="Icecave\Coro\Primitive\AbstractDetachPrimitive">Icecave\Coro\Primitive\AbstractDetachPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    A primitive that detaches the parent from it's parent co-routine and continue executing.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Primitive/AbstractPrimitive.html" target="main"><abbr title="Icecave\Coro\Primitive\AbstractPrimitive">Icecave\Coro\Primitive\AbstractPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    The base class for all primitives.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Primitive/CallbackPrimitive.html" target="main"><abbr title="Icecave\Coro\Primitive\CallbackPrimitive">Icecave\Coro\Primitive\CallbackPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    Invoke a callback and send the result to the parent node.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Primitive/CooperativePrimitive.html" target="main"><abbr title="Icecave\Coro\Primitive\CooperativePrimitive">Icecave\Coro\Primitive\CooperativePrimitive</abbr></a>
-                                    </td>
-                <td>
-                    Perform a co-operative yield.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Primitive/DetachPrimitive.html" target="main"><abbr title="Icecave\Coro\Primitive\DetachPrimitive">Icecave\Coro\Primitive\DetachPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    A primitive that detaches the parent from it's parent co-routine and continue executing.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Primitive/DetachWithExceptionPrimitive.html" target="main"><abbr title="Icecave\Coro\Primitive\DetachWithExceptionPrimitive">Icecave\Coro\Primitive\DetachWithExceptionPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    A primitive that detaches the parent from it's parent co-routine and continue executing.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Primitive/SleepPrimitive.html" target="main"><abbr title="Icecave\Coro\Primitive\SleepPrimitive">Icecave\Coro\Primitive\SleepPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    A primitive which sends null to it's parent after the specified number of seconds.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Primitive/SuspendPrimitive.html" target="main"><abbr title="Icecave\Coro\Primitive\SuspendPrimitive">Icecave\Coro\Primitive\SuspendPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    Suspend the parent node, and pass an object that can be used to resume it to the given callback.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Primitive/TimeoutPrimitive.html" target="main"><abbr title="Icecave\Coro\Primitive\TimeoutPrimitive">Icecave\Coro\Primitive\TimeoutPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    A primitive which cancels its child if it is not complete within a certain period.
-                </td>
-            </tr>
-                    <tr>
-                <td>
                                         <a href="Icecave/Coro/React/EventLoopEngine.html" target="main"><abbr title="Icecave\Coro\React\EventLoopEngine">Icecave\Coro\React\EventLoopEngine</abbr></a>
                                     </td>
                 <td>
                     A co-routine engine based on ReactPHP's event loop.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/React/Facade.html" target="main"><abbr title="Icecave\Coro\React\Facade">Icecave\Coro\React\Facade</abbr></a>
-                                    </td>
-                <td>
-                    A helper object for use through the static Coro facade.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/React/NodeAdaptor.html" target="main"><abbr title="Icecave\Coro\React\NodeAdaptor">Icecave\Coro\React\NodeAdaptor</abbr></a>
-                                    </td>
-                <td>
-                    Node adaptor for use with the react event loop.
                 </td>
             </tr>
                     <tr>
@@ -359,18 +202,157 @@
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Tree/ChildNodeInterface.html" target="main"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">Icecave\Coro\Tree\ChildNodeInterface</abbr></a>
-                    </em>                </td>
+                                        <a href="Icecave/Coro/React/ReactFacade.html" target="main"><abbr title="Icecave\Coro\React\ReactFacade">Icecave\Coro\React\ReactFacade</abbr></a>
+                                    </td>
                 <td>
-                    A node that can be attached to another node.
+                    A helper object for use through the static Coro facade.
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Tree/ExecutableNodeInterface.html" target="main"><abbr title="Icecave\Coro\Tree\ExecutableNodeInterface">Icecave\Coro\Tree\ExecutableNodeInterface</abbr></a>
+                                        <a href="Icecave/Coro/React/ReactTaskAdaptor.html" target="main"><abbr title="Icecave\Coro\React\ReactTaskAdaptor">Icecave\Coro\React\ReactTaskAdaptor</abbr></a>
+                                    </td>
+                <td>
+                    Task adaptor for use with the react event loop.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/AbstractTask.html" target="main"><abbr title="Icecave\Coro\Task\AbstractTask">Icecave\Coro\Task\AbstractTask</abbr></a>
+                                    </td>
+                <td>
+                    A task is a node that can perform an action.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Exception/TaskCancelledException.html" target="main"><abbr title="Icecave\Coro\Task\Exception\TaskCancelledException">Icecave\Coro\Task\Exception\TaskCancelledException</abbr></a>
+                                    </td>
+                <td>
+                    
+
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Exception/TaskTimeoutException.html" target="main"><abbr title="Icecave\Coro\Task\Exception\TaskTimeoutException">Icecave\Coro\Task\Exception\TaskTimeoutException</abbr></a>
+                                    </td>
+                <td>
+                    
+
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Primitives/AbstractPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\AbstractPrimitive">Icecave\Coro\Task\Primitives\AbstractPrimitive</abbr></a>
+                                    </td>
+                <td>
+                    Primitives provide the core building blocks of the co-routine engine.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Primitives/DetachPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\DetachPrimitive">Icecave\Coro\Task\Primitives\DetachPrimitive</abbr></a>
+                                    </td>
+                <td>
+                    Detaches the parent task from its parent, and resumes execution of both.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Primitives/DetachWithExceptionPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\DetachWithExceptionPrimitive">Icecave\Coro\Task\Primitives\DetachWithExceptionPrimitive</abbr></a>
+                                    </td>
+                <td>
+                    Detaches the parent task from its parent, and resumes execution of both.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Primitives/FacadeOperationPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\FacadeOperationPrimitive">Icecave\Coro\Task\Primitives\FacadeOperationPrimitive</abbr></a>
+                                    </td>
+                <td>
+                    Proxies calls onto the facade implementation provided by the engine.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Primitives/ImmediatePrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\ImmediatePrimitive">Icecave\Coro\Task\Primitives\ImmediatePrimitive</abbr></a>
+                                    </td>
+                <td>
+                    Invoke a callback immediately and send the result to the parent task.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Primitives/SleepPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\SleepPrimitive">Icecave\Coro\Task\Primitives\SleepPrimitive</abbr></a>
+                                    </td>
+                <td>
+                    Suspend the parent task and enqueue it to be resumed after the specified timeout.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Primitives/SuspendPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\SuspendPrimitive">Icecave\Coro\Task\Primitives\SuspendPrimitive</abbr></a>
+                                    </td>
+                <td>
+                    Suspend the parent task.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/Primitives/TimeoutPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\TimeoutPrimitive">Icecave\Coro\Task\Primitives\TimeoutPrimitive</abbr></a>
+                                    </td>
+                <td>
+                    A task that cancels its child task if it does not complete within a specified period.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/TaskAdaptor.html" target="main"><abbr title="Icecave\Coro\Task\TaskAdaptor">Icecave\Coro\Task\TaskAdaptor</abbr></a>
+                                    </td>
+                <td>
+                    The base/default task adaptor implementation.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Coro/Task/TaskAdaptorInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">Icecave\Coro\Task\TaskAdaptorInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A node that has side-effects.
+                    Adapts arbitrary values into tasks.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Coro/Task/TaskInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskInterface">Icecave\Coro\Task\TaskInterface</abbr></a>
+                    </em>                </td>
+                <td>
+                    A task is a node that can perform an action.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Coro/Task/TaskResumerInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskResumerInterface">Icecave\Coro\Task\TaskResumerInterface</abbr></a>
+                    </em>                </td>
+                <td>
+                    Public interface for resuming or cancelling suspended tasks.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Coro/Task/TaskStatus.html" target="main"><abbr title="Icecave\Coro\Task\TaskStatus">Icecave\Coro\Task\TaskStatus</abbr></a>
+                                    </td>
+                <td>
+                    
+
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Coro/Tree/ChildNodeInterface.html" target="main"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">Icecave\Coro\Tree\ChildNodeInterface</abbr></a>
+                    </em>                </td>
+                <td>
+                    A node that can be attached to another node.
                 </td>
             </tr>
                     <tr>
