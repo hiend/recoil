@@ -24,15 +24,6 @@
                 <table>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Channel/BidirectionalChannelInterface.html" target="main"><abbr title="Icecave\Coro\Channel\BidirectionalChannelInterface">Icecave\Coro\Channel\BidirectionalChannelInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td>
                                         <a href="Icecave/Coro/Channel/Channel.html" target="main"><abbr title="Icecave\Coro\Channel\Channel">Icecave\Coro\Channel\Channel</abbr></a>
                                     </td>
                 <td>
@@ -140,7 +131,7 @@
                                         <a href="Icecave/Coro/Engine/AbstractEngine.html" target="main"><abbr title="Icecave\Coro\Engine\AbstractEngine">Icecave\Coro\Engine\AbstractEngine</abbr></a>
                                     </td>
                 <td>
-                    Base class for engines.
+                    Common implementation for co-routine engines.
                 </td>
             </tr>
                     <tr>
@@ -177,6 +168,14 @@
             </tr>
                     <tr>
                 <td>
+                                        <a href="Icecave/Coro/Engine/TaskRoot.html" target="main"><abbr title="Icecave\Coro\Engine\TaskRoot">Icecave\Coro\Engine\TaskRoot</abbr></a>
+                                    </td>
+                <td>
+                    The parent to which all top-level tasks are attached.
+                </td>
+            </tr>
+                    <tr>
+                <td>
                                         <a href="Icecave/Coro/PackageInfo.html" target="main"><abbr title="Icecave\Coro\PackageInfo">Icecave\Coro\PackageInfo</abbr></a>
                                     </td>
                 <td>
@@ -197,7 +196,7 @@
                                         <a href="Icecave/Coro/React/PromisePrimitive.html" target="main"><abbr title="Icecave\Coro\React\PromisePrimitive">Icecave\Coro\React\PromisePrimitive</abbr></a>
                                     </td>
                 <td>
-                    Send a value or error to the parent node when a promise is fulfilled.
+                    Send a value or error to the parent task when a promise is fulfilled.
                 </td>
             </tr>
                     <tr>
@@ -218,10 +217,18 @@
             </tr>
                     <tr>
                 <td>
+                                        <a href="Icecave/Coro/Task/AbstractParentTask.html" target="main"><abbr title="Icecave\Coro\Task\AbstractParentTask">Icecave\Coro\Task\AbstractParentTask</abbr></a>
+                                    </td>
+                <td>
+                    Common implementation for tasks that are also task parents.
+                </td>
+            </tr>
+                    <tr>
+                <td>
                                         <a href="Icecave/Coro/Task/AbstractTask.html" target="main"><abbr title="Icecave\Coro\Task\AbstractTask">Icecave\Coro\Task\AbstractTask</abbr></a>
                                     </td>
                 <td>
-                    A task is a node that can perform an action.
+                    Common implementation for tasks.
                 </td>
             </tr>
                     <tr>
@@ -240,14 +247,6 @@
                 <td>
                     
 
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/Primitives/AbstractPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\AbstractPrimitive">Icecave\Coro\Task\Primitives\AbstractPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    Primitives provide the core building blocks of the co-routine engine.
                 </td>
             </tr>
                     <tr>
@@ -327,7 +326,15 @@
                     <em>                    <a href="Icecave/Coro/Task/TaskInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskInterface">Icecave\Coro\Task\TaskInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A task is a node that can perform an action.
+                    A unit-of-work that can be executed on a co-routine engine.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Coro/Task/TaskParentInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskParentInterface">Icecave\Coro\Task\TaskParentInterface</abbr></a>
+                    </em>                </td>
+                <td>
+                    An object to which tasks can be attached.
                 </td>
             </tr>
                     <tr>
@@ -343,40 +350,7 @@
                                         <a href="Icecave/Coro/Task/TaskStatus.html" target="main"><abbr title="Icecave\Coro\Task\TaskStatus">Icecave\Coro\Task\TaskStatus</abbr></a>
                                     </td>
                 <td>
-                    
-
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                    <em>                    <a href="Icecave/Coro/Tree/ChildNodeInterface.html" target="main"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">Icecave\Coro\Tree\ChildNodeInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    A node that can be attached to another node.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                    <em>                    <a href="Icecave/Coro/Tree/NodeInterface.html" target="main"><abbr title="Icecave\Coro\Tree\NodeInterface">Icecave\Coro\Tree\NodeInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    A node that can be attached to a parent.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                    <em>                    <a href="Icecave/Coro/Tree/ParentNodeInterface.html" target="main"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">Icecave\Coro\Tree\ParentNodeInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    A node to which other nodes can be attached.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Tree/RootNode.html" target="main"><abbr title="Icecave\Coro\Tree\RootNode">Icecave\Coro\Tree\RootNode</abbr></a>
-                                    </td>
-                <td>
-                    The root node of a co-routine graph.
+                    Represents the current state of a task.
                 </td>
             </tr>
             </table>

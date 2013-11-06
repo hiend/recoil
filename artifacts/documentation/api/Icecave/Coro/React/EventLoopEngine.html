@@ -40,7 +40,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null, <a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)
+                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor = null, <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a> $taskRoot = null)
                     <p>
 </p>
                 </td>
@@ -58,23 +58,13 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Icecave\Coro\Engine\NodeInterface">NodeInterface</abbr>
+                    
                 </td>
                 <td class="last">
-                    <a href="#method_rootNode">rootNode</a>()
-                    <p>Fetch the root node of the co-routine graph.</p>
+                    <a href="#method_enqueueCallback">enqueueCallback</a>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())
+                    <p>Enqueue a callback for execution.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_rootNode"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method_taskAdaptor">taskAdaptor</a>()
-                    <p>Fetch the adaptor used to convert values into tasks.</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_taskAdaptor"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_enqueueCallback"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -88,13 +78,23 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_enqueueCallback">enqueueCallback</a>(<abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())
-                    <p>Enqueue a callback for execution.</p>
+                    <a href="#method_taskAdaptor">taskAdaptor</a>()
+                    <p>Fetch the adaptor used to convert values into tasks.</p>
                 </td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_taskAdaptor"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_taskRoot">taskRoot</a>()
+                    <p>Fetch the parent to which all top-level tasks are attached.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_taskRoot"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -124,7 +124,7 @@
                         <h3 id="method___construct">
         <div class="location">at line 23</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null, <a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)</code>
+    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor = null, <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a> $taskRoot = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -141,19 +141,19 @@
                 <td>The ReactPHP event loop to used by the engine for IO and timers.</td>
             </tr>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a></td>
-                <td>$taskAdaptor</td>
-                <td>The adaptor used to convert values into nodes.</td>
-            </tr>
-                    <tr>
                 <td><a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a></td>
                 <td>$facadeImplementation</td>
                 <td>The object that implements the behaviour of the static Coro facade.</td>
             </tr>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a></td>
-                <td>$rootNode</td>
-                <td>The root node of the call tree.</td>
+                <td><a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a></td>
+                <td>$taskAdaptor</td>
+                <td>The adaptor used to convert values into tasks.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a></td>
+                <td>$taskRoot</td>
+                <td>The parent to which all top-level tasks are attached.</td>
             </tr>
             </table>
 
@@ -164,7 +164,7 @@
     </div>
 
                 <h3 id="method_enqueue">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_enqueue"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a> at line 40</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_enqueue"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a> at line 39</div>
         <code>            public            
     <strong>enqueue</strong>(mixed $coroutine)</code>
     </h3>
@@ -188,58 +188,41 @@
                     </div>
     </div>
 
-                <h3 id="method_rootNode">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_rootNode"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a> at line 57</div>
-        <code>            public            <abbr title="Icecave\Coro\Engine\NodeInterface">NodeInterface</abbr>
-    <strong>rootNode</strong>()</code>
+                <h3 id="method_enqueueCallback">
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_enqueueCallback"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a> at line 60</div>
+        <code>            public            
+    <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
     <div class="details">
-        <p>Fetch the root node of the co-routine graph.</p>
-        <p>
-</p>
+        <p>Enqueue a callback for execution.</p>
+        <p>Callbacks are guaranteed to be executed in the order they are enqueued.</p>
+
+<p>If the callback returns a value that can be adapted to a co-routine it is
+executed.</p>
         <div class="tags">
-            
-                            <h4>Return Value</h4>
+                            <h4>Parameters</h4>
 
                     <table>
-        <tr>
-            <td><abbr title="Icecave\Coro\Engine\NodeInterface">NodeInterface</abbr></td>
-            <td>The root node of the co-routine graph.</td>
-        </tr>
-    </table>
+                    <tr>
+                <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
+                <td>$callback</td>
+                <td>The callable to invoke.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>Arguments to pass to the callable.</td>
+            </tr>
+            </table>
 
             
-            
-                    </div>
-    </div>
-
-                <h3 id="method_taskAdaptor">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_taskAdaptor"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a> at line 67</div>
-        <code>            public            <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a>
-    <strong>taskAdaptor</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Fetch the adaptor used to convert values into tasks.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a></td>
-            <td>The adaptor used to convert values into tasks.</td>
-        </tr>
-    </table>
-
             
             
                     </div>
     </div>
 
                 <h3 id="method_facadeImplementation">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_facadeImplementation"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a> at line 77</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_facadeImplementation"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a> at line 70</div>
         <code>            public            <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
     <strong>facadeImplementation</strong>()</code>
     </h3>
@@ -263,41 +246,58 @@
                     </div>
     </div>
 
-                <h3 id="method_enqueueCallback">
-        <div class="location">at line 58</div>
-        <code>            public            
-    <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())</code>
+                <h3 id="method_taskAdaptor">
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_taskAdaptor"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a> at line 80</div>
+        <code>            public            <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a>
+    <strong>taskAdaptor</strong>()</code>
     </h3>
     <div class="details">
-        <p>Enqueue a callback for execution.</p>
-        <p>Callbacks are guaranteed to be executed in the order they are enqueued.</p>
-
-<p>If the callback returns a value that can be adapted to a co-routine it is
-executed.</p>
+        <p>Fetch the adaptor used to convert values into tasks.</p>
+        <p>
+</p>
         <div class="tags">
-                            <h4>Parameters</h4>
+            
+                            <h4>Return Value</h4>
 
                     <table>
-                    <tr>
-                <td><abbr title="Icecave\Coro\React\callable">callable</abbr></td>
-                <td>$callback</td>
-                <td>The callable to invoke.</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$arguments</td>
-                <td>Arguments to pass to the callable.</td>
-            </tr>
-            </table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a></td>
+            <td>The adaptor used to convert values into tasks.</td>
+        </tr>
+    </table>
 
             
+            
+                    </div>
+    </div>
+
+                <h3 id="method_taskRoot">
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/AbstractEngine.html#method_taskRoot"><abbr title="Icecave\Coro\Engine\AbstractEngine">AbstractEngine</abbr></a> at line 90</div>
+        <code>            public            <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a>
+    <strong>taskRoot</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the parent to which all top-level tasks are attached.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a></td>
+            <td>The parent to which all top-level tasks are attached.</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_enqueueDelayedCallback">
-        <div class="location">at line 85</div>
+        <div class="location">at line 60</div>
         <code>            public            
     <strong>enqueueDelayedCallback</strong>(<abbr title="Icecave\Coro\React\number">number</abbr> $delay, <abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
@@ -336,7 +336,7 @@ executed.</p>
     </div>
 
                 <h3 id="method_eventLoop">
-        <div class="location">at line 100</div>
+        <div class="location">at line 77</div>
         <code>            public            <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
     <strong>eventLoop</strong>()</code>
     </h3>

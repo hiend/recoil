@@ -22,8 +22,7 @@
     <h1><a href="../../../../Icecave/Coro/Task/Primitives.html">Icecave\Coro\Task\Primitives</a>\TimeoutPrimitive</h1>
     </div>
         <div class="content">
-                <p>class    <strong>TimeoutPrimitive</strong>        extends <a href="../../../../Icecave/Coro/Task/Primitives/AbstractPrimitive.html"><abbr title="Icecave\Coro\Task\Primitives\AbstractPrimitive">AbstractPrimitive</abbr></a>        implements
-        <a href="../../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a></p>
+                <p>class    <strong>TimeoutPrimitive</strong>        extends <a href="../../../../Icecave/Coro/Task/AbstractParentTask.html"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a></p>
 
             <div class="description">
             <p>A task that cancels its child task if it does not complete within a specified period.</p>
@@ -41,6 +40,26 @@
                     
                 </td>
                 <td class="last">
+                    <a href="#method_onTaskAttached">onTaskAttached</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
+                    <p>Notify this task that a child task has been attached.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_onTaskAttached"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_onTaskDetached">onTaskDetached</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
+                    <p>Notify this task that a child task has been detached.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
                     <a href="#method___construct">__construct</a>(<abbr title="Icecave\Coro\Task\Primitives\number">number</abbr> $timeout, mixed $task)
                     <p>
 </p>
@@ -52,8 +71,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_onAttach">onAttach</a>(<a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)
-                    <p>Notify the node that a child has been attached.</p>
+                    <a href="#method_onTaskComplete">onTaskComplete</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, mixed $value = null)
+                    <p>Notify this task that a child task has completed.</p>
                 </td>
                 <td></td>
             </tr>
@@ -62,28 +81,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_onDetach">onDetach</a>(<a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)
-                    <p>Notify the node that a child has been detached.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_onValue">onValue</a>(<a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)
-                    <p>Notify the node of a value.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_onError">onError</a>(<a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Notify the node of an error.</p>
+                    <a href="#method_onTaskCompleteWithException">onTaskCompleteWithException</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Notify this task that a child task has completed with an error.</p>
                 </td>
                 <td></td>
             </tr>
@@ -102,8 +101,60 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 21</div>
+                        <h3 id="method_onTaskAttached">
+        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_onTaskAttached"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a> at line 15</div>
+        <code>            public            
+    <strong>onTaskAttached</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
+    </h3>
+    <div class="details">
+        <p>Notify this task that a child task has been attached.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The child that has been attached.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_onTaskDetached">
+        <div class="location">at line 45</div>
+        <code>            public            
+    <strong>onTaskDetached</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
+    </h3>
+    <div class="details">
+        <p>Notify this task that a child task has been detached.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The child that has been detached.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 19</div>
         <code>            public            
     <strong>__construct</strong>(<abbr title="Icecave\Coro\Task\Primitives\number">number</abbr> $timeout, mixed $task)</code>
     </h3>
@@ -134,13 +185,13 @@
                     </div>
     </div>
 
-                <h3 id="method_onAttach">
-        <div class="location">at line 52</div>
+                <h3 id="method_onTaskComplete">
+        <div class="location">at line 56</div>
         <code>            public            
-    <strong>onAttach</strong>(<a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)</code>
+    <strong>onTaskComplete</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, mixed $value = null)</code>
     </h3>
     <div class="details">
-        <p>Notify the node that a child has been attached.</p>
+        <p>Notify this task that a child task has completed.</p>
         <p>
 </p>
         <div class="tags">
@@ -148,66 +199,14 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></td>
-                <td>$child</td>
-                <td>The child that has been attached.</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_onDetach">
-        <div class="location">at line 63</div>
-        <code>            public            
-    <strong>onDetach</strong>(<a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child)</code>
-    </h3>
-    <div class="details">
-        <p>Notify the node that a child has been detached.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></td>
-                <td>$child</td>
-                <td>The child that has been detached.</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_onValue">
-        <div class="location">at line 74</div>
-        <code>            public            
-    <strong>onValue</strong>(<a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, mixed $value = null)</code>
-    </h3>
-    <div class="details">
-        <p>Notify the node of a value.</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></td>
-                <td>$child</td>
-                <td>The child that is sending the value.</td>
+                <td><a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The task that completed.</td>
             </tr>
                     <tr>
                 <td>mixed</td>
                 <td>$value</td>
-                <td>The value to send.</td>
+                <td>The value that was produced, if any.</td>
             </tr>
             </table>
 
@@ -217,13 +216,13 @@
                     </div>
     </div>
 
-                <h3 id="method_onError">
-        <div class="location">at line 85</div>
+                <h3 id="method_onTaskCompleteWithException">
+        <div class="location">at line 67</div>
         <code>            public            
-    <strong>onError</strong>(<a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> $child, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    <strong>onTaskCompleteWithException</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Notify the node of an error.</p>
+        <p>Notify this task that a child task has completed with an error.</p>
         <p>
 </p>
         <div class="tags">
@@ -231,14 +230,14 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></td>
-                <td>$child</td>
-                <td>The child that is sending the error.</td>
+                <td><a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The task that completed.</td>
             </tr>
                     <tr>
                 <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>$exception</td>
-                <td>The error to send.</td>
+                <td>The error that occurred.</td>
             </tr>
             </table>
 
@@ -249,7 +248,7 @@
     </div>
 
                 <h3 id="method_onTimeout">
-        <div class="location">at line 93</div>
+        <div class="location">at line 75</div>
         <code>            public            
     <strong>onTimeout</strong>()</code>
     </h3>

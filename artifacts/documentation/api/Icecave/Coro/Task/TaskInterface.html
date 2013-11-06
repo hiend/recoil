@@ -22,11 +22,10 @@
     <h1><a href="../../../Icecave/Coro/Task.html">Icecave\Coro\Task</a>\TaskInterface</h1>
     </div>
         <div class="content">
-                <p>interface    <strong>TaskInterface</strong>        implements
-        <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></p>
+                <p>interface    <strong>TaskInterface</strong></p>
 
             <div class="description">
-            <p>A task is a node that can perform an action.</p>
+            <p>A unit-of-work that can be executed on a co-routine engine.</p>
             <p>
 </p>
         </div>
@@ -41,10 +40,10 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_attach">attach</a>(<a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $parent)
-                    <p>Attach this node to a parent.</p>
+                    <a href="#method_attach">attach</a>(<a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a> $parent)
+                    <p>Attach this task to a parent.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_attach"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -52,19 +51,49 @@
                 </td>
                 <td class="last">
                     <a href="#method_detach">detach</a>()
-                    <p>Detach this node from its parent.</p>
+                    <p>Detach this task from its parent.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_detach"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a>
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_orphan">orphan</a>()
+                    <p>Detach this task from its parent and attach it to the engine's task root.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAttached">isAttached</a>()
+                    <p>Check if this task is attached to a parent.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_parent">parent</a>()
-                    <p>Fetch the parent of this node.</p>
+                    <p>Get this task's parent.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_parent"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a></small></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Icecave\Coro\Task\EngineInterface">EngineInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_engine">engine</a>()
+                    <p>Fetch the engine on which attached tasks will execute.</p>
+                </td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -102,12 +131,12 @@
         <h2>Details</h2>
 
                         <h3 id="method_attach">
-        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_attach"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 17</div>
+        <div class="location">at line 17</div>
         <code>            public            
-    <strong>attach</strong>(<a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a> $parent)</code>
+    <strong>attach</strong>(<a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a> $parent)</code>
     </h3>
     <div class="details">
-        <p>Attach this node to a parent.</p>
+        <p>Attach this task to a parent.</p>
         <p>
 </p>
         <div class="tags">
@@ -115,9 +144,9 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a></td>
+                <td><a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a></td>
                 <td>$parent</td>
-                <td>The new parent of this node.</td>
+                <td>The new parent of this task.</td>
             </tr>
             </table>
 
@@ -128,7 +157,7 @@
                     <table>
                     <tr>
                 <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
-                <td>If this node is currently attached to a parent.</td>
+                <td>If this task is already attached to a parent.</td>
             </tr>
             </table>
 
@@ -137,12 +166,12 @@
     </div>
 
                 <h3 id="method_detach">
-        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_detach"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 24</div>
+        <div class="location">at line 24</div>
         <code>            public            
     <strong>detach</strong>()</code>
     </h3>
     <div class="details">
-        <p>Detach this node from its parent.</p>
+        <p>Detach this task from its parent.</p>
         <p>
 </p>
         <div class="tags">
@@ -153,7 +182,7 @@
                     <table>
                     <tr>
                 <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
-                <td>If this node has not been attached to a parent.</td>
+                <td>If this task has not been attached to a parent.</td>
             </tr>
             </table>
 
@@ -161,13 +190,38 @@
                     </div>
     </div>
 
-                <h3 id="method_parent">
-        <div class="location">in <a href="../../../Icecave/Coro/Tree/ChildNodeInterface.html#method_parent"><abbr title="Icecave\Coro\Tree\ChildNodeInterface">ChildNodeInterface</abbr></a> at line 32</div>
-        <code>            public            <a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a>
-    <strong>parent</strong>()</code>
+                <h3 id="method_orphan">
+        <div class="location">at line 31</div>
+        <code>            public            
+    <strong>orphan</strong>()</code>
     </h3>
     <div class="details">
-        <p>Fetch the parent of this node.</p>
+        <p>Detach this task from its parent and attach it to the engine's task root.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>If this task has not been attached to a parent.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAttached">
+        <div class="location">at line 38</div>
+        <code>            public            boolean
+    <strong>isAttached</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if this task is attached to a parent.</p>
         <p>
 </p>
         <div class="tags">
@@ -176,8 +230,33 @@
 
                     <table>
         <tr>
-            <td><a href="../../../Icecave/Coro/Tree/ParentNodeInterface.html"><abbr title="Icecave\Coro\Tree\ParentNodeInterface">ParentNodeInterface</abbr></a></td>
-            <td>The parent of this node.</td>
+            <td>boolean</td>
+            <td>True if this task is attached; otherwise false.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parent">
+        <div class="location">at line 46</div>
+        <code>            public            <a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a>
+    <strong>parent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get this task's parent.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a></td>
+            <td>The parent of this task.</td>
         </tr>
     </table>
 
@@ -187,7 +266,7 @@
                     <table>
                     <tr>
                 <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
-                <td>If this node has not been attached to a parent.</td>
+                <td>If this task is not attached to a parent.</td>
             </tr>
             </table>
 
@@ -195,8 +274,33 @@
                     </div>
     </div>
 
+                <h3 id="method_engine">
+        <div class="location">at line 53</div>
+        <code>            public            <abbr title="Icecave\Coro\Task\EngineInterface">EngineInterface</abbr>
+    <strong>engine</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the engine on which attached tasks will execute.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Icecave\Coro\Task\EngineInterface">EngineInterface</abbr></td>
+            <td>The engine on which attached tasks will execute.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_execute">
-        <div class="location">at line 15</div>
+        <div class="location">at line 60</div>
         <code>            public            
     <strong>execute</strong>()</code>
     </h3>
@@ -207,12 +311,21 @@
         <div class="tags">
             
             
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>If this task is not attached to a parent, or is not in PENDING state.</td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
 
                 <h3 id="method_cancel">
-        <div class="location">at line 25</div>
+        <div class="location">at line 70</div>
         <code>            public            
     <strong>cancel</strong>()</code>
     </h3>
@@ -237,7 +350,7 @@ Cancelling an already cancelled task is a no-op.</p>
     </div>
 
                 <h3 id="method_status">
-        <div class="location">at line 32</div>
+        <div class="location">at line 77</div>
         <code>            public            <a href="../../../Icecave/Coro/Task/TaskStatus.html"><abbr title="Icecave\Coro\Task\TaskStatus">TaskStatus</abbr></a>
     <strong>status</strong>()</code>
     </h3>

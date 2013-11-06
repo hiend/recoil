@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Icecave\Coro\Engine\TaskRoot | Coro API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Coro API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Icecave/Coro/Engine.html">Icecave\Coro\Engine</a>\TaskRoot</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>TaskRoot</strong>        implements
+        <a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a></p>
+
+            <div class="description">
+            <p>The parent to which all top-level tasks are attached.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_engine">engine</a>()
+                    <p>Fetch the engine on which attached tasks will execute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setEngine">setEngine</a>(<a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a> $engine)
+                    <p>Set the engine on which attached tasks will execute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_onTaskAttached">onTaskAttached</a>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
+                    <p>Notify this task that a child task has been attached.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_onTaskDetached">onTaskDetached</a>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
+                    <p>Notify this task that a child task has been detached.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_onTaskComplete">onTaskComplete</a>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, mixed $value = null)
+                    <p>Notify this task that a child task has completed.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_onTaskCompleteWithException">onTaskCompleteWithException</a>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Notify this task that a child task has completed with an error.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_engine">
+        <div class="location">at line 20</div>
+        <code>            public            <a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a>
+    <strong>engine</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the engine on which attached tasks will execute.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a></td>
+            <td>The engine on which attached tasks will execute.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setEngine">
+        <div class="location">at line 34</div>
+        <code>            public            
+    <strong>setEngine</strong>(<a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a> $engine)</code>
+    </h3>
+    <div class="details">
+        <p>Set the engine on which attached tasks will execute.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a></td>
+                <td>$engine</td>
+                <td>The engine on which attached tasks will execute.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_onTaskAttached">
+        <div class="location">at line 44</div>
+        <code>            public            
+    <strong>onTaskAttached</strong>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
+    </h3>
+    <div class="details">
+        <p>Notify this task that a child task has been attached.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The child that has been attached.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_onTaskDetached">
+        <div class="location">at line 53</div>
+        <code>            public            
+    <strong>onTaskDetached</strong>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
+    </h3>
+    <div class="details">
+        <p>Notify this task that a child task has been detached.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The child that has been detached.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_onTaskComplete">
+        <div class="location">at line 63</div>
+        <code>            public            
+    <strong>onTaskComplete</strong>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, mixed $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Notify this task that a child task has completed.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The task that completed.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value that was produced, if any.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_onTaskCompleteWithException">
+        <div class="location">at line 73</div>
+        <code>            public            
+    <strong>onTaskCompleteWithException</strong>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Notify this task that a child task has completed with an error.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The task that completed.</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>The error that occurred.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

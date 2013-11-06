@@ -24,6 +24,11 @@
         <div class="content">
                 <p>class    <strong>TaskStatus</strong>        extends <abbr title="Eloquent\Enumeration\Enumeration">Enumeration</abbr></p>
 
+            <div class="description">
+            <p>Represents the current state of a task.</p>
+            <p>
+</p>
+        </div>
     
             <h2>Constants</h2>
 
@@ -31,8 +36,7 @@
                     <tr>
                 <td>PENDING</td>
                 <td class="last">
-                    <p><em>
-</em></p>
+                    <p><em>The task is waiting to be executed.</em></p>
                     <p>
 </p>
                 </td>
@@ -40,8 +44,7 @@
                     <tr>
                 <td>EXECUTING</td>
                 <td class="last">
-                    <p><em>
-</em></p>
+                    <p><em>The task is currently executing.</em></p>
                     <p>
 </p>
                 </td>
@@ -49,8 +52,7 @@
                     <tr>
                 <td>SUSPENDED</td>
                 <td class="last">
-                    <p><em>
-</em></p>
+                    <p><em>The task has completed some work and is waiting on another task to resume it.</em></p>
                     <p>
 </p>
                 </td>
@@ -58,17 +60,15 @@
                     <tr>
                 <td>COMPLETE</td>
                 <td class="last">
-                    <p><em>
-</em></p>
+                    <p><em>The task has finished executing without error.</em></p>
                     <p>
 </p>
                 </td>
             </tr>
                     <tr>
-                <td>FAILED</td>
+                <td>COMPLETE_EXCEPTION</td>
                 <td class="last">
-                    <p><em>
-</em></p>
+                    <p><em>The task has finished with an exception.</em></p>
                     <p>
 </p>
                 </td>
@@ -76,8 +76,15 @@
                     <tr>
                 <td>CANCELLED</td>
                 <td class="last">
-                    <p><em>
-</em></p>
+                    <p><em>The task has been cancelled while PENDING or SUSPENDED.</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DISCARDED</td>
+                <td class="last">
+                    <p><em>The task has completed executing successfully and was deliberately detached from the parent without notifying it of completion.</em></p>
                     <p>
 </p>
                 </td>

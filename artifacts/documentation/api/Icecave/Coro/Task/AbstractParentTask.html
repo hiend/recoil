@@ -3,29 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Coro\Task\Primitives\SleepPrimitive | Coro API</title>
-                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+        <title>Icecave\Coro\Task\AbstractParentTask | Coro API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
             <div class="header">
         <ul>
-            <li><a href="../../../../classes.html">Classes</a></li>
-                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
-                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
-            <li><a href="../../../../doc-index.html">Index</a></li>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
             
         </ul>
 
         <div id="title">Coro API</div>
 
             <div class="type">Class</div>
-    <h1><a href="../../../../Icecave/Coro/Task/Primitives.html">Icecave\Coro\Task\Primitives</a>\SleepPrimitive</h1>
+    <h1><a href="../../../Icecave/Coro/Task.html">Icecave\Coro\Task</a>\AbstractParentTask</h1>
     </div>
         <div class="content">
-                <p>class    <strong>SleepPrimitive</strong>        extends <a href="../../../../Icecave/Coro/Task/AbstractTask.html"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></p>
+                <p>abstract class    <strong>AbstractParentTask</strong>        extends <a href="../../../Icecave/Coro/Task/AbstractTask.html"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a>        implements
+        <a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a></p>
 
             <div class="description">
-            <p>Suspend the parent task and enqueue it to be resumed after the specified timeout.</p>
+            <p>Common implementation for tasks that are also task parents.</p>
             <p>
 </p>
         </div>
@@ -40,21 +41,21 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="Icecave\Coro\Task\Primitives\number">number</abbr> $timeout)
+                    <a href="#method___construct">__construct</a>()
                     <p>
 </p>
                 </td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method___construct"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method_attach">attach</a>(<a href="../../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a> $parent)
+                    <a href="#method_attach">attach</a>(<a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a> $parent)
                     <p>Attach this task to a parent.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_attach"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method_attach"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -64,7 +65,7 @@
                     <a href="#method_detach">detach</a>()
                     <p>Detach this task from its parent.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_detach"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method_detach"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -74,7 +75,7 @@
                     <a href="#method_orphan">orphan</a>()
                     <p>Detach this task from its parent and attach it to the engine's task root.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_orphan"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method_orphan"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -84,17 +85,17 @@
                     <a href="#method_isAttached">isAttached</a>()
                     <p>Check if this task is attached to a parent.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_isAttached"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method_isAttached"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a>
+                    <a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_parent">parent</a>()
                     <p>Get this task's parent.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_parent"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method_parent"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -104,7 +105,7 @@
                     <a href="#method_engine">engine</a>()
                     <p>Fetch the engine on which attached tasks will execute.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_engine"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method_engine"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -114,7 +115,7 @@
                     <a href="#method_execute">execute</a>()
                     <p>Execute the task.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_execute"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method_execute"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -124,25 +125,35 @@
                     <a href="#method_cancel">cancel</a>()
                     <p>Cancel execution.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_cancel"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method_cancel"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../../Icecave/Coro/Task/TaskStatus.html"><abbr title="Icecave\Coro\Task\TaskStatus">TaskStatus</abbr></a>
+                    <a href="../../../Icecave/Coro/Task/TaskStatus.html"><abbr title="Icecave\Coro\Task\TaskStatus">TaskStatus</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_status">status</a>()
                     <p>Get the current status of the task.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_status"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Task/AbstractTask.html#method_status"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method_onResume">onResume</a>()
-                    <p>Called when the sleep timer is executed.</p>
+                    <a href="#method_onTaskAttached">onTaskAttached</a>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
+                    <p>Notify this task that a child task has been attached.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_onTaskDetached">onTaskDetached</a>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
+                    <p>Notify this task that a child task has been detached.</p>
                 </td>
                 <td></td>
             </tr>
@@ -152,9 +163,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 15</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method___construct"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 13</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="Icecave\Coro\Task\Primitives\number">number</abbr> $timeout)</code>
+    <strong>__construct</strong>()</code>
     </h3>
     <div class="details">
         <p>
@@ -162,16 +173,6 @@
         <p>
 </p>
         <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td><abbr title="Icecave\Coro\Task\Primitives\number">number</abbr></td>
-                <td>$timeout</td>
-                <td>The number of seconds to wait before resuming.</td>
-            </tr>
-            </table>
-
             
             
             
@@ -179,9 +180,9 @@
     </div>
 
                 <h3 id="method_attach">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_attach"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 24</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method_attach"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 24</div>
         <code>            public            
-    <strong>attach</strong>(<a href="../../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a> $parent)</code>
+    <strong>attach</strong>(<a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a> $parent)</code>
     </h3>
     <div class="details">
         <p>Attach this task to a parent.</p>
@@ -192,7 +193,7 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a></td>
+                <td><a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a></td>
                 <td>$parent</td>
                 <td>The new parent of this task.</td>
             </tr>
@@ -214,7 +215,7 @@
     </div>
 
                 <h3 id="method_detach">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_detach"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 41</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method_detach"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 41</div>
         <code>            public            
     <strong>detach</strong>()</code>
     </h3>
@@ -239,7 +240,7 @@
     </div>
 
                 <h3 id="method_orphan">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_orphan"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 56</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method_orphan"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 56</div>
         <code>            public            
     <strong>orphan</strong>()</code>
     </h3>
@@ -264,7 +265,7 @@
     </div>
 
                 <h3 id="method_isAttached">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_isAttached"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 69</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method_isAttached"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 69</div>
         <code>            public            boolean
     <strong>isAttached</strong>()</code>
     </h3>
@@ -289,8 +290,8 @@
     </div>
 
                 <h3 id="method_parent">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_parent"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 80</div>
-        <code>            public            <a href="../../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method_parent"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 80</div>
+        <code>            public            <a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a>
     <strong>parent</strong>()</code>
     </h3>
     <div class="details">
@@ -303,7 +304,7 @@
 
                     <table>
         <tr>
-            <td><a href="../../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a></td>
+            <td><a href="../../../Icecave/Coro/Task/TaskParentInterface.html"><abbr title="Icecave\Coro\Task\TaskParentInterface">TaskParentInterface</abbr></a></td>
             <td>The parent of this task.</td>
         </tr>
     </table>
@@ -323,7 +324,7 @@
     </div>
 
                 <h3 id="method_engine">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_engine"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 92</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method_engine"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 92</div>
         <code>            public            <abbr title="Icecave\Coro\Task\EngineInterface">EngineInterface</abbr>
     <strong>engine</strong>()</code>
     </h3>
@@ -348,7 +349,7 @@
     </div>
 
                 <h3 id="method_execute">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_execute"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 104</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method_execute"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 104</div>
         <code>            public            
     <strong>execute</strong>()</code>
     </h3>
@@ -373,7 +374,7 @@
     </div>
 
                 <h3 id="method_cancel">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_cancel"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 131</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method_cancel"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 131</div>
         <code>            public            
     <strong>cancel</strong>()</code>
     </h3>
@@ -398,8 +399,8 @@ Cancelling an already cancelled task is a no-op.</p>
     </div>
 
                 <h3 id="method_status">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractTask.html#method_status"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 172</div>
-        <code>            public            <a href="../../../../Icecave/Coro/Task/TaskStatus.html"><abbr title="Icecave\Coro\Task\TaskStatus">TaskStatus</abbr></a>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/AbstractTask.html#method_status"><abbr title="Icecave\Coro\Task\AbstractTask">AbstractTask</abbr></a> at line 172</div>
+        <code>            public            <a href="../../../Icecave/Coro/Task/TaskStatus.html"><abbr title="Icecave\Coro\Task\TaskStatus">TaskStatus</abbr></a>
     <strong>status</strong>()</code>
     </h3>
     <div class="details">
@@ -412,7 +413,7 @@ Cancelling an already cancelled task is a no-op.</p>
 
                     <table>
         <tr>
-            <td><a href="../../../../Icecave/Coro/Task/TaskStatus.html"><abbr title="Icecave\Coro\Task\TaskStatus">TaskStatus</abbr></a></td>
+            <td><a href="../../../Icecave/Coro/Task/TaskStatus.html"><abbr title="Icecave\Coro\Task\TaskStatus">TaskStatus</abbr></a></td>
             <td>The current status of the task.</td>
         </tr>
     </table>
@@ -422,16 +423,52 @@ Cancelling an already cancelled task is a no-op.</p>
                     </div>
     </div>
 
-                <h3 id="method_onResume">
-        <div class="location">at line 36</div>
+                <h3 id="method_onTaskAttached">
+        <div class="location">at line 15</div>
         <code>            public            
-    <strong>onResume</strong>()</code>
+    <strong>onTaskAttached</strong>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
     </h3>
     <div class="details">
-        <p>Called when the sleep timer is executed.</p>
+        <p>Notify this task that a child task has been attached.</p>
         <p>
 </p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The child that has been attached.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_onTaskDetached">
+        <div class="location">at line 25</div>
+        <code>            public            
+    <strong>onTaskDetached</strong>(<a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
+    </h3>
+    <div class="details">
+        <p>Notify this task that a child task has been detached.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
+                <td>$task</td>
+                <td>The child that has been detached.</td>
+            </tr>
+            </table>
+
             
             
             

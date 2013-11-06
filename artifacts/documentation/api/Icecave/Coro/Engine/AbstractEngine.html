@@ -26,7 +26,7 @@
         <a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a></p>
 
             <div class="description">
-            <p>Base class for engines.</p>
+            <p>Common implementation for co-routine engines.</p>
             <p>
 </p>
         </div>
@@ -41,7 +41,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation, <a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)
+                    <a href="#method___construct">__construct</a>(<a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor, <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a> $taskRoot = null)
                     <p>
 </p>
                 </td>
@@ -59,11 +59,21 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="Icecave\Coro\Engine\NodeInterface">NodeInterface</abbr>
+                    
                 </td>
                 <td class="last">
-                    <a href="#method_rootNode">rootNode</a>()
-                    <p>Fetch the root node of the co-routine graph.</p>
+                    <a href="#method_enqueueCallback">enqueueCallback</a>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())
+                    <p>Enqueue a callback for execution.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_facadeImplementation">facadeImplementation</a>()
+                    <p>Fetch the object that implements the behaviour of the static Coro facade.</p>
                 </td>
                 <td></td>
             </tr>
@@ -79,11 +89,11 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
+                    <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_facadeImplementation">facadeImplementation</a>()
-                    <p>Fetch the object that implements the behaviour of the static Coro facade.</p>
+                    <a href="#method_taskRoot">taskRoot</a>()
+                    <p>Fetch the parent to which all top-level tasks are attached.</p>
                 </td>
                 <td></td>
             </tr>
@@ -93,9 +103,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 17</div>
+        <div class="location">at line 16</div>
         <code>            public            
-    <strong>__construct</strong>(<a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation, <a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a> $rootNode = null)</code>
+    <strong>__construct</strong>(<a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor, <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a> $taskRoot = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -107,19 +117,19 @@
 
                     <table>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a></td>
-                <td>$taskAdaptor</td>
-                <td>The adaptor used to convert values into tasks.</td>
-            </tr>
-                    <tr>
                 <td><a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a></td>
                 <td>$facadeImplementation</td>
                 <td>The object that implements the behaviour of the static Coro facade.</td>
             </tr>
                     <tr>
-                <td><a href="../../../Icecave/Coro/Tree/RootNode.html"><abbr title="Icecave\Coro\Tree\RootNode">RootNode</abbr></a></td>
-                <td>$rootNode</td>
-                <td>The root node of the call tree.</td>
+                <td><a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a></td>
+                <td>$taskAdaptor</td>
+                <td>The adaptor used to convert values into tasks.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a></td>
+                <td>$taskRoot</td>
+                <td>The parent to which all top-level tasks are attached.</td>
             </tr>
             </table>
 
@@ -130,7 +140,7 @@
     </div>
 
                 <h3 id="method_enqueue">
-        <div class="location">at line 40</div>
+        <div class="location">at line 39</div>
         <code>            public            
     <strong>enqueue</strong>(mixed $coroutine)</code>
     </h3>
@@ -154,13 +164,46 @@
                     </div>
     </div>
 
-                <h3 id="method_rootNode">
-        <div class="location">at line 57</div>
-        <code>            public            <abbr title="Icecave\Coro\Engine\NodeInterface">NodeInterface</abbr>
-    <strong>rootNode</strong>()</code>
+                <h3 id="method_enqueueCallback">
+        <div class="location">at line 60</div>
+        <code>            public            
+    <strong>enqueueCallback</strong>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
     <div class="details">
-        <p>Fetch the root node of the co-routine graph.</p>
+        <p>Enqueue a callback for execution.</p>
+        <p>Callbacks are guaranteed to be executed in the order they are enqueued.</p>
+
+<p>If the callback returns a value that can be adapted to a co-routine it is
+executed.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
+                <td>$callback</td>
+                <td>The callable to invoke.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>Arguments to pass to the callable.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_facadeImplementation">
+        <div class="location">at line 70</div>
+        <code>            public            <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
+    <strong>facadeImplementation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the object that implements the behaviour of the static Coro facade.</p>
         <p>
 </p>
         <div class="tags">
@@ -169,8 +212,8 @@
 
                     <table>
         <tr>
-            <td><abbr title="Icecave\Coro\Engine\NodeInterface">NodeInterface</abbr></td>
-            <td>The root node of the co-routine graph.</td>
+            <td><a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a></td>
+            <td>The object that implements the behaviour of the static Coro facade.</td>
         </tr>
     </table>
 
@@ -180,7 +223,7 @@
     </div>
 
                 <h3 id="method_taskAdaptor">
-        <div class="location">at line 67</div>
+        <div class="location">at line 80</div>
         <code>            public            <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a>
     <strong>taskAdaptor</strong>()</code>
     </h3>
@@ -204,13 +247,13 @@
                     </div>
     </div>
 
-                <h3 id="method_facadeImplementation">
-        <div class="location">at line 77</div>
-        <code>            public            <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
-    <strong>facadeImplementation</strong>()</code>
+                <h3 id="method_taskRoot">
+        <div class="location">at line 90</div>
+        <code>            public            <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a>
+    <strong>taskRoot</strong>()</code>
     </h3>
     <div class="details">
-        <p>Fetch the object that implements the behaviour of the static Coro facade.</p>
+        <p>Fetch the parent to which all top-level tasks are attached.</p>
         <p>
 </p>
         <div class="tags">
@@ -219,8 +262,8 @@
 
                     <table>
         <tr>
-            <td><a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a></td>
-            <td>The object that implements the behaviour of the static Coro facade.</td>
+            <td><a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a></td>
+            <td>The parent to which all top-level tasks are attached.</td>
         </tr>
     </table>
 
