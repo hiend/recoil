@@ -40,6 +40,17 @@
                     
                 </td>
                 <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="Icecave\Coro\Task\Primitives\number">number</abbr> $timeout, mixed $task)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
                     <a href="#method_onTaskAttached">onTaskAttached</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
                     <p>Notify this task that a child task has been attached.</p>
                 </td>
@@ -60,11 +71,20 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="Icecave\Coro\Task\Primitives\number">number</abbr> $timeout, mixed $task)
-                    <p>
-</p>
+                    <a href="#method_onTaskCancelled">onTaskCancelled</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
+                    <p>Notify this task that a child task has been cancelled.</p>
                 </td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_onTaskCancelled"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Icecave\Coro\Task\mixed&lt;TaskInterface&gt;">mixed&lt;TaskInterface&gt;</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_children">children</a>()
+                    <p>Iterate over the children attached to this class.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_children"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -101,8 +121,40 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method_onTaskAttached">
-        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_onTaskAttached"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a> at line 15</div>
+                        <h3 id="method___construct">
+        <div class="location">at line 19</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="Icecave\Coro\Task\Primitives\number">number</abbr> $timeout, mixed $task)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Icecave\Coro\Task\Primitives\number">number</abbr></td>
+                <td>$timeout</td>
+                <td>The number of seconds to wait before cancelling the task.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$task</td>
+                <td>The child task to execute.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_onTaskAttached">
+        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_onTaskAttached"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a> at line 25</div>
         <code>            public            
     <strong>onTaskAttached</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
     </h3>
@@ -153,14 +205,13 @@
                     </div>
     </div>
 
-                <h3 id="method___construct">
-        <div class="location">at line 19</div>
+                <h3 id="method_onTaskCancelled">
+        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_onTaskCancelled"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a> at line 45</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="Icecave\Coro\Task\Primitives\number">number</abbr> $timeout, mixed $task)</code>
+    <strong>onTaskCancelled</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>Notify this task that a child task has been cancelled.</p>
         <p>
 </p>
         <div class="tags">
@@ -168,18 +219,39 @@
 
                     <table>
                     <tr>
-                <td><abbr title="Icecave\Coro\Task\Primitives\number">number</abbr></td>
-                <td>$timeout</td>
-                <td>The number of seconds to wait before cancelling the task.</td>
-            </tr>
-                    <tr>
-                <td>mixed</td>
+                <td><a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
                 <td>$task</td>
-                <td>The child task to execute.</td>
+                <td>The task was cancelled.</td>
             </tr>
             </table>
 
             
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_children">
+        <div class="location">in <a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_children"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a> at line 60</div>
+        <code>            public            <abbr title="Icecave\Coro\Task\mixed&lt;TaskInterface&gt;">mixed&lt;TaskInterface&gt;</abbr>
+    <strong>children</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Iterate over the children attached to this class.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Icecave\Coro\Task\mixed&lt;TaskInterface&gt;">mixed&lt;TaskInterface&gt;</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>

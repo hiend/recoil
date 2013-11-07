@@ -366,8 +366,8 @@ failed will throw the exception produced by that task.</p>
     </h3>
     <div class="details">
         <p>Suspend the current co-routine.</p>
-        <p>The callback is invoked with a ResumableInterface object that can be used
-to resume or cancel execution.</p>
+        <p>The callback is invoked immediately after suspension and is passed the
+co-routine that has been suspended.</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
