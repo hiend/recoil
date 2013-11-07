@@ -60,7 +60,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_enqueueTask">enqueueTask</a>(mixed $task)
+                    <a href="#method_enqueueTask">enqueueTask</a>($task)
                     <p>Enqueue a task for execution.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Icecave/Coro/Engine/Facade.html#method_enqueueTask"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a></small></td>
@@ -77,13 +77,23 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a>
+                    
                 </td>
                 <td class="last">
                     <a href="#method_engine">engine</a>()
                     <p>Fetch the engine on which the current co-routine is executing.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Icecave/Coro/Engine/Facade.html#method_engine"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Icecave/Coro/Task/Compound/WaitAllResult.html"><abbr title="Icecave\Coro\Task\Compound\WaitAllResult">WaitAllResult</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_all">all</a>($task1, $task2)
+                    <p>Wait for all of the given tasks to complete.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Coro/Engine/Facade.html#method_all"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -151,7 +161,7 @@
         <h2>Details</h2>
 
                         <h3 id="method_get">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_get"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 25</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_get"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 27</div>
         <code>            public            
     <strong>get</strong>()</code>
     </h3>
@@ -167,7 +177,7 @@
     </div>
 
                 <h3 id="method_result">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_result"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 48</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_result"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 50</div>
         <code>            public            
     <strong>result</strong>($value)</code>
     </h3>
@@ -207,9 +217,9 @@ co-routine is completed.</p>
     </div>
 
                 <h3 id="method_enqueueTask">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_enqueueTask"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 67</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_enqueueTask"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 71</div>
         <code>            public            
-    <strong>enqueueTask</strong>(mixed $task)</code>
+    <strong>enqueueTask</strong>($task)</code>
     </h3>
     <div class="details">
         <p>Enqueue a task for execution.</p>
@@ -222,9 +232,10 @@ task adaptor.</p>
 
                     <table>
                     <tr>
-                <td>mixed</td>
+                <td></td>
                 <td>$task</td>
-                <td>The task to execute.</td>
+                <td>
+</td>
             </tr>
             </table>
 
@@ -235,7 +246,7 @@ task adaptor.</p>
     </div>
 
                 <h3 id="method_enqueue">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_enqueue"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 87</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_enqueue"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 93</div>
         <code>            public            
     <strong>enqueue</strong>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
@@ -252,12 +263,14 @@ executed.</p>
                     <tr>
                 <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
                 <td>$callback</td>
-                <td>The callable to invoke.</td>
+                <td>
+</td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$arguments</td>
-                <td>Arguments to pass to the callable.</td>
+                <td>
+</td>
             </tr>
             </table>
 
@@ -268,8 +281,8 @@ executed.</p>
     </div>
 
                 <h3 id="method_engine">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_engine"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 101</div>
-        <code>            public            <a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_engine"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 109</div>
+        <code>            public            
     <strong>engine</strong>()</code>
     </h3>
     <div class="details">
@@ -278,12 +291,48 @@ executed.</p>
 </p>
         <div class="tags">
             
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_all">
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_all"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 135</div>
+        <code>            public            <a href="../../../Icecave/Coro/Task/Compound/WaitAllResult.html"><abbr title="Icecave\Coro\Task\Compound\WaitAllResult">WaitAllResult</abbr></a>
+    <strong>all</strong>($task1, $task2)</code>
+    </h3>
+    <div class="details">
+        <p>Wait for all of the given tasks to complete.</p>
+        <p>The return value is an object that implements ArrayAccess which contains
+the results from each of the tasks in the same order as they were passed.</p>
+
+<p>Results are access by numeric index; accessing a result for a task that
+failed will throw the exception produced by that task.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$task1</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$task2</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
                             <h4>Return Value</h4>
 
                     <table>
         <tr>
-            <td><a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a></td>
-            <td>The engine on which the current co-routine is executing.</td>
+            <td><a href="../../../Icecave/Coro/Task/Compound/WaitAllResult.html"><abbr title="Icecave\Coro\Task\Compound\WaitAllResult">WaitAllResult</abbr></a></td>
+            <td>An object containing the results of the tasks.</td>
         </tr>
     </table>
 
@@ -293,7 +342,7 @@ executed.</p>
     </div>
 
                 <h3 id="method_sleep">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_sleep"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 117</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_sleep"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 149</div>
         <code>            public            
     <strong>sleep</strong>($timeout)</code>
     </h3>
@@ -320,7 +369,7 @@ executed.</p>
     </div>
 
                 <h3 id="method_suspend">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_suspend"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 132</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_suspend"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 164</div>
         <code>            public            
     <strong>suspend</strong>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback)</code>
     </h3>
@@ -347,7 +396,7 @@ to resume or cancel execution.</p>
     </div>
 
                 <h3 id="method_timeout">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_timeout"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 148</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_timeout"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 180</div>
         <code>            public            
     <strong>timeout</strong>($timeout, $coroutine)</code>
     </h3>
@@ -380,7 +429,7 @@ cancelled.</p>
     </div>
 
                 <h3 id="method_detach">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_detach"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 162</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_detach"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 194</div>
         <code>            public            
     <strong>detach</strong>($value = null)</code>
     </h3>
@@ -416,7 +465,7 @@ cancelled.</p>
     </div>
 
                 <h3 id="method_detachWithException">
-        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_detachWithException"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 176</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Engine/Facade.html#method_detachWithException"><abbr title="Icecave\Coro\Engine\Facade">Facade</abbr></a> at line 208</div>
         <code>            public            
     <strong>detachWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
