@@ -37,7 +37,7 @@
             <table>
                     <tr>
                 <td class="type">
-                    
+                    <abbr title="Icecave\Coro\Engine\callable">callable</abbr>
                 </td>
                 <td class="last">
                     <a href="#method_enqueueTask">enqueueTask</a>(mixed $task)
@@ -47,7 +47,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <abbr title="Icecave\Coro\Engine\callable">callable</abbr>
                 </td>
                 <td class="last">
                     <a href="#method_enqueue">enqueue</a>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())
@@ -57,7 +57,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <abbr title="Icecave\Coro\Engine\callable">callable</abbr>
                 </td>
                 <td class="last">
                     <a href="#method_enqueueDelayedCallback">enqueueDelayedCallback</a>(<abbr title="Icecave\Coro\Engine\number">number</abbr> $delay, <abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())
@@ -101,8 +101,8 @@
         <h2>Details</h2>
 
                         <h3 id="method_enqueueTask">
-        <div class="location">at line 21</div>
-        <code>            public            
+        <div class="location">at line 23</div>
+        <code>            public            <abbr title="Icecave\Coro\Engine\callable">callable</abbr>
     <strong>enqueueTask</strong>(mixed $task)</code>
     </h3>
     <div class="details">
@@ -123,14 +123,23 @@ task adaptor.</p>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
+            <td>A function that can be called to cancel the enqueued callback.</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_enqueue">
-        <div class="location">at line 34</div>
-        <code>            public            
+        <div class="location">at line 38</div>
+        <code>            public            <abbr title="Icecave\Coro\Engine\callable">callable</abbr>
     <strong>enqueue</strong>(<abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
     <div class="details">
@@ -156,14 +165,23 @@ executed.</p>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
+            <td>A function that can be called to cancel the enqueued callback.</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_enqueueDelayedCallback">
-        <div class="location">at line 49</div>
-        <code>            public            
+        <div class="location">at line 55</div>
+        <code>            public            <abbr title="Icecave\Coro\Engine\callable">callable</abbr>
     <strong>enqueueDelayedCallback</strong>(<abbr title="Icecave\Coro\Engine\number">number</abbr> $delay, <abbr title="Icecave\Coro\Engine\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
     <div class="details">
@@ -195,13 +213,22 @@ executed.</p>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Icecave\Coro\Engine\callable">callable</abbr></td>
+            <td>A function that can be called to cancel the enqueued callback.</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_facadeImplementation">
-        <div class="location">at line 56</div>
+        <div class="location">at line 62</div>
         <code>            public            <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a>
     <strong>facadeImplementation</strong>()</code>
     </h3>
@@ -226,7 +253,7 @@ executed.</p>
     </div>
 
                 <h3 id="method_taskAdaptor">
-        <div class="location">at line 63</div>
+        <div class="location">at line 69</div>
         <code>            public            <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a>
     <strong>taskAdaptor</strong>()</code>
     </h3>
@@ -251,7 +278,7 @@ executed.</p>
     </div>
 
                 <h3 id="method_taskRoot">
-        <div class="location">at line 70</div>
+        <div class="location">at line 76</div>
         <code>            public            <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a>
     <strong>taskRoot</strong>()</code>
     </h3>
