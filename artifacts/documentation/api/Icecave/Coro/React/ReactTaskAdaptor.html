@@ -61,14 +61,13 @@
         <h2>Details</h2>
 
                         <h3 id="method_adapt">
-        <div class="location">in <a href="../../../Icecave/Coro/Task/TaskAdaptor.html#method_adapt"><abbr title="Icecave\Coro\Task\TaskAdaptor">TaskAdaptor</abbr></a> at line 25</div>
+        <div class="location">in <a href="../../../Icecave/Coro/Task/TaskAdaptor.html#method_adapt"><abbr title="Icecave\Coro\Task\TaskAdaptor">TaskAdaptor</abbr></a> at line 27</div>
         <code>            public            <a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a>
     <strong>adapt</strong>(<a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a> $engine, mixed $value)</code>
     </h3>
     <div class="details">
         <p>Adapt a value into a task.</p>
-        <p>
-</p>
+        <p>It is an error to pass a value that can not be adapted into a task.</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -91,7 +90,7 @@
                     <table>
         <tr>
             <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
-            <td>The resulting task.</td>
+            <td>The task represented by $value.</td>
         </tr>
     </table>
 
@@ -101,7 +100,7 @@
                     <table>
                     <tr>
                 <td><abbr title="TaskAdaptationException">TaskAdaptationException</abbr></td>
-                <td>if the given value can not be adapted into a task.</td>
+                <td>if the given value can not be adapted.</td>
             </tr>
             </table>
 
@@ -110,14 +109,13 @@
     </div>
 
                 <h3 id="method_tryAdapt">
-        <div class="location">at line 22</div>
+        <div class="location">at line 24</div>
         <code>            public            <a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a>|null
     <strong>tryAdapt</strong>(<a href="../../../Icecave/Coro/Engine/EngineInterface.html"><abbr title="Icecave\Coro\Engine\EngineInterface">EngineInterface</abbr></a> $engine, mixed $value)</code>
     </h3>
     <div class="details">
         <p>Attempt to adapt a value into a task.</p>
-        <p>
-</p>
+        <p>If no valid adaptation can be made, null is returned.</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -140,7 +138,7 @@
                     <table>
         <tr>
             <td><a href="../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a>|null</td>
-            <td>The resulting task, or null if there is no meaningful adaptation.</td>
+            <td>The task represented by $value.</td>
         </tr>
     </table>
 

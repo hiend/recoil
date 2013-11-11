@@ -188,7 +188,7 @@
                                         <a href="Icecave/Coro/React/PromisePrimitive.html" target="main"><abbr title="Icecave\Coro\React\PromisePrimitive">Icecave\Coro\React\PromisePrimitive</abbr></a>
                                     </td>
                 <td>
-                    Send a value or error to the parent task when a promise is fulfilled.
+                    Send a value or error to the parent task when a promise is fulfilled or rejected, respectively.
                 </td>
             </tr>
                     <tr>
@@ -317,7 +317,7 @@
                                         <a href="Icecave/Coro/Task/Primitives/TimeoutPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\TimeoutPrimitive">Icecave\Coro\Task\Primitives\TimeoutPrimitive</abbr></a>
                                     </td>
                 <td>
-                    A task that cancels its child task if it does not complete within a specified period.
+                    Execute a child task and cancel it if execution is not complete within the timeout duration.
                 </td>
             </tr>
                     <tr>
@@ -325,7 +325,7 @@
                                         <a href="Icecave/Coro/Task/TaskAdaptor.html" target="main"><abbr title="Icecave\Coro\Task\TaskAdaptor">Icecave\Coro\Task\TaskAdaptor</abbr></a>
                                     </td>
                 <td>
-                    The base/default task adaptor implementation.
+                    The default task adaptor implementation.
                 </td>
             </tr>
                     <tr>
@@ -333,7 +333,7 @@
                     <em>                    <a href="Icecave/Coro/Task/TaskAdaptorInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">Icecave\Coro\Task\TaskAdaptorInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    Adapts arbitrary values into tasks.
+                    Adapts values into TaskInterface objects.
                 </td>
             </tr>
                     <tr>
@@ -341,7 +341,7 @@
                     <em>                    <a href="Icecave/Coro/Task/TaskInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskInterface">Icecave\Coro\Task\TaskInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A unit-of-work that can be executed on a co-routine engine.
+                    Logic that can be executed on by a co-routine engine.
                 </td>
             </tr>
                     <tr>
@@ -357,7 +357,7 @@
                     <em>                    <a href="Icecave/Coro/Task/TaskProviderInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskProviderInterface">Icecave\Coro\Task\TaskProviderInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    An object that can use an engine to produce a task.
+                    An object that can produce tasks.
                 </td>
             </tr>
                     <tr>

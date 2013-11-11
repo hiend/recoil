@@ -47,7 +47,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_onTaskAttached">onTaskAttached</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
-                    <p>Notify this task that a child task has been attached.</p>
+                    <p>Notify this object that a task has been attached.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_onTaskAttached"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a></small></td>
             </tr>
@@ -57,7 +57,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_onTaskDetached">onTaskDetached</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
-                    <p>Notify this task that a child task has been detached.</p>
+                    <p>Notify this object that a task has been detached.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_onTaskDetached"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a></small></td>
             </tr>
@@ -67,7 +67,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_onTaskCancelled">onTaskCancelled</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)
-                    <p>Notify this task that a child task has been cancelled.</p>
+                    <p>Notify this object that a task has been cancelled.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../../Icecave/Coro/Task/AbstractParentTask.html#method_onTaskCancelled"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a></small></td>
             </tr>
@@ -87,7 +87,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_onTaskComplete">onTaskComplete</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, mixed $value = null)
-                    <p>Notify this task that a child task has completed.</p>
+                    <p>Notify this object that a task has completed.</p>
                 </td>
                 <td></td>
             </tr>
@@ -97,7 +97,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_onTaskCompleteWithException">onTaskCompleteWithException</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Notify this task that a child task has completed with an error.</p>
+                    <p>Notify this object that a task has completed in an errored state.</p>
                 </td>
                 <td></td>
             </tr>
@@ -139,7 +139,7 @@
     <strong>onTaskAttached</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
     </h3>
     <div class="details">
-        <p>Notify this task that a child task has been attached.</p>
+        <p>Notify this object that a task has been attached.</p>
         <p>
 </p>
         <div class="tags">
@@ -149,7 +149,7 @@
                     <tr>
                 <td><a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
                 <td>$task</td>
-                <td>The child that has been attached.</td>
+                <td>The task that has been attached.</td>
             </tr>
             </table>
 
@@ -165,7 +165,7 @@
     <strong>onTaskDetached</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
     </h3>
     <div class="details">
-        <p>Notify this task that a child task has been detached.</p>
+        <p>Notify this object that a task has been detached.</p>
         <p>
 </p>
         <div class="tags">
@@ -175,7 +175,7 @@
                     <tr>
                 <td><a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
                 <td>$task</td>
-                <td>The child that has been detached.</td>
+                <td>The task that has been detached.</td>
             </tr>
             </table>
 
@@ -191,7 +191,7 @@
     <strong>onTaskCancelled</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task)</code>
     </h3>
     <div class="details">
-        <p>Notify this task that a child task has been cancelled.</p>
+        <p>Notify this object that a task has been cancelled.</p>
         <p>
 </p>
         <div class="tags">
@@ -201,7 +201,7 @@
                     <tr>
                 <td><a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a></td>
                 <td>$task</td>
-                <td>The task was cancelled.</td>
+                <td>The task that was cancelled.</td>
             </tr>
             </table>
 
@@ -243,7 +243,7 @@
     <strong>onTaskComplete</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, mixed $value = null)</code>
     </h3>
     <div class="details">
-        <p>Notify this task that a child task has completed.</p>
+        <p>Notify this object that a task has completed.</p>
         <p>
 </p>
         <div class="tags">
@@ -258,7 +258,7 @@
                     <tr>
                 <td>mixed</td>
                 <td>$value</td>
-                <td>The value that was produced, if any.</td>
+                <td>The result that the task produced, if any.</td>
             </tr>
             </table>
 
@@ -274,7 +274,7 @@
     <strong>onTaskCompleteWithException</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Notify this task that a child task has completed with an error.</p>
+        <p>Notify this object that a task has completed in an errored state.</p>
         <p>
 </p>
         <div class="tags">
