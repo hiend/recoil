@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Coro\Task\Compound\WaitAll | Coro API</title>
+        <title>Icecave\Coro\Task\Compound\WaitAny | Coro API</title>
                     <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
                             </head>
         <body id="class">
@@ -19,13 +19,13 @@
         <div id="title">Coro API</div>
 
             <div class="type">Class</div>
-    <h1><a href="../../../../Icecave/Coro/Task/Compound.html">Icecave\Coro\Task\Compound</a>\WaitAll</h1>
+    <h1><a href="../../../../Icecave/Coro/Task/Compound.html">Icecave\Coro\Task\Compound</a>\WaitAny</h1>
     </div>
         <div class="content">
-                <p>class    <strong>WaitAll</strong>        extends <a href="../../../../Icecave/Coro/Task/AbstractParentTask.html"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a></p>
+                <p>class    <strong>WaitAny</strong>        extends <a href="../../../../Icecave/Coro/Task/AbstractParentTask.html"><abbr title="Icecave\Coro\Task\AbstractParentTask">AbstractParentTask</abbr></a></p>
 
             <div class="description">
-            <p>Wait for all child tasks to complete before returning an aggregate result to the parent.</p>
+            <p>Wait for any one of the child tasks to complete before returning the result to the parent and cancelling the other tasks.</p>
             <p>
 </p>
         </div>
@@ -92,7 +92,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_onTaskComplete">onTaskComplete</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, mixed $value = null)
-                    <p>Notify this object that a task has completed.</p>
+                    <p>Notify this task that a child task has completed.</p>
                 </td>
                 <td></td>
             </tr>
@@ -102,7 +102,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_onTaskCompleteWithException">onTaskCompleteWithException</a>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Notify this object that a task has completed in an errored state.</p>
+                    <p>Notify this task that a child task has completed with an error.</p>
                 </td>
                 <td></td>
             </tr>
@@ -243,12 +243,12 @@
     </div>
 
                 <h3 id="method_onTaskComplete">
-        <div class="location">at line 52</div>
+        <div class="location">at line 53</div>
         <code>            public            
     <strong>onTaskComplete</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, mixed $value = null)</code>
     </h3>
     <div class="details">
-        <p>Notify this object that a task has completed.</p>
+        <p>Notify this task that a child task has completed.</p>
         <p>
 </p>
         <div class="tags">
@@ -263,7 +263,7 @@
                     <tr>
                 <td>mixed</td>
                 <td>$value</td>
-                <td>The result that the task produced, if any.</td>
+                <td>The value that was produced, if any.</td>
             </tr>
             </table>
 
@@ -274,12 +274,12 @@
     </div>
 
                 <h3 id="method_onTaskCompleteWithException">
-        <div class="location">at line 71</div>
+        <div class="location">at line 74</div>
         <code>            public            
     <strong>onTaskCompleteWithException</strong>(<a href="../../../../Icecave/Coro/Task/TaskInterface.html"><abbr title="Icecave\Coro\Task\TaskInterface">TaskInterface</abbr></a> $task, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Notify this object that a task has completed in an errored state.</p>
+        <p>Notify this task that a child task has completed with an error.</p>
         <p>
 </p>
         <div class="tags">
