@@ -40,7 +40,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor = null, <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a> $taskRoot = null)
+                    <a href="#method___construct">__construct</a>(<abbr title="React\EventLoop\NextTickLoopInterface">NextTickLoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor = null, <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a> $taskRoot = null)
                     <p>
 </p>
                 </td>
@@ -108,7 +108,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+                    <abbr title="React\EventLoop\NextTickLoopInterface">NextTickLoopInterface</abbr>
                 </td>
                 <td class="last">
                     <a href="#method_eventLoop">eventLoop</a>()
@@ -122,9 +122,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 25</div>
+        <div class="location">at line 24</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor = null, <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a> $taskRoot = null)</code>
+    <strong>__construct</strong>(<abbr title="React\EventLoop\NextTickLoopInterface">NextTickLoopInterface</abbr> $eventLoop = null, <a href="../../../Icecave/Coro/Engine/FacadeInterface.html"><abbr title="Icecave\Coro\Engine\FacadeInterface">FacadeInterface</abbr></a> $facadeImplementation = null, <a href="../../../Icecave/Coro/Task/TaskAdaptorInterface.html"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">TaskAdaptorInterface</abbr></a> $taskAdaptor = null, <a href="../../../Icecave/Coro/Engine/TaskRoot.html"><abbr title="Icecave\Coro\Engine\TaskRoot">TaskRoot</abbr></a> $taskRoot = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -136,7 +136,7 @@
 
                     <table>
                     <tr>
-                <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
+                <td><abbr title="React\EventLoop\NextTickLoopInterface">NextTickLoopInterface</abbr></td>
                 <td>$eventLoop</td>
                 <td>The ReactPHP event loop to used by the engine for IO and timers.</td>
             </tr>
@@ -276,7 +276,7 @@ task adaptor.</p>
     </div>
 
                 <h3 id="method_enqueue">
-        <div class="location">at line 62</div>
+        <div class="location">at line 60</div>
         <code>            public            <abbr title="Icecave\Coro\React\callable">callable</abbr>
     <strong>enqueue</strong>(<abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
@@ -318,7 +318,7 @@ executed immediately.</p>
     </div>
 
                 <h3 id="method_executeAfter">
-        <div class="location">at line 100</div>
+        <div class="location">at line 98</div>
         <code>            public            <abbr title="Icecave\Coro\React\callable">callable</abbr>
     <strong>executeAfter</strong>(<abbr title="Icecave\Coro\React\number">number</abbr> $delay, <abbr title="Icecave\Coro\React\callable">callable</abbr> $callback, array $arguments = array())</code>
     </h3>
@@ -366,8 +366,8 @@ executed immediately.</p>
     </div>
 
                 <h3 id="method_eventLoop">
-        <div class="location">at line 126</div>
-        <code>            public            <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+        <div class="location">at line 123</div>
+        <code>            public            <abbr title="React\EventLoop\NextTickLoopInterface">NextTickLoopInterface</abbr>
     <strong>eventLoop</strong>()</code>
     </h3>
     <div class="details">
@@ -380,7 +380,7 @@ executed immediately.</p>
 
                     <table>
         <tr>
-            <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
+            <td><abbr title="React\EventLoop\NextTickLoopInterface">NextTickLoopInterface</abbr></td>
             <td>The ReactPHP event loop.</td>
         </tr>
     </table>
