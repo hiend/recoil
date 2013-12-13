@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Interfaces | Coro API</title>
+        <title>Interfaces | Recoil API</title>
                     <link rel="stylesheet" type="text/css" href="stylesheet.css">
                             </head>
         <body id="overview">
@@ -16,88 +16,77 @@
             
         </ul>
 
-        <div id="title">Coro API</div>
+        <div id="title">Recoil API</div>
 
             <h1>Interfaces</h1>
     </div>
         <div class="content">
                 <table>
                     <tr>
-                <td><a href="Icecave/Coro/Channel/ChannelInterface.html" target="main"><abbr title="Icecave\Coro\Channel\ChannelInterface">Icecave\Coro\Channel\ChannelInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Channel/ChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\ChannelInterface">Icecave\Recoil\Channel\ChannelInterface</abbr></a></td>
                 <td class="last">
-                    A data channel is a (possibly asynchronous) queue of objects.
+                    A data channel is primitive for sending values between strands.
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Channel/Exception/ChannelExceptionInterface.html" target="main"><abbr title="Icecave\Coro\Channel\Exception\ChannelExceptionInterface">Icecave\Coro\Channel\Exception\ChannelExceptionInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Channel/ReadableChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">Icecave\Recoil\Channel\ReadableChannelInterface</abbr></a></td>
                 <td class="last">
-                    A common interface for grouping all channel related exceptions.
+                    A data channel from which values can be read (aka producer, source).
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Channel/ReadableChannelInterface.html" target="main"><abbr title="Icecave\Coro\Channel\ReadableChannelInterface">Icecave\Coro\Channel\ReadableChannelInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Channel/WritableChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">Icecave\Recoil\Channel\WritableChannelInterface</abbr></a></td>
                 <td class="last">
-                    A data channel from which objects may be obtained (aka producer, source).
+                    A data channel to which values can be written (aka consumer, sink).
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Channel/WritableChannelInterface.html" target="main"><abbr title="Icecave\Coro\Channel\WritableChannelInterface">Icecave\Coro\Channel\WritableChannelInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Coroutine/CoroutineAdaptorInterface.html" target="main"><abbr title="Icecave\Recoil\Coroutine\CoroutineAdaptorInterface">Icecave\Recoil\Coroutine\CoroutineAdaptorInterface</abbr></a></td>
                 <td class="last">
-                    A data channel to which objects may be written (aka consumer, sink).
+                    Adapts arbitrary values into co-routine objects.
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Coroutine/CoroutineInterface.html" target="main"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">Icecave\Coro\Coroutine\CoroutineInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Coroutine/CoroutineInterface.html" target="main"><abbr title="Icecave\Recoil\Coroutine\CoroutineInterface">Icecave\Recoil\Coroutine\CoroutineInterface</abbr></a></td>
                 <td class="last">
-                    A task which can suspend and resume multiple times.
+                    A co-routine represents a unit of work that can be suspended and resumed.
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Coroutine/DriverInterface.html" target="main"><abbr title="Icecave\Coro\Coroutine\DriverInterface">Icecave\Coro\Coroutine\DriverInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Coroutine/CoroutineProviderInterface.html" target="main"><abbr title="Icecave\Recoil\Coroutine\CoroutineProviderInterface">Icecave\Recoil\Coroutine\CoroutineProviderInterface</abbr></a></td>
                 <td class="last">
-                    Low-level driver for co-routine implementations.
+                    A co-routine provide is an object that can produce an object that can be adapted into a co-routine using the kernel's co-routine adaptor.
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Engine/EngineInterface.html" target="main"><abbr title="Icecave\Coro\Engine\EngineInterface">Icecave\Coro\Engine\EngineInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Kernel/Api/KernelApiInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\Api\KernelApiInterface">Icecave\Recoil\Kernel\Api\KernelApiInterface</abbr></a></td>
                 <td class="last">
-                    A co-routine engine.
+                    Public interface for manipulating the kernel and the current strand.
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Engine/FacadeInterface.html" target="main"><abbr title="Icecave\Coro\Engine\FacadeInterface">Icecave\Coro\Engine\FacadeInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Kernel/KernelInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\KernelInterface">Icecave\Recoil\Kernel\KernelInterface</abbr></a></td>
                 <td class="last">
-                    A helper object for use through the static Coro facade.
+                    A co-routine kernel.
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Task/Exception/TaskExceptionInterface.html" target="main"><abbr title="Icecave\Coro\Task\Exception\TaskExceptionInterface">Icecave\Coro\Task\Exception\TaskExceptionInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Kernel/Strand/StrandFactoryInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\Strand\StrandFactoryInterface">Icecave\Recoil\Kernel\Strand\StrandFactoryInterface</abbr></a></td>
                 <td class="last">
-                    A common interface for grouping all task related exceptions.
+                    A factory for strands.
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Task/TaskAdaptorInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">Icecave\Coro\Task\TaskAdaptorInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Kernel/Strand/StrandInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">Icecave\Recoil\Kernel\Strand\StrandInterface</abbr></a></td>
                 <td class="last">
-                    Adapts values into TaskInterface objects.
+                    A strand represents a user-space "thread" of execution.
                 </td>
             </tr>
                     <tr>
-                <td><a href="Icecave/Coro/Task/TaskInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskInterface">Icecave\Coro\Task\TaskInterface</abbr></a></td>
+                <td><a href="Icecave/Recoil/Kernel/Strand/StrandResultInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\Strand\StrandResultInterface">Icecave\Recoil\Kernel\Strand\StrandResultInterface</abbr></a></td>
                 <td class="last">
-                    Logic that can be executed on by a co-routine engine.
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Icecave/Coro/Task/TaskParentInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskParentInterface">Icecave\Coro\Task\TaskParentInterface</abbr></a></td>
-                <td class="last">
-                    An object to which tasks can be attached.
-                </td>
-            </tr>
-                    <tr>
-                <td><a href="Icecave/Coro/Task/TaskProviderInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskProviderInterface">Icecave\Coro\Task\TaskProviderInterface</abbr></a></td>
-                <td class="last">
-                    An object that can produce tasks.
+                    
+
                 </td>
             </tr>
             </table>

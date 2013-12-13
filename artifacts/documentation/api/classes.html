@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Classes | Coro API</title>
+        <title>Classes | Recoil API</title>
                     <link rel="stylesheet" type="text/css" href="stylesheet.css">
                             </head>
         <body id="overview">
@@ -16,7 +16,7 @@
             
         </ul>
 
-        <div id="title">Coro API</div>
+        <div id="title">Recoil API</div>
 
             <h1>Classes</h1>
     </div>
@@ -24,23 +24,23 @@
                 <table>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Channel/Channel.html" target="main"><abbr title="Icecave\Coro\Channel\Channel">Icecave\Coro\Channel\Channel</abbr></a>
+                                        <a href="Icecave/Recoil/Channel/Channel.html" target="main"><abbr title="Icecave\Recoil\Channel\Channel">Icecave\Recoil\Channel\Channel</abbr></a>
                                     </td>
                 <td>
-                    An unbuffered data channel.
+                    An unbuffered (synchronous) data channel that requires exclusive read/write operations.
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Channel/ChannelInterface.html" target="main"><abbr title="Icecave\Coro\Channel\ChannelInterface">Icecave\Coro\Channel\ChannelInterface</abbr></a>
+                    <em>                    <a href="Icecave/Recoil/Channel/ChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\ChannelInterface">Icecave\Recoil\Channel\ChannelInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A data channel is a (possibly asynchronous) queue of objects.
+                    A data channel is primitive for sending values between strands.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Channel/Exception/ChannelClosedException.html" target="main"><abbr title="Icecave\Coro\Channel\Exception\ChannelClosedException">Icecave\Coro\Channel\Exception\ChannelClosedException</abbr></a>
+                                        <a href="Icecave/Recoil/Channel/Exception/ChannelClosedException.html" target="main"><abbr title="Icecave\Recoil\Channel\Exception\ChannelClosedException">Icecave\Recoil\Channel\Exception\ChannelClosedException</abbr></a>
                                     </td>
                 <td>
                     A read or write operation was attempted on a channel that has been closed.
@@ -48,127 +48,103 @@
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Channel/Exception/ChannelExceptionInterface.html" target="main"><abbr title="Icecave\Coro\Channel\Exception\ChannelExceptionInterface">Icecave\Coro\Channel\Exception\ChannelExceptionInterface</abbr></a>
+                                        <a href="Icecave/Recoil/Channel/Exception/ChannelLockedException.html" target="main"><abbr title="Icecave\Recoil\Channel\Exception\ChannelLockedException">Icecave\Recoil\Channel\Exception\ChannelLockedException</abbr></a>
+                                    </td>
+                <td>
+                    A read or write operation was attempted on a channel that is locked.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Recoil/Channel/QueueChannel.html" target="main"><abbr title="Icecave\Recoil\Channel\QueueChannel">Icecave\Recoil\Channel\QueueChannel</abbr></a>
+                                    </td>
+                <td>
+                    An unbuffered (synchronous) data channel that allows multiple concurrent read/write operations.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Recoil/Channel/ReadableChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">Icecave\Recoil\Channel\ReadableChannelInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A common interface for grouping all channel related exceptions.
+                    A data channel from which values can be read (aka producer, source).
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Channel/ReadableChannelInterface.html" target="main"><abbr title="Icecave\Coro\Channel\ReadableChannelInterface">Icecave\Coro\Channel\ReadableChannelInterface</abbr></a>
+                                        <a href="Icecave/Recoil/Channel/Stream/ReadableStreamChannel.html" target="main"><abbr title="Icecave\Recoil\Channel\Stream\ReadableStreamChannel">Icecave\Recoil\Channel\Stream\ReadableStreamChannel</abbr></a>
+                                    </td>
+                <td>
+                    Adapts a ReactPHP readable stream into a readable channel.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Recoil/Channel/WritableChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">Icecave\Recoil\Channel\WritableChannelInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A data channel from which objects may be obtained (aka producer, source).
+                    A data channel to which values can be written (aka consumer, sink).
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Channel/WritableChannelInterface.html" target="main"><abbr title="Icecave\Coro\Channel\WritableChannelInterface">Icecave\Coro\Channel\WritableChannelInterface</abbr></a>
+                                        <a href="Icecave/Recoil/Coroutine/AbstractCoroutine.html" target="main"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">Icecave\Recoil\Coroutine\AbstractCoroutine</abbr></a>
+                                    </td>
+                <td>
+                    A base class for co-routines that keeps track of next tick state behaviour.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Recoil/Coroutine/CoroutineAdaptor.html" target="main"><abbr title="Icecave\Recoil\Coroutine\CoroutineAdaptor">Icecave\Recoil\Coroutine\CoroutineAdaptor</abbr></a>
+                                    </td>
+                <td>
+                    The default co-routine adaptor implementation.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Recoil/Coroutine/CoroutineAdaptorInterface.html" target="main"><abbr title="Icecave\Recoil\Coroutine\CoroutineAdaptorInterface">Icecave\Recoil\Coroutine\CoroutineAdaptorInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A data channel to which objects may be written (aka consumer, sink).
+                    Adapts arbitrary values into co-routine objects.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Coro.html" target="main"><abbr title="Icecave\Coro\Coro">Icecave\Coro\Coro</abbr></a>
-                                    </td>
-                <td>
-                    Public facade for co-routine operations.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Coroutine/Coroutine.html" target="main"><abbr title="Icecave\Coro\Coroutine\Coroutine">Icecave\Coro\Coroutine\Coroutine</abbr></a>
-                                    </td>
-                <td>
-                    Wraps a DriverInterface to provide CoroutineInterface.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                    <em>                    <a href="Icecave/Coro/Coroutine/CoroutineInterface.html" target="main"><abbr title="Icecave\Coro\Coroutine\CoroutineInterface">Icecave\Coro\Coroutine\CoroutineInterface</abbr></a>
+                    <em>                    <a href="Icecave/Recoil/Coroutine/CoroutineInterface.html" target="main"><abbr title="Icecave\Recoil\Coroutine\CoroutineInterface">Icecave\Recoil\Coroutine\CoroutineInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A task which can suspend and resume multiple times.
+                    A co-routine represents a unit of work that can be suspended and resumed.
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Coroutine/DriverInterface.html" target="main"><abbr title="Icecave\Coro\Coroutine\DriverInterface">Icecave\Coro\Coroutine\DriverInterface</abbr></a>
+                    <em>                    <a href="Icecave/Recoil/Coroutine/CoroutineProviderInterface.html" target="main"><abbr title="Icecave\Recoil\Coroutine\CoroutineProviderInterface">Icecave\Recoil\Coroutine\CoroutineProviderInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    Low-level driver for co-routine implementations.
+                    A co-routine provide is an object that can produce an object that can be adapted into a co-routine using the kernel's co-routine adaptor.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Coroutine/GeneratorDriver.html" target="main"><abbr title="Icecave\Coro\Coroutine\GeneratorDriver">Icecave\Coro\Coroutine\GeneratorDriver</abbr></a>
+                                        <a href="Icecave/Recoil/Coroutine/GeneratorCoroutine.html" target="main"><abbr title="Icecave\Recoil\Coroutine\GeneratorCoroutine">Icecave\Recoil\Coroutine\GeneratorCoroutine</abbr></a>
                                     </td>
                 <td>
-                    Low-level driver for co-routines based on PHP generators.
+                    A co-routine wrapper for PHP generators.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Engine/AbstractEngine.html" target="main"><abbr title="Icecave\Coro\Engine\AbstractEngine">Icecave\Coro\Engine\AbstractEngine</abbr></a>
+                                        <a href="Icecave/Recoil/Coroutine/PromiseCoroutine.html" target="main"><abbr title="Icecave\Recoil\Coroutine\PromiseCoroutine">Icecave\Recoil\Coroutine\PromiseCoroutine</abbr></a>
                                     </td>
                 <td>
-                    Common implementation for co-routine engines.
+                    A co-routine that resumes when a promise is fulfilled or rejected.
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Engine/EngineInterface.html" target="main"><abbr title="Icecave\Coro\Engine\EngineInterface">Icecave\Coro\Engine\EngineInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    A co-routine engine.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Engine/Facade.html" target="main"><abbr title="Icecave\Coro\Engine\Facade">Icecave\Coro\Engine\Facade</abbr></a>
-                                    </td>
-                <td>
-                    A helper object for use through the static Coro facade.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                    <em>                    <a href="Icecave/Coro/Engine/FacadeInterface.html" target="main"><abbr title="Icecave\Coro\Engine\FacadeInterface">Icecave\Coro\Engine\FacadeInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    A helper object for use through the static Coro facade.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Engine/FacadeOperation.html" target="main"><abbr title="Icecave\Coro\Engine\FacadeOperation">Icecave\Coro\Engine\FacadeOperation</abbr></a>
-                                    </td>
-                <td>
-                    Represents a call made via the Coro facade.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Engine/SynchronousEngine.html" target="main"><abbr title="Icecave\Coro\Engine\SynchronousEngine">Icecave\Coro\Engine\SynchronousEngine</abbr></a>
-                                    </td>
-                <td>
-                    A simple synchronous co-routine interface.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Engine/TaskRoot.html" target="main"><abbr title="Icecave\Coro\Engine\TaskRoot">Icecave\Coro\Engine\TaskRoot</abbr></a>
-                                    </td>
-                <td>
-                    The parent to which all top-level tasks are attached.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/PackageInfo.html" target="main"><abbr title="Icecave\Coro\PackageInfo">Icecave\Coro\PackageInfo</abbr></a>
+                                        <a href="Icecave/Recoil/Kernel/Api/KernelApi.html" target="main"><abbr title="Icecave\Recoil\Kernel\Api\KernelApi">Icecave\Recoil\Kernel\Api\KernelApi</abbr></a>
                                     </td>
                 <td>
                     
@@ -177,87 +153,23 @@
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/React/EventLoopEngine.html" target="main"><abbr title="Icecave\Coro\React\EventLoopEngine">Icecave\Coro\React\EventLoopEngine</abbr></a>
+                                        <a href="Icecave/Recoil/Kernel/Api/KernelApiCall.html" target="main"><abbr title="Icecave\Recoil\Kernel\Api\KernelApiCall">Icecave\Recoil\Kernel\Api\KernelApiCall</abbr></a>
                                     </td>
                 <td>
-                    A co-routine engine based on ReactPHP's event loop.
+                    Represents a call to a feature provided by the Kernel API.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/React/PromisePrimitive.html" target="main"><abbr title="Icecave\Coro\React\PromisePrimitive">Icecave\Coro\React\PromisePrimitive</abbr></a>
-                                    </td>
+                    <em>                    <a href="Icecave/Recoil/Kernel/Api/KernelApiInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\Api\KernelApiInterface">Icecave\Recoil\Kernel\Api\KernelApiInterface</abbr></a>
+                    </em>                </td>
                 <td>
-                    Send a value or error to the parent task when a promise is fulfilled or rejected, respectively.
+                    Public interface for manipulating the kernel and the current strand.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/React/ReactFacade.html" target="main"><abbr title="Icecave\Coro\React\ReactFacade">Icecave\Coro\React\ReactFacade</abbr></a>
-                                    </td>
-                <td>
-                    A helper object for use through the static Coro facade.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/React/ReactTaskAdaptor.html" target="main"><abbr title="Icecave\Coro\React\ReactTaskAdaptor">Icecave\Coro\React\ReactTaskAdaptor</abbr></a>
-                                    </td>
-                <td>
-                    Task adaptor for use with the react event loop.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/React/Stream/ReadableStreamChannel.html" target="main"><abbr title="Icecave\Coro\React\Stream\ReadableStreamChannel">Icecave\Coro\React\Stream\ReadableStreamChannel</abbr></a>
-                                    </td>
-                <td>
-                    A readable channel that produces values from a readable ReactPHP stream.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/AbstractParentTask.html" target="main"><abbr title="Icecave\Coro\Task\AbstractParentTask">Icecave\Coro\Task\AbstractParentTask</abbr></a>
-                                    </td>
-                <td>
-                    Common implementation for tasks that are also task parents.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/AbstractTask.html" target="main"><abbr title="Icecave\Coro\Task\AbstractTask">Icecave\Coro\Task\AbstractTask</abbr></a>
-                                    </td>
-                <td>
-                    Common implementation for tasks.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/Compound/WaitAll.html" target="main"><abbr title="Icecave\Coro\Task\Compound\WaitAll">Icecave\Coro\Task\Compound\WaitAll</abbr></a>
-                                    </td>
-                <td>
-                    Wait for all child tasks to complete before returning an aggregate result to the parent.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/Compound/WaitAllResult.html" target="main"><abbr title="Icecave\Coro\Task\Compound\WaitAllResult">Icecave\Coro\Task\Compound\WaitAllResult</abbr></a>
-                                    </td>
-                <td>
-                    An array-like object that contains results of a "wait-all" operation.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/Compound/WaitAny.html" target="main"><abbr title="Icecave\Coro\Task\Compound\WaitAny">Icecave\Coro\Task\Compound\WaitAny</abbr></a>
-                                    </td>
-                <td>
-                    Wait for any one of the child tasks to complete before returning the result to the parent and cancelling the other tasks.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/Compound/WaitAnyResult.html" target="main"><abbr title="Icecave\Coro\Task\Compound\WaitAnyResult">Icecave\Coro\Task\Compound\WaitAnyResult</abbr></a>
+                                        <a href="Icecave/Recoil/Kernel/Api/Select.html" target="main"><abbr title="Icecave\Recoil\Kernel\Api\Select">Icecave\Recoil\Kernel\Api\Select</abbr></a>
                                     </td>
                 <td>
                     
@@ -266,130 +178,118 @@
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Task/Exception/TaskAdaptationException.html" target="main"><abbr title="Icecave\Coro\Task\Exception\TaskAdaptationException">Icecave\Coro\Task\Exception\TaskAdaptationException</abbr></a>
+                                        <a href="Icecave/Recoil/Kernel/Api/Sleep.html" target="main"><abbr title="Icecave\Recoil\Kernel\Api\Sleep">Icecave\Recoil\Kernel\Api\Sleep</abbr></a>
                                     </td>
                 <td>
-                    Indicates that a given value could not be adapted into a task.
+                    
+
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Task/Exception/TaskCancelledException.html" target="main"><abbr title="Icecave\Coro\Task\Exception\TaskCancelledException">Icecave\Coro\Task\Exception\TaskCancelledException</abbr></a>
+                                        <a href="Icecave/Recoil/Kernel/Api/Timeout.html" target="main"><abbr title="Icecave\Recoil\Kernel\Api\Timeout">Icecave\Recoil\Kernel\Api\Timeout</abbr></a>
                                     </td>
                 <td>
-                    Indicates that a task was cancelled.
+                    
+
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Task/Exception/TaskExceptionInterface.html" target="main"><abbr title="Icecave\Coro\Task\Exception\TaskExceptionInterface">Icecave\Coro\Task\Exception\TaskExceptionInterface</abbr></a>
+                                        <a href="Icecave/Recoil/Kernel/Exception/StrandTerminatedException.html" target="main"><abbr title="Icecave\Recoil\Kernel\Exception\StrandTerminatedException">Icecave\Recoil\Kernel\Exception\StrandTerminatedException</abbr></a>
+                                    </td>
+                <td>
+                    Indicates that strand has been terminated.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Recoil/Kernel/Exception/TimeoutException.html" target="main"><abbr title="Icecave\Recoil\Kernel\Exception\TimeoutException">Icecave\Recoil\Kernel\Exception\TimeoutException</abbr></a>
+                                    </td>
+                <td>
+                    Indicates that a co-routine has timed out.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Recoil/Kernel/Kernel.html" target="main"><abbr title="Icecave\Recoil\Kernel\Kernel">Icecave\Recoil\Kernel\Kernel</abbr></a>
+                                    </td>
+                <td>
+                    The default kernel implementation.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Recoil/Kernel/KernelInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\KernelInterface">Icecave\Recoil\Kernel\KernelInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A common interface for grouping all task related exceptions.
+                    A co-routine kernel.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Task/Exception/TaskTimeoutException.html" target="main"><abbr title="Icecave\Coro\Task\Exception\TaskTimeoutException">Icecave\Coro\Task\Exception\TaskTimeoutException</abbr></a>
+                                        <a href="Icecave/Recoil/Kernel/Strand/StackBase.html" target="main"><abbr title="Icecave\Recoil\Kernel\Strand\StackBase">Icecave\Recoil\Kernel\Strand\StackBase</abbr></a>
                                     </td>
                 <td>
-                    Indicates that a task has timed out.
+                    The base co-routine in a strand's call-stack.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Task/Primitives/ImmediatePrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\ImmediatePrimitive">Icecave\Coro\Task\Primitives\ImmediatePrimitive</abbr></a>
+                                        <a href="Icecave/Recoil/Kernel/Strand/Strand.html" target="main"><abbr title="Icecave\Recoil\Kernel\Strand\Strand">Icecave\Recoil\Kernel\Strand\Strand</abbr></a>
                                     </td>
                 <td>
-                    Invoke a callback immediately and send the result to the parent task.
+                    A strand represents a user-space "thread" of execution.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Task/Primitives/ReturnPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\ReturnPrimitive">Icecave\Coro\Task\Primitives\ReturnPrimitive</abbr></a>
+                                        <a href="Icecave/Recoil/Kernel/Strand/StrandFactory.html" target="main"><abbr title="Icecave\Recoil\Kernel\Strand\StrandFactory">Icecave\Recoil\Kernel\Strand\StrandFactory</abbr></a>
                                     </td>
                 <td>
-                    Detaches the parent task from its parent, and resumes execution of both.
+                    The default strand factory.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Coro/Task/Primitives/SleepPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\SleepPrimitive">Icecave\Coro\Task\Primitives\SleepPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    Suspend the parent task and enqueue it to be resumed after the specified timeout.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/Primitives/SuspendPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\SuspendPrimitive">Icecave\Coro\Task\Primitives\SuspendPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    Suspend the parent task.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/Primitives/ThrowPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\ThrowPrimitive">Icecave\Coro\Task\Primitives\ThrowPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    Detaches the parent task from its parent, and resumes execution of both.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/Primitives/TimeoutPrimitive.html" target="main"><abbr title="Icecave\Coro\Task\Primitives\TimeoutPrimitive">Icecave\Coro\Task\Primitives\TimeoutPrimitive</abbr></a>
-                                    </td>
-                <td>
-                    Execute a child task and cancel it if execution is not complete within the timeout duration.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/TaskAdaptor.html" target="main"><abbr title="Icecave\Coro\Task\TaskAdaptor">Icecave\Coro\Task\TaskAdaptor</abbr></a>
-                                    </td>
-                <td>
-                    The default task adaptor implementation.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                    <em>                    <a href="Icecave/Coro/Task/TaskAdaptorInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskAdaptorInterface">Icecave\Coro\Task\TaskAdaptorInterface</abbr></a>
+                    <em>                    <a href="Icecave/Recoil/Kernel/Strand/StrandFactoryInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\Strand\StrandFactoryInterface">Icecave\Recoil\Kernel\Strand\StrandFactoryInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    Adapts values into TaskInterface objects.
+                    A factory for strands.
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Task/TaskInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskInterface">Icecave\Coro\Task\TaskInterface</abbr></a>
+                    <em>                    <a href="Icecave/Recoil/Kernel/Strand/StrandInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">Icecave\Recoil\Kernel\Strand\StrandInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    Logic that can be executed on by a co-routine engine.
+                    A strand represents a user-space "thread" of execution.
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Task/TaskParentInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskParentInterface">Icecave\Coro\Task\TaskParentInterface</abbr></a>
+                    <em>                    <a href="Icecave/Recoil/Kernel/Strand/StrandResultInterface.html" target="main"><abbr title="Icecave\Recoil\Kernel\Strand\StrandResultInterface">Icecave\Recoil\Kernel\Strand\StrandResultInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    An object to which tasks can be attached.
+                    
+
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Coro/Task/TaskProviderInterface.html" target="main"><abbr title="Icecave\Coro\Task\TaskProviderInterface">Icecave\Coro\Task\TaskProviderInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    An object that can produce tasks.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Coro/Task/TaskStatus.html" target="main"><abbr title="Icecave\Coro\Task\TaskStatus">Icecave\Coro\Task\TaskStatus</abbr></a>
+                                        <a href="Icecave/Recoil/PackageInfo.html" target="main"><abbr title="Icecave\Recoil\PackageInfo">Icecave\Recoil\PackageInfo</abbr></a>
                                     </td>
                 <td>
-                    Represents the current state of a task.
+                    
+
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Recoil/Recoil.html" target="main"><abbr title="Icecave\Recoil\Recoil">Icecave\Recoil\Recoil</abbr></a>
+                                    </td>
+                <td>
+                    Public facade for Kernel API calls.
                 </td>
             </tr>
             </table>

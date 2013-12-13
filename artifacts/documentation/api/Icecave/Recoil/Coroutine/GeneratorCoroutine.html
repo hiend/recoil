@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Icecave\Recoil\Coroutine\GeneratorCoroutine | Recoil API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Recoil API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Icecave/Recoil/Coroutine.html">Icecave\Recoil\Coroutine</a>\GeneratorCoroutine</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>GeneratorCoroutine</strong>        extends <a href="../../../Icecave/Recoil/Coroutine/AbstractCoroutine.html"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></p>
+
+            <div class="description">
+            <p>A co-routine wrapper for PHP generators.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="http://php.net/Generator"><abbr title="Generator">Generator</abbr></a> $generator)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_call">call</a>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)
+                    <p>Invoked when tick() is called for the first time.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resumeWithValue">resumeWithValue</a>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, mixed $value)
+                    <p>Invoked when tick() is called after sendOnNextTick().</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Invoked when tick() is called after throwOnNextTick().</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_terminate">terminate</a>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)
+                    <p>Invoked when tick() is called after terminateOnNextTick().</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_tick">tick</a>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)
+                    <p>Execute the next unit of work.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Coroutine/AbstractCoroutine.html#method_tick"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sendOnNextTick">sendOnNextTick</a>(mixed $value)
+                    <p>Store a value to send to the co-routine on the next tick.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Coroutine/AbstractCoroutine.html#method_sendOnNextTick"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_throwOnNextTick">throwOnNextTick</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Store an exception to send to the co-routine on the next tick.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Coroutine/AbstractCoroutine.html#method_throwOnNextTick"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_terminateOnNextTick">terminateOnNextTick</a>()
+                    <p>Instruct the co-routine to terminate execution on the next tick.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Coroutine/AbstractCoroutine.html#method_terminateOnNextTick"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 16</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="http://php.net/Generator"><abbr title="Generator">Generator</abbr></a> $generator)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Generator"><abbr title="Generator">Generator</abbr></a></td>
+                <td>$generator</td>
+                <td>The PHP generator that implements the co-routine logic.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_call">
+        <div class="location">at line 28</div>
+        <code>            public            
+    <strong>call</strong>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
+    </h3>
+    <div class="details">
+        <p>Invoked when tick() is called for the first time.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the co-routine.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resumeWithValue">
+        <div class="location">at line 46</div>
+        <code>            public            
+    <strong>resumeWithValue</strong>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Invoked when tick() is called after sendOnNextTick().</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the co-routine.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value passed to sendOnNextTick().</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resumeWithException">
+        <div class="location">at line 65</div>
+        <code>            public            
+    <strong>resumeWithException</strong>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Invoked when tick() is called after throwOnNextTick().</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the co-routine.</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>The exception passed to throwOnNextTick().</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_terminate">
+        <div class="location">at line 83</div>
+        <code>            public            
+    <strong>terminate</strong>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
+    </h3>
+    <div class="details">
+        <p>Invoked when tick() is called after terminateOnNextTick().</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the co-routine.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_tick">
+        <div class="location">in <a href="../../../Icecave/Recoil/Coroutine/AbstractCoroutine.html#method_tick"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 54</div>
+        <code>            public            
+    <strong>tick</strong>(<a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
+    </h3>
+    <div class="details">
+        <p>Execute the next unit of work.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the co-routine.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendOnNextTick">
+        <div class="location">in <a href="../../../Icecave/Recoil/Coroutine/AbstractCoroutine.html#method_sendOnNextTick"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 70</div>
+        <code>            public            
+    <strong>sendOnNextTick</strong>(mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Store a value to send to the co-routine on the next tick.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_throwOnNextTick">
+        <div class="location">in <a href="../../../Icecave/Recoil/Coroutine/AbstractCoroutine.html#method_throwOnNextTick"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 82</div>
+        <code>            public            
+    <strong>throwOnNextTick</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>Store an exception to send to the co-routine on the next tick.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>$exception</td>
+                <td>The exception to send.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_terminateOnNextTick">
+        <div class="location">in <a href="../../../Icecave/Recoil/Coroutine/AbstractCoroutine.html#method_terminateOnNextTick"><abbr title="Icecave\Recoil\Coroutine\AbstractCoroutine">AbstractCoroutine</abbr></a> at line 92</div>
+        <code>            public            
+    <strong>terminateOnNextTick</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instruct the co-routine to terminate execution on the next tick.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
