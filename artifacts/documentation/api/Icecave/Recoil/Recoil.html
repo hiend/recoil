@@ -44,8 +44,8 @@ operations that are available; some kernels may provide additional features.</p>
                     static&nbsp;
                 </td>
                 <td class="last">
-                    <a href="#method___callStatic">__callStatic</a>($name, array $arguments)
-                    <p>Invoke a kernel API function.</p>
+                    <a href="#method___callStatic">__callStatic</a>(string $name, array $arguments)
+                    <p>[CO-ROUTINE] Invoke a kernel API function.</p>
                 </td>
                 <td></td>
             </tr>
@@ -55,12 +55,12 @@ operations that are available; some kernels may provide additional features.</p>
         <h2>Details</h2>
 
                         <h3 id="method___callStatic">
-        <div class="location">at line 29</div>
+        <div class="location">at line 27</div>
         <code>        static    public            
-    <strong>__callStatic</strong>($name, array $arguments)</code>
+    <strong>__callStatic</strong>(string $name, array $arguments)</code>
     </h3>
     <div class="details">
-        <p>Invoke a kernel API function.</p>
+        <p>[CO-ROUTINE] Invoke a kernel API function.</p>
         <p>
 </p>
         <div class="tags">
@@ -68,16 +68,14 @@ operations that are available; some kernels may provide additional features.</p>
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$name</td>
-                <td>
-</td>
+                <td>The name of the kernel API function to invoke.</td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$arguments</td>
-                <td>
-</td>
+                <td>The arguments to the kernel API function.</td>
             </tr>
             </table>
 
