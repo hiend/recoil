@@ -41,7 +41,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="React\Stream\WritableStreamInterface">WritableStreamInterface</abbr> $stream)
+                    <a href="#method___construct">__construct</a>(<abbr title="React\Stream\WritableStreamInterface">WritableStreamInterface</abbr> $stream, <a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a> $encoding = null)
                     <p>
 </p>
                 </td>
@@ -52,7 +52,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_write">write</a>(string $value)
+                    <a href="#method_write">write</a>(mixed $value)
                     <p>[CO-ROUTINE] Write a value to this channel.</p>
                 </td>
                 <td></td>
@@ -116,9 +116,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 17</div>
+        <div class="location">at line 19</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="React\Stream\WritableStreamInterface">WritableStreamInterface</abbr> $stream)</code>
+    <strong>__construct</strong>(<abbr title="React\Stream\WritableStreamInterface">WritableStreamInterface</abbr> $stream, <a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a> $encoding = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -135,6 +135,12 @@
                 <td>
 </td>
             </tr>
+                    <tr>
+                <td><a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a></td>
+                <td>$encoding</td>
+                <td>
+</td>
+            </tr>
             </table>
 
             
@@ -144,9 +150,9 @@
     </div>
 
                 <h3 id="method_write">
-        <div class="location">at line 44</div>
+        <div class="location">at line 53</div>
         <code>            public            
-    <strong>write</strong>(string $value)</code>
+    <strong>write</strong>(mixed $value)</code>
     </h3>
     <div class="details">
         <p>[CO-ROUTINE] Write a value to this channel.</p>
@@ -163,7 +169,7 @@ a ChannelLockedException is thrown.</p>
 
                     <table>
                     <tr>
-                <td>string</td>
+                <td>mixed</td>
                 <td>$value</td>
                 <td>The value to write to the channel.</td>
             </tr>
@@ -184,7 +190,7 @@ a ChannelLockedException is thrown.</p>
             </tr>
                     <tr>
                 <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
-                <td>if $value is not a string.</td>
+                <td>if $value can not be encoded.</td>
             </tr>
             </table>
 
@@ -193,7 +199,7 @@ a ChannelLockedException is thrown.</p>
     </div>
 
                 <h3 id="method_close">
-        <div class="location">at line 75</div>
+        <div class="location">at line 84</div>
         <code>            public            
     <strong>close</strong>()</code>
     </h3>
@@ -209,7 +215,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_isClosed">
-        <div class="location">at line 87</div>
+        <div class="location">at line 96</div>
         <code>            public            boolean
     <strong>isClosed</strong>()</code>
     </h3>
@@ -234,7 +240,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_onStreamDrain">
-        <div class="location">at line 95</div>
+        <div class="location">at line 104</div>
         <code>            public            
     <strong>onStreamDrain</strong>()</code>
     </h3>
@@ -251,7 +257,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_onStreamClose">
-        <div class="location">at line 106</div>
+        <div class="location">at line 115</div>
         <code>            public            
     <strong>onStreamClose</strong>()</code>
     </h3>
@@ -268,7 +274,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_onStreamError">
-        <div class="location">at line 123</div>
+        <div class="location">at line 132</div>
         <code>            public            
     <strong>onStreamError</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>

@@ -42,7 +42,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="React\Stream\ReadableStreamInterface">ReadableStreamInterface</abbr> $stream)
+                    <a href="#method___construct">__construct</a>(<abbr title="React\Stream\ReadableStreamInterface">ReadableStreamInterface</abbr> $stream, <a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a> $encoding = null)
                     <p>
 </p>
                 </td>
@@ -117,9 +117,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 20</div>
+        <div class="location">at line 22</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="React\Stream\ReadableStreamInterface">ReadableStreamInterface</abbr> $stream)</code>
+    <strong>__construct</strong>(<abbr title="React\Stream\ReadableStreamInterface">ReadableStreamInterface</abbr> $stream, <a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a> $encoding = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -136,6 +136,12 @@
                 <td>
 </td>
             </tr>
+                    <tr>
+                <td><a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a></td>
+                <td>$encoding</td>
+                <td>
+</td>
+            </tr>
             </table>
 
             
@@ -145,7 +151,7 @@
     </div>
 
                 <h3 id="method_read">
-        <div class="location">at line 47</div>
+        <div class="location">at line 56</div>
         <code>            public            string
     <strong>read</strong>()</code>
     </h3>
@@ -188,7 +194,7 @@ a ChannelLockedException is thrown.</p>
     </div>
 
                 <h3 id="method_close">
-        <div class="location">at line 73</div>
+        <div class="location">at line 85</div>
         <code>            public            
     <strong>close</strong>()</code>
     </h3>
@@ -204,7 +210,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_isClosed">
-        <div class="location">at line 85</div>
+        <div class="location">at line 97</div>
         <code>            public            boolean
     <strong>isClosed</strong>()</code>
     </h3>
@@ -229,7 +235,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_onStreamData">
-        <div class="location">at line 93</div>
+        <div class="location">at line 105</div>
         <code>            public            
     <strong>onStreamData</strong>($data)</code>
     </h3>
@@ -257,7 +263,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_onStreamEnd">
-        <div class="location">at line 106</div>
+        <div class="location">at line 120</div>
         <code>            public            
     <strong>onStreamEnd</strong>()</code>
     </h3>
@@ -274,7 +280,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_onStreamError">
-        <div class="location">at line 123</div>
+        <div class="location">at line 137</div>
         <code>            public            
     <strong>onStreamError</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
