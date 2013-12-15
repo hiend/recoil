@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Icecave\Recoil\Channel\QueueChannel | Recoil API</title>
+        <title>Icecave\Recoil\Channel\BidirectionalChannelInterface | Recoil API</title>
                     <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
@@ -18,15 +18,15 @@
 
         <div id="title">Recoil API</div>
 
-            <div class="type">Class</div>
-    <h1><a href="../../../Icecave/Recoil/Channel.html">Icecave\Recoil\Channel</a>\QueueChannel</h1>
+            <div class="type">Interface</div>
+    <h1><a href="../../../Icecave/Recoil/Channel.html">Icecave\Recoil\Channel</a>\BidirectionalChannelInterface</h1>
     </div>
         <div class="content">
-                <p>class    <strong>QueueChannel</strong>        implements
+                <p>interface    <strong>BidirectionalChannelInterface</strong>        implements
         <a href="../../../Icecave/Recoil/Channel/ReadableChannelInterface.html"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a>, <a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></p>
 
             <div class="description">
-            <p>An unbuffered (synchronous) loop-back data channel that allows multiple concurrent read/write operations.</p>
+            <p>A non-loop-back data channel that supports both reading and writing.</p>
             <p>
 </p>
         </div>
@@ -38,24 +38,13 @@
             <table>
                     <tr>
                 <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method___construct">__construct</a>()
-                    <p>
-</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
                     mixed
                 </td>
                 <td class="last">
                     <a href="#method_read">read</a>()
                     <p>[CO-ROUTINE] Read a value from this channel.</p>
                 </td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Channel/ReadableChannelInterface.html#method_read"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -65,61 +54,29 @@
                     <a href="#method_write">write</a>(mixed $value)
                     <p>[CO-ROUTINE] Write a value to this channel.</p>
                 </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_close">close</a>()
-                    <p>[CO-ROUTINE] Close this channel.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    boolean
-                </td>
-                <td class="last">
-                    <a href="#method_isClosed">isClosed</a>()
-                    <p>Check if this channel is closed.</p>
-                </td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_write"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></small></td>
             </tr>
             </table>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 14</div>
-        <code>            public            
-    <strong>__construct</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_read">
-        <div class="location">at line 32</div>
+                        <h3 id="method_read">
+        <div class="location">in <a href="../../../Icecave/Recoil/Channel/ReadableChannelInterface.html#method_read"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a> at line 29</div>
         <code>            public            mixed
     <strong>read</strong>()</code>
     </h3>
     <div class="details">
         <p>[CO-ROUTINE] Read a value from this channel.</p>
-        <p>Execution of the current strand is suspended until a value is available.</p>
+        <p>The implementation MUST suspend execution of the current strand until a
+value is available.</p>
 
 <p>If the channel is already closed, or is closed while a read operation is
-pending a ChannelClosedException is thrown.</p>
+pending the implementation MUST throw a ChannelClosedException.</p>
+
+<p>The implementation MAY require read operations to be exclusive. If
+concurrent reads are attempted but not supported the implementation MUST
+throw a ChannelLockedException.</p>
         <div class="tags">
             
                             <h4>Return Value</h4>
@@ -139,6 +96,10 @@ pending a ChannelClosedException is thrown.</p>
                 <td><abbr title="ChannelClosedException">ChannelClosedException</abbr></td>
                 <td>if the channel has been closed.</td>
             </tr>
+                    <tr>
+                <td><abbr title="ChannelLockedException">ChannelLockedException</abbr></td>
+                <td>if concurrent reads are unsupported.</td>
+            </tr>
             </table>
 
             
@@ -146,17 +107,24 @@ pending a ChannelClosedException is thrown.</p>
     </div>
 
                 <h3 id="method_write">
-        <div class="location">at line 67</div>
+        <div class="location">in <a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_write"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 35</div>
         <code>            public            
     <strong>write</strong>(mixed $value)</code>
     </h3>
     <div class="details">
         <p>[CO-ROUTINE] Write a value to this channel.</p>
-        <p>Execution of the current strand is suspended until the value has been
-consumed.</p>
+        <p>The implementation MUST throw an InvalidArgumentException if the type of
+the given value is unsupported.</p>
+
+<p>The implementation MAY suspend execution of the current strand until the
+value is consumed or internal buffers are flushed.</p>
 
 <p>If the channel is already closed, or is closed while a write operation is
-pending a ChannelClosedException is thrown.</p>
+pending the implementation MUST throw a ChannelClosedException.</p>
+
+<p>The implementation MAY require write operations to be exclusive. If
+concurrent writes are attempted but not supported the implementation MUST
+throw a ChannelLockedException.</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -177,49 +145,16 @@ pending a ChannelClosedException is thrown.</p>
                 <td><abbr title="ChannelClosedException">ChannelClosedException</abbr></td>
                 <td>if the channel has been closed.</td>
             </tr>
+                    <tr>
+                <td><abbr title="ChannelLockedException">ChannelLockedException</abbr></td>
+                <td>if concurrent writes are unsupported.</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the type of $value is unsupported.</td>
+            </tr>
             </table>
 
-            
-                    </div>
-    </div>
-
-                <h3 id="method_close">
-        <div class="location">at line 89</div>
-        <code>            public            
-    <strong>close</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>[CO-ROUTINE] Close this channel.</p>
-        <p>Closing a channel indicates that no more values will be read from or
-written to the channel. Any future read/write operations will fail.</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_isClosed">
-        <div class="location">at line 115</div>
-        <code>            public            boolean
-    <strong>isClosed</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Check if this channel is closed.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>boolean</td>
-            <td>True if the channel has been closed; otherwise, false.</td>
-        </tr>
-    </table>
-
-            
             
                     </div>
     </div>
