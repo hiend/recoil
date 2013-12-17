@@ -80,6 +80,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_encoding">encoding</a>()
+                    <p>Fetch the channel's encoding protocol.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     
                 </td>
                 <td class="last">
@@ -117,7 +127,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 22</div>
+        <div class="location">at line 26</div>
         <code>            public            
     <strong>__construct</strong>(<abbr title="React\Stream\ReadableStreamInterface">ReadableStreamInterface</abbr> $stream, <a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a> $encoding = null)</code>
     </h3>
@@ -133,14 +143,12 @@
                     <tr>
                 <td><abbr title="React\Stream\ReadableStreamInterface">ReadableStreamInterface</abbr></td>
                 <td>$stream</td>
-                <td>
-</td>
+                <td>The underlying stream.</td>
             </tr>
                     <tr>
                 <td><a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a></td>
                 <td>$encoding</td>
-                <td>
-</td>
+                <td>The protocol to use for decoding values read from the stream.</td>
             </tr>
             </table>
 
@@ -151,7 +159,7 @@
     </div>
 
                 <h3 id="method_read">
-        <div class="location">at line 56</div>
+        <div class="location">at line 60</div>
         <code>            public            string
     <strong>read</strong>()</code>
     </h3>
@@ -194,7 +202,7 @@ a ChannelLockedException is thrown.</p>
     </div>
 
                 <h3 id="method_close">
-        <div class="location">at line 85</div>
+        <div class="location">at line 89</div>
         <code>            public            
     <strong>close</strong>()</code>
     </h3>
@@ -210,7 +218,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_isClosed">
-        <div class="location">at line 97</div>
+        <div class="location">at line 101</div>
         <code>            public            boolean
     <strong>isClosed</strong>()</code>
     </h3>
@@ -234,8 +242,33 @@ written to the channel. Any future read/write operations will fail.</p>
                     </div>
     </div>
 
+                <h3 id="method_encoding">
+        <div class="location">at line 111</div>
+        <code>            public            <a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a>
+    <strong>encoding</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the channel's encoding protocol.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">EncodingProtocolInterface</abbr></a></td>
+            <td>The protocol to use for decoding values read from the stream.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_onStreamData">
-        <div class="location">at line 105</div>
+        <div class="location">at line 119</div>
         <code>            public            
     <strong>onStreamData</strong>($data)</code>
     </h3>
@@ -263,7 +296,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_onStreamEnd">
-        <div class="location">at line 120</div>
+        <div class="location">at line 134</div>
         <code>            public            
     <strong>onStreamEnd</strong>()</code>
     </h3>
@@ -280,7 +313,7 @@ written to the channel. Any future read/write operations will fail.</p>
     </div>
 
                 <h3 id="method_onStreamError">
-        <div class="location">at line 137</div>
+        <div class="location">at line 151</div>
         <code>            public            
     <strong>onStreamError</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
