@@ -35,7 +35,7 @@
                     <em>                    <a href="Icecave/Recoil/Channel/BidirectionalChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\BidirectionalChannelInterface">Icecave\Recoil\Channel\BidirectionalChannelInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A non-loop-back data channel that supports both reading and writing.
+                    A data-channel that supports bidirectional communication.
                 </td>
             </tr>
                     <tr>
@@ -44,14 +44,6 @@
                                     </td>
                 <td>
                     An unbuffered (synchronous) loop-back data channel that requires exclusive read/write operations.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                    <em>                    <a href="Icecave/Recoil/Channel/ChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\ChannelInterface">Icecave\Recoil\Channel\ChannelInterface</abbr></a>
-                    </em>                </td>
-                <td>
-                    A data channel is primitive for sending values between strands.
                 </td>
             </tr>
                     <tr>
@@ -83,47 +75,48 @@
                     <em>                    <a href="Icecave/Recoil/Channel/ReadableChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">Icecave\Recoil\Channel\ReadableChannelInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A data channel from which values can be read (aka producer, source).
+                    Interface and specification for co-routine based readable data-channels.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Recoil/Channel/Stream/Encoding/BinaryEncodingProtocol.html" target="main"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\BinaryEncodingProtocol">Icecave\Recoil\Channel\Stream\Encoding\BinaryEncodingProtocol</abbr></a>
+                                        <a href="Icecave/Recoil/Channel/ReadableStreamChannel.html" target="main"><abbr title="Icecave\Recoil\Channel\ReadableStreamChannel">Icecave\Recoil\Channel\ReadableStreamChannel</abbr></a>
                                     </td>
                 <td>
-                    An encoding protocol for binary data.
+                    
+
                 </td>
             </tr>
                     <tr>
                 <td>
-                    <em>                    <a href="Icecave/Recoil/Channel/Stream/Encoding/EncodingProtocolInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface">Icecave\Recoil\Channel\Stream\Encoding\EncodingProtocolInterface</abbr></a>
+                                        <a href="Icecave/Recoil/Channel/Serialization/PhpSerializer.html" target="main"><abbr title="Icecave\Recoil\Channel\Serialization\PhpSerializer">Icecave\Recoil\Channel\Serialization\PhpSerializer</abbr></a>
+                                    </td>
+                <td>
+                    A serializer that uses the built-in PHP serialization protocol.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Recoil/Channel/Serialization/PhpUnserializer.html" target="main"><abbr title="Icecave\Recoil\Channel\Serialization\PhpUnserializer">Icecave\Recoil\Channel\Serialization\PhpUnserializer</abbr></a>
+                                    </td>
+                <td>
+                    An unserializer that uses the built-in PHP serialization protocol.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                    <em>                    <a href="Icecave/Recoil/Channel/Serialization/SerializerInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\Serialization\SerializerInterface">Icecave\Recoil\Channel\Serialization\SerializerInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    Defines a mechanism for encoding PHP values on stream-based channels.
+                    A mechanism for serializing PHP values on stream-based channels.
                 </td>
             </tr>
                     <tr>
                 <td>
-                                        <a href="Icecave/Recoil/Channel/Stream/Encoding/PhpEncodingProtocol.html" target="main"><abbr title="Icecave\Recoil\Channel\Stream\Encoding\PhpEncodingProtocol">Icecave\Recoil\Channel\Stream\Encoding\PhpEncodingProtocol</abbr></a>
-                                    </td>
+                    <em>                    <a href="Icecave/Recoil/Channel/Serialization/UnserializerInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\Serialization\UnserializerInterface">Icecave\Recoil\Channel\Serialization\UnserializerInterface</abbr></a>
+                    </em>                </td>
                 <td>
-                    An encoding protocol based on PHP serialization.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Recoil/Channel/Stream/ReadableStreamChannel.html" target="main"><abbr title="Icecave\Recoil\Channel\Stream\ReadableStreamChannel">Icecave\Recoil\Channel\Stream\ReadableStreamChannel</abbr></a>
-                                    </td>
-                <td>
-                    Adapts a ReactPHP readable stream into a readable channel.
-                </td>
-            </tr>
-                    <tr>
-                <td>
-                                        <a href="Icecave/Recoil/Channel/Stream/WritableStreamChannel.html" target="main"><abbr title="Icecave\Recoil\Channel\Stream\WritableStreamChannel">Icecave\Recoil\Channel\Stream\WritableStreamChannel</abbr></a>
-                                    </td>
-                <td>
-                    Adapts a ReactPHP writable stream into a writable channel.
+                    A mechanism for unserializing PHP values from stream-based channels.
                 </td>
             </tr>
                     <tr>
@@ -131,7 +124,15 @@
                     <em>                    <a href="Icecave/Recoil/Channel/WritableChannelInterface.html" target="main"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">Icecave\Recoil\Channel\WritableChannelInterface</abbr></a>
                     </em>                </td>
                 <td>
-                    A data channel to which values can be written (aka consumer, sink).
+                    Interface and specification for co-routine based writable data-channels.
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                        <a href="Icecave/Recoil/Channel/WritableStreamChannel.html" target="main"><abbr title="Icecave\Recoil\Channel\WritableStreamChannel">Icecave\Recoil\Channel\WritableStreamChannel</abbr></a>
+                                    </td>
+                <td>
+                    A writable channel that serializes values onto a stream.
                 </td>
             </tr>
                     <tr>

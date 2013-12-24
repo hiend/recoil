@@ -35,25 +35,30 @@
                     <td><a href="../../Icecave/Recoil/Channel/QueueChannel.html"><abbr title="Icecave\Recoil\Channel\QueueChannel">QueueChannel</abbr></a></td>
                     <td class="last">An unbuffered (synchronous) loop-back data channel that allows multiple concurrent read/write operations.</td>
                 </tr>
+                            <tr>
+                    <td><a href="../../Icecave/Recoil/Channel/ReadableStreamChannel.html"><abbr title="Icecave\Recoil\Channel\ReadableStreamChannel">ReadableStreamChannel</abbr></a></td>
+                    <td class="last">
+</td>
+                </tr>
+                            <tr>
+                    <td><a href="../../Icecave/Recoil/Channel/WritableStreamChannel.html"><abbr title="Icecave\Recoil\Channel\WritableStreamChannel">WritableStreamChannel</abbr></a></td>
+                    <td class="last">A writable channel that serializes values onto a stream.</td>
+                </tr>
                     </table>
     
             <h2>Interfaces</h2>
         <table>
                             <tr>
                     <td><a href="../../Icecave/Recoil/Channel/BidirectionalChannelInterface.html"><abbr title="Icecave\Recoil\Channel\BidirectionalChannelInterface">BidirectionalChannelInterface</abbr></a></td>
-                    <td class="last">A non-loop-back data channel that supports both reading and writing.</td>
-                </tr>
-                            <tr>
-                    <td><a href="../../Icecave/Recoil/Channel/ChannelInterface.html"><abbr title="Icecave\Recoil\Channel\ChannelInterface">ChannelInterface</abbr></a></td>
-                    <td class="last">A data channel is primitive for sending values between strands.</td>
+                    <td class="last">A data-channel that supports bidirectional communication.</td>
                 </tr>
                             <tr>
                     <td><a href="../../Icecave/Recoil/Channel/ReadableChannelInterface.html"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a></td>
-                    <td class="last">A data channel from which values can be read (aka producer, source).</td>
+                    <td class="last">Interface and specification for co-routine based readable data-channels.</td>
                 </tr>
                             <tr>
                     <td><a href="../../Icecave/Recoil/Channel/WritableChannelInterface.html"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></td>
-                    <td class="last">A data channel to which values can be written (aka consumer, sink).</td>
+                    <td class="last">Interface and specification for co-routine based writable data-channels.</td>
                 </tr>
                     </table>
     

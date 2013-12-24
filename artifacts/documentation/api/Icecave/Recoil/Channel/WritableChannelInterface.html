@@ -22,13 +22,16 @@
     <h1><a href="../../../Icecave/Recoil/Channel.html">Icecave\Recoil\Channel</a>\WritableChannelInterface</h1>
     </div>
         <div class="content">
-                <p>interface    <strong>WritableChannelInterface</strong>        implements
-        <a href="../../../Icecave/Recoil/Channel/ChannelInterface.html"><abbr title="Icecave\Recoil\Channel\ChannelInterface">ChannelInterface</abbr></a></p>
+                <p>interface    <strong>WritableChannelInterface</strong></p>
 
             <div class="description">
-            <p>A data channel to which values can be written (aka consumer, sink).</p>
-            <p>
-</p>
+            <p>Interface and specification for co-routine based writable data-channels.</p>
+            <p>A writable data-channel is a stream-like object that consumes PHP values
+rather than characters.</p>
+
+<p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+"SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to
+be interpreted as described in RFC 2119.</p>
         </div>
     
     
@@ -41,10 +44,20 @@
                     
                 </td>
                 <td class="last">
+                    <a href="#method_write">write</a>(mixed $value)
+                    <p>[CO-ROUTINE] Write a value to this channel.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
                     <a href="#method_close">close</a>()
                     <p>[CO-ROUTINE] Close this channel.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Channel/ChannelInterface.html#method_close"><abbr title="Icecave\Recoil\Channel\ChannelInterface">ChannelInterface</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -54,16 +67,6 @@
                     <a href="#method_isClosed">isClosed</a>()
                     <p>Check if this channel is closed.</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Channel/ChannelInterface.html#method_isClosed"><abbr title="Icecave\Recoil\Channel\ChannelInterface">ChannelInterface</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    
-                </td>
-                <td class="last">
-                    <a href="#method_write">write</a>(mixed $value)
-                    <p>[CO-ROUTINE] Write a value to this channel.</p>
-                </td>
                 <td></td>
             </tr>
             </table>
@@ -71,49 +74,8 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method_close">
-        <div class="location">in <a href="../../../Icecave/Recoil/Channel/ChannelInterface.html#method_close"><abbr title="Icecave\Recoil\Channel\ChannelInterface">ChannelInterface</abbr></a> at line 15</div>
-        <code>            public            
-    <strong>close</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>[CO-ROUTINE] Close this channel.</p>
-        <p>Closing a channel indicates that no more values will be read from or
-written to the channel. Any future read/write operations will fail.</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_isClosed">
-        <div class="location">in <a href="../../../Icecave/Recoil/Channel/ChannelInterface.html#method_isClosed"><abbr title="Icecave\Recoil\Channel\ChannelInterface">ChannelInterface</abbr></a> at line 22</div>
-        <code>            public            boolean
-    <strong>isClosed</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Check if this channel is closed.</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>boolean</td>
-            <td>True if the channel has been closed; otherwise, false.</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_write">
-        <div class="location">at line 35</div>
+                        <h3 id="method_write">
+        <div class="location">at line 44</div>
         <code>            public            
     <strong>write</strong>(mixed $value)</code>
     </h3>
@@ -161,6 +123,63 @@ throw a ChannelLockedException.</p>
             </tr>
             </table>
 
+            
+                    </div>
+    </div>
+
+                <h3 id="method_close">
+        <div class="location">at line 61</div>
+        <code>            public            
+    <strong>close</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[CO-ROUTINE] Close this channel.</p>
+        <p>Closing a channel indicates that no more values will be written. Once a
+channel is closed future invocations of write() MUST throw
+a ChannelClosedException.</p>
+
+<p>The implementation SHOULD NOT throw an exception if close() is called on
+an already-closed channel.</p>
+
+<p>The implementation SHOULD support closing while a write operation is in
+progress, otherwise ChannelLockedException MUST be thrown.</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ChannelLockedException">ChannelLockedException</abbr></td>
+                <td>if the channel can not be closed due to a pending write operation.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isClosed">
+        <div class="location">at line 71</div>
+        <code>            public            boolean
+    <strong>isClosed</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if this channel is closed.</p>
+        <p>The implementation MUST return true after close() has been called or the
+channel is closed during a write operation.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the channel has been closed; otherwise, false.</td>
+        </tr>
+    </table>
+
+            
             
                     </div>
     </div>

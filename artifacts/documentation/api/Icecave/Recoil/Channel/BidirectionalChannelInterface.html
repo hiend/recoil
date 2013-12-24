@@ -26,7 +26,7 @@
         <a href="../../../Icecave/Recoil/Channel/ReadableChannelInterface.html"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a>, <a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></p>
 
             <div class="description">
-            <p>A non-loop-back data channel that supports both reading and writing.</p>
+            <p>A data-channel that supports bidirectional communication.</p>
             <p>
 </p>
         </div>
@@ -51,6 +51,26 @@
                     
                 </td>
                 <td class="last">
+                    <a href="#method_close">close</a>()
+                    <p>[CO-ROUTINE] Close this channel.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_close"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isClosed">isClosed</a>()
+                    <p>Check if this channel is closed.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_isClosed"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
                     <a href="#method_write">write</a>(mixed $value)
                     <p>[CO-ROUTINE] Write a value to this channel.</p>
                 </td>
@@ -62,7 +82,7 @@
         <h2>Details</h2>
 
                         <h3 id="method_read">
-        <div class="location">in <a href="../../../Icecave/Recoil/Channel/ReadableChannelInterface.html#method_read"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a> at line 29</div>
+        <div class="location">in <a href="../../../Icecave/Recoil/Channel/ReadableChannelInterface.html#method_read"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a> at line 38</div>
         <code>            public            mixed
     <strong>read</strong>()</code>
     </h3>
@@ -106,8 +126,65 @@ throw a ChannelLockedException.</p>
                     </div>
     </div>
 
+                <h3 id="method_close">
+        <div class="location">in <a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_close"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 61</div>
+        <code>            public            
+    <strong>close</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[CO-ROUTINE] Close this channel.</p>
+        <p>Closing a channel indicates that no more values will be written. Once a
+channel is closed future invocations of write() MUST throw
+a ChannelClosedException.</p>
+
+<p>The implementation SHOULD NOT throw an exception if close() is called on
+an already-closed channel.</p>
+
+<p>The implementation SHOULD support closing while a write operation is in
+progress, otherwise ChannelLockedException MUST be thrown.</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ChannelLockedException">ChannelLockedException</abbr></td>
+                <td>if the channel can not be closed due to a pending write operation.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isClosed">
+        <div class="location">in <a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_isClosed"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 71</div>
+        <code>            public            boolean
+    <strong>isClosed</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if this channel is closed.</p>
+        <p>The implementation MUST return true after close() has been called or the
+channel is closed during a write operation.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the channel has been closed; otherwise, false.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_write">
-        <div class="location">in <a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_write"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 35</div>
+        <div class="location">in <a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_write"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a> at line 44</div>
         <code>            public            
     <strong>write</strong>(mixed $value)</code>
     </h3>
