@@ -25,7 +25,7 @@
                 <p>interface    <strong>ReadableChannelInterface</strong></p>
 
             <div class="description">
-            <p>Interface and specification for co-routine based readable data-channels.</p>
+            <p>Interface and specification for coroutine based readable data-channels.</p>
             <p>A readable data-channel is a stream-like object that produces PHP values
 rather than characters.</p>
 
@@ -45,7 +45,7 @@ be interpreted as described in RFC 2119.</p>
                 </td>
                 <td class="last">
                     <a href="#method_read">read</a>()
-                    <p>[CO-ROUTINE] Read a value from this channel.</p>
+                    <p>[COROUTINE] Read a value from this channel.</p>
                 </td>
                 <td></td>
             </tr>
@@ -55,7 +55,7 @@ be interpreted as described in RFC 2119.</p>
                 </td>
                 <td class="last">
                     <a href="#method_close">close</a>()
-                    <p>[CO-ROUTINE] Close this channel.</p>
+                    <p>[COROUTINE] Close this channel.</p>
                 </td>
                 <td></td>
             </tr>
@@ -80,7 +80,7 @@ be interpreted as described in RFC 2119.</p>
     <strong>read</strong>()</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Read a value from this channel.</p>
+        <p>[COROUTINE] Read a value from this channel.</p>
         <p>The implementation MUST suspend execution of the current strand until a
 value is available.</p>
 
@@ -125,7 +125,7 @@ throw a ChannelLockedException.</p>
     <strong>close</strong>()</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Close this channel.</p>
+        <p>[COROUTINE] Close this channel.</p>
         <p>Closing a channel indicates that no more values will be read from or
 written to the channel. Once a channel is closed, future invocations of
 read() must throw a ChannelClosedException.</p>

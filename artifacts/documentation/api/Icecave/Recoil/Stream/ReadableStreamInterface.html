@@ -25,7 +25,7 @@
                 <p>interface    <strong>ReadableStreamInterface</strong></p>
 
             <div class="description">
-            <p>Interface and specification for co-routine based readable streams.</p>
+            <p>Interface and specification for coroutine based readable streams.</p>
             <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to
 be interpreted as described in RFC 2119.</p>
@@ -42,7 +42,7 @@ be interpreted as described in RFC 2119.</p>
                 </td>
                 <td class="last">
                     <a href="#method_read">read</a>(integer $length)
-                    <p>[CO-ROUTINE] Read data from the stream.</p>
+                    <p>[COROUTINE] Read data from the stream.</p>
                 </td>
                 <td></td>
             </tr>
@@ -52,7 +52,7 @@ be interpreted as described in RFC 2119.</p>
                 </td>
                 <td class="last">
                     <a href="#method_close">close</a>()
-                    <p>[CO-ROUTINE] Close this stream.</p>
+                    <p>[COROUTINE] Close this stream.</p>
                 </td>
                 <td></td>
             </tr>
@@ -77,7 +77,7 @@ be interpreted as described in RFC 2119.</p>
     <strong>read</strong>(integer $length)</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Read data from the stream.</p>
+        <p>[COROUTINE] Read data from the stream.</p>
         <p>The implementation MUST suspend execution of the current strand until
 data is available or the end of the data stream is reached. Execution
 MAY be resumed before $length bytes have been read.</p>
@@ -140,7 +140,7 @@ throw a StreamLockedException.</p>
     <strong>close</strong>()</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Close this stream.</p>
+        <p>[COROUTINE] Close this stream.</p>
         <p>Closing a stream indicates that no more data will be read from the
 stream. Once a stream is closed future, invocations of read() MUST throw
 a StreamClosedException.</p>

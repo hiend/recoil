@@ -53,7 +53,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_write">write</a>(string $buffer, integer|null $length = null)
-                    <p>[CO-ROUTINE] Write data to this stream.</p>
+                    <p>[COROUTINE] Write data to this stream.</p>
                 </td>
                 <td></td>
             </tr>
@@ -63,7 +63,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_writeAll">writeAll</a>(string $buffer)
-                    <p>[CO-ROUTINE] Write all data from the given buffer to this stream.</p>
+                    <p>[COROUTINE] Write all data from the given buffer to this stream.</p>
                 </td>
                 <td></td>
             </tr>
@@ -73,7 +73,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_close">close</a>()
-                    <p>[CO-ROUTINE] Close this stream.</p>
+                    <p>[COROUTINE] Close this stream.</p>
                 </td>
                 <td></td>
             </tr>
@@ -147,7 +147,7 @@
     <strong>write</strong>(string $buffer, integer|null $length = null)</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Write data to this stream.</p>
+        <p>[COROUTINE] Write data to this stream.</p>
         <p>Execution of the current strand is suspended until the underlying stream
 is drained.</p>
 
@@ -207,7 +207,7 @@ StreamLockedException is thrown.</p>
     <strong>writeAll</strong>(string $buffer)</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Write all data from the given buffer to this stream.</p>
+        <p>[COROUTINE] Write all data from the given buffer to this stream.</p>
         <p>Execution of the current strand is suspended until the data is sent.</p>
 
 <p>Write operations must be exclusive. If concurrent writes are attempted a
@@ -252,7 +252,7 @@ StreamLockedException is thrown.</p>
     <strong>close</strong>()</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Close this stream.</p>
+        <p>[COROUTINE] Close this stream.</p>
         <p>Closing a stream indicates that no more data will be written to the
 stream.</p>
         <div class="tags">

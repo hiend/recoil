@@ -42,7 +42,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_read">read</a>()
-                    <p>[CO-ROUTINE] Read a value from this channel.</p>
+                    <p>[COROUTINE] Read a value from this channel.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Channel/ReadableChannelInterface.html#method_read"><abbr title="Icecave\Recoil\Channel\ReadableChannelInterface">ReadableChannelInterface</abbr></a></small></td>
             </tr>
@@ -52,7 +52,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_close">close</a>()
-                    <p>[CO-ROUTINE] Close this channel.</p>
+                    <p>[COROUTINE] Close this channel.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_close"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></small></td>
             </tr>
@@ -72,7 +72,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_write">write</a>(mixed $value)
-                    <p>[CO-ROUTINE] Write a value to this channel.</p>
+                    <p>[COROUTINE] Write a value to this channel.</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../../Icecave/Recoil/Channel/WritableChannelInterface.html#method_write"><abbr title="Icecave\Recoil\Channel\WritableChannelInterface">WritableChannelInterface</abbr></a></small></td>
             </tr>
@@ -87,7 +87,7 @@
     <strong>read</strong>()</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Read a value from this channel.</p>
+        <p>[COROUTINE] Read a value from this channel.</p>
         <p>The implementation MUST suspend execution of the current strand until a
 value is available.</p>
 
@@ -132,7 +132,7 @@ throw a ChannelLockedException.</p>
     <strong>close</strong>()</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Close this channel.</p>
+        <p>[COROUTINE] Close this channel.</p>
         <p>Closing a channel indicates that no more values will be written. Once a
 channel is closed future invocations of write() MUST throw
 a ChannelClosedException.</p>
@@ -189,7 +189,7 @@ channel is closed during a write operation.</p>
     <strong>write</strong>(mixed $value)</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Write a value to this channel.</p>
+        <p>[COROUTINE] Write a value to this channel.</p>
         <p>The implementation MUST throw an InvalidArgumentException if the type of
 the given value is unsupported.</p>
 

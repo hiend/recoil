@@ -53,7 +53,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_write">write</a>(mixed $value)
-                    <p>[CO-ROUTINE] Write a value to this channel.</p>
+                    <p>[COROUTINE] Write a value to this channel.</p>
                 </td>
                 <td></td>
             </tr>
@@ -63,7 +63,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_close">close</a>()
-                    <p>[CO-ROUTINE] Close this channel.</p>
+                    <p>[COROUTINE] Close this channel.</p>
                 </td>
                 <td></td>
             </tr>
@@ -120,7 +120,7 @@
     <strong>write</strong>(mixed $value)</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Write a value to this channel.</p>
+        <p>[COROUTINE] Write a value to this channel.</p>
         <p>Execution of the current strand is suspended until the value has been
 consumed.</p>
 
@@ -165,7 +165,7 @@ exlusive writes.</p>
     <strong>close</strong>()</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Close this channel.</p>
+        <p>[COROUTINE] Close this channel.</p>
         <p>Closing a channel indicates that no more values will be read from or
 written to the channel. Any future read/write operations will fail.</p>
         <div class="tags">

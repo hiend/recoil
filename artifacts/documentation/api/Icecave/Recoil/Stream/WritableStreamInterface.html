@@ -25,7 +25,7 @@
                 <p>interface    <strong>WritableStreamInterface</strong></p>
 
             <div class="description">
-            <p>Interface and specification for co-routine based writable streams.</p>
+            <p>Interface and specification for coroutine based writable streams.</p>
             <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to
 be interpreted as described in RFC 2119.</p>
@@ -42,7 +42,7 @@ be interpreted as described in RFC 2119.</p>
                 </td>
                 <td class="last">
                     <a href="#method_write">write</a>(string $buffer, integer|null $length = null)
-                    <p>[CO-ROUTINE] Write data to this stream.</p>
+                    <p>[COROUTINE] Write data to this stream.</p>
                 </td>
                 <td></td>
             </tr>
@@ -52,7 +52,7 @@ be interpreted as described in RFC 2119.</p>
                 </td>
                 <td class="last">
                     <a href="#method_writeAll">writeAll</a>($buffer)
-                    <p>[CO-ROUTINE] Write all data from the given buffer to this stream.</p>
+                    <p>[COROUTINE] Write all data from the given buffer to this stream.</p>
                 </td>
                 <td></td>
             </tr>
@@ -62,7 +62,7 @@ be interpreted as described in RFC 2119.</p>
                 </td>
                 <td class="last">
                     <a href="#method_close">close</a>()
-                    <p>[CO-ROUTINE] Close this stream.</p>
+                    <p>[COROUTINE] Close this stream.</p>
                 </td>
                 <td></td>
             </tr>
@@ -87,7 +87,7 @@ be interpreted as described in RFC 2119.</p>
     <strong>write</strong>(string $buffer, integer|null $length = null)</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Write data to this stream.</p>
+        <p>[COROUTINE] Write data to this stream.</p>
         <p>The implementation MAY suspend execution of the current strand until the
 data is sent.</p>
 
@@ -151,7 +151,7 @@ throw a StreamLockedException.</p>
     <strong>writeAll</strong>($buffer)</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Write all data from the given buffer to this stream.</p>
+        <p>[COROUTINE] Write all data from the given buffer to this stream.</p>
         <p>The implementation MAY suspend execution of the current strand until the
 data is sent.</p>
 
@@ -202,7 +202,7 @@ throw a StreamLockedException.</p>
     <strong>close</strong>()</code>
     </h3>
     <div class="details">
-        <p>[CO-ROUTINE] Close this stream.</p>
+        <p>[COROUTINE] Close this stream.</p>
         <p>Closing a stream indicates that no more data will be written. Once a
 stream is closed future invocations of write() MUST throw
 a StreamClosedException.</p>
