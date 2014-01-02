@@ -25,6 +25,11 @@
                 <p>class    <strong>KernelApi</strong>        implements
         <a href="../../../../Icecave/Recoil/Kernel/Api/KernelApiInterface.html"><abbr title="Icecave\Recoil\Kernel\Api\KernelApiInterface">KernelApiInterface</abbr></a></p>
 
+            <div class="description">
+            <p>The default kernel API implementation.</p>
+            <p>
+</p>
+        </div>
     
     
     
@@ -167,7 +172,7 @@
         <h2>Details</h2>
 
                         <h3 id="method_strand">
-        <div class="location">at line 14</div>
+        <div class="location">at line 17</div>
         <code>            public            
     <strong>strand</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -193,7 +198,7 @@
     </div>
 
                 <h3 id="method_kernel">
-        <div class="location">at line 24</div>
+        <div class="location">at line 27</div>
         <code>            public            
     <strong>kernel</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -219,7 +224,7 @@
     </div>
 
                 <h3 id="method_eventLoop">
-        <div class="location">at line 34</div>
+        <div class="location">at line 37</div>
         <code>            public            
     <strong>eventLoop</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -245,7 +250,7 @@
     </div>
 
                 <h3 id="method_return_">
-        <div class="location">at line 45</div>
+        <div class="location">at line 48</div>
         <code>            public            
     <strong>return_</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, mixed $value = null)</code>
     </h3>
@@ -276,7 +281,7 @@
     </div>
 
                 <h3 id="method_throw_">
-        <div class="location">at line 56</div>
+        <div class="location">at line 59</div>
         <code>            public            
     <strong>throw_</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
@@ -307,7 +312,7 @@
     </div>
 
                 <h3 id="method_terminate">
-        <div class="location">at line 66</div>
+        <div class="location">at line 69</div>
         <code>            public            
     <strong>terminate</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -333,7 +338,7 @@
     </div>
 
                 <h3 id="method_sleep">
-        <div class="location">at line 77</div>
+        <div class="location">at line 80</div>
         <code>            public            
     <strong>sleep</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, <abbr title="Icecave\Recoil\Kernel\Api\number">number</abbr> $timeout)</code>
     </h3>
@@ -364,7 +369,7 @@
     </div>
 
                 <h3 id="method_suspend">
-        <div class="location">at line 89</div>
+        <div class="location">at line 92</div>
         <code>            public            
     <strong>suspend</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, <abbr title="Icecave\Recoil\Kernel\Api\callable">callable</abbr> $callback)</code>
     </h3>
@@ -395,7 +400,7 @@
     </div>
 
                 <h3 id="method_timeout">
-        <div class="location">at line 106</div>
+        <div class="location">at line 109</div>
         <code>            public            
     <strong>timeout</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, <abbr title="Icecave\Recoil\Kernel\Api\number">number</abbr> $timeout, mixed $coroutine)</code>
     </h3>
@@ -431,7 +436,7 @@ cancelled.</p>
     </div>
 
                 <h3 id="method_cooperate">
-        <div class="location">at line 118</div>
+        <div class="location">at line 121</div>
         <code>            public            
     <strong>cooperate</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -457,7 +462,7 @@ cancelled.</p>
     </div>
 
                 <h3 id="method_noop">
-        <div class="location">at line 137</div>
+        <div class="location">at line 140</div>
         <code>            public            
     <strong>noop</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -483,7 +488,7 @@ cancelled.</p>
     </div>
 
                 <h3 id="method_execute">
-        <div class="location">at line 148</div>
+        <div class="location">at line 151</div>
         <code>            public            
     <strong>execute</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, mixed $coroutine)</code>
     </h3>
@@ -514,7 +519,7 @@ cancelled.</p>
     </div>
 
                 <h3 id="method_select">
-        <div class="location">at line 163</div>
+        <div class="location">at line 166</div>
         <code>            public            
     <strong>select</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, array $strands)</code>
     </h3>
