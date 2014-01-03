@@ -131,6 +131,16 @@
                     
                 </td>
                 <td class="last">
+                    <a href="#method_all">all</a>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, array $coroutines)
+                    <p>Execute the given coroutines concurrently.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
                     <a href="#method_cooperate">cooperate</a>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)
                     <p>Suspend the strand until the next tick.</p>
                 </td>
@@ -445,8 +455,40 @@ cancelled.</p>
                     </div>
     </div>
 
+                <h3 id="method_all">
+        <div class="location">at line 126</div>
+        <code>            public            
+    <strong>all</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, array $coroutines)</code>
+    </h3>
+    <div class="details">
+        <p>Execute the given coroutines concurrently.</p>
+        <p>Execution of the current strand is suspended until all of the coroutines
+are completed. If any of the coroutines fails, the remaining coroutines
+are terminated.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The currently executing strand.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$coroutines</td>
+                <td>The coroutines to execute.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_cooperate">
-        <div class="location">at line 121</div>
+        <div class="location">at line 138</div>
         <code>            public            
     <strong>cooperate</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -472,7 +514,7 @@ cancelled.</p>
     </div>
 
                 <h3 id="method_noop">
-        <div class="location">at line 140</div>
+        <div class="location">at line 157</div>
         <code>            public            
     <strong>noop</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -498,7 +540,7 @@ cancelled.</p>
     </div>
 
                 <h3 id="method_execute">
-        <div class="location">at line 151</div>
+        <div class="location">at line 168</div>
         <code>            public            
     <strong>execute</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, mixed $coroutine)</code>
     </h3>
@@ -529,7 +571,7 @@ cancelled.</p>
     </div>
 
                 <h3 id="method_stop">
-        <div class="location">at line 169</div>
+        <div class="location">at line 186</div>
         <code>            public            
     <strong>stop</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, boolean $stopEventLoop = true)</code>
     </h3>
@@ -560,7 +602,7 @@ terminated.</p>
     </div>
 
                 <h3 id="method_select">
-        <div class="location">at line 184</div>
+        <div class="location">at line 201</div>
         <code>            public            
     <strong>select</strong>(<a href="../../../../Icecave/Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Icecave\Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, array $strands)</code>
     </h3>
