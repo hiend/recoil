@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Recoil\Stream\WritableStreamInterface | recoil/recoil API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">recoil/recoil API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../Recoil/Stream.html">Recoil\Stream</a>\WritableStreamInterface</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>WritableStreamInterface</strong></p>
+
+            <div class="description">
+            <p>Interface and specification for coroutine based writable streams.</p>
+            <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+"SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to
+be interpreted as described in RFC 2119.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_write">write</a>(string $buffer, integer|null $length = null)
+                    <p>[COROUTINE] Write data to this stream.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_writeAll">writeAll</a>($buffer)
+                    <p>[COROUTINE] Write all data from the given buffer to this stream.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_close">close</a>()
+                    <p>[COROUTINE] Close this stream.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isClosed">isClosed</a>()
+                    <p>Check if this stream is closed.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_write">
+        <div class="location">at line 40</div>
+        <code>            public            integer
+    <strong>write</strong>(string $buffer, integer|null $length = null)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Write data to this stream.</p>
+        <p>The implementation MAY suspend execution of the current strand until the
+data is sent.</p>
+
+<p>If the stream is already closed, or is closed while a write operation is
+pending the implementation MUST throw a StreamClosedException.</p>
+
+<p>The implementation MAY require write operations to be exclusive. If
+concurrent writes are attempted but not supported the implementation MUST
+throw a StreamLockedException.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$buffer</td>
+                <td>The data to write to the stream.</td>
+            </tr>
+                    <tr>
+                <td>integer|null</td>
+                <td>$length</td>
+                <td>The maximum number of bytes to write.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The number of bytes written.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="StreamClosedException">StreamClosedException</abbr></td>
+                <td>if the stream is already closed.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="StreamLockedException">StreamLockedException</abbr></td>
+                <td>if concurrent writes are unsupported.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="StreamWriteException">StreamWriteException</abbr></td>
+                <td>if an error occurs while writing to the stream.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_writeAll">
+        <div class="location">at line 62</div>
+        <code>            public            
+    <strong>writeAll</strong>($buffer)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Write all data from the given buffer to this stream.</p>
+        <p>The implementation MAY suspend execution of the current strand until the
+data is sent.</p>
+
+<p>If the stream is already closed, or is closed while a write operation is
+pending the implementation MUST throw a StreamClosedException.</p>
+
+<p>The implementation MAY require write operations to be exclusive. If
+concurrent writes are attempted but not supported the implementation MUST
+throw a StreamLockedException.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$buffer</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="StreamClosedException">StreamClosedException</abbr></td>
+                <td>if the stream is already closed.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="StreamLockedException">StreamLockedException</abbr></td>
+                <td>if concurrent writes are unsupported.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="StreamWriteException">StreamWriteException</abbr></td>
+                <td>if an error occurs while writing to the stream.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_close">
+        <div class="location">at line 79</div>
+        <code>            public            
+    <strong>close</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Close this stream.</p>
+        <p>Closing a stream indicates that no more data will be written. Once a
+stream is closed future invocations of write() MUST throw
+a StreamClosedException.</p>
+
+<p>The implementation SHOULD NOT throw an exception if close() is called on
+an already-closed stream.</p>
+
+<p>The implementation SHOULD support closing the stream while a write
+operation is in progress, otherwise StreamLockedException MUST be thrown.</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="StreamLockedException">StreamLockedException</abbr></td>
+                <td>if the stream can not be closed due to a pending write operation.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isClosed">
+        <div class="location">at line 89</div>
+        <code>            public            boolean
+    <strong>isClosed</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if this stream is closed.</p>
+        <p>The implementation MUST return true after close() has been called or the
+stream is closed during a write operation.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the stream has been closed; otherwise, false.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

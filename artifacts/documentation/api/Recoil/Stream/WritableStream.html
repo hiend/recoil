@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Recoil\Stream\WritableStream | recoil/recoil API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">recoil/recoil API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Recoil/Stream.html">Recoil\Stream</a>\WritableStream</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>WritableStream</strong>        implements
+        <a href="../../Recoil/Stream/WritableStreamInterface.html"><abbr title="Recoil\Stream\WritableStreamInterface">WritableStreamInterface</abbr></a></p>
+
+            <div class="description">
+            <p>A writable stream that operates directly on a native PHP stream resource.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="Recoil\Stream\resource">resource</abbr> $stream)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_write">write</a>(string $buffer, integer|null $length = null)
+                    <p>[COROUTINE] Write data to this stream.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_writeAll">writeAll</a>(string $buffer)
+                    <p>[COROUTINE] Write all data from the given buffer to this stream.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_close">close</a>()
+                    <p>[COROUTINE] Close this stream.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isClosed">isClosed</a>()
+                    <p>Check if this stream is closed.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 18</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="Recoil\Stream\resource">resource</abbr> $stream)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Recoil\Stream\resource">resource</abbr></td>
+                <td>$stream</td>
+                <td>The underlying PHP stream resource.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_write">
+        <div class="location">at line 39</div>
+        <code>            public            integer
+    <strong>write</strong>(string $buffer, integer|null $length = null)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Write data to this stream.</p>
+        <p>Execution of the current strand is suspended until the data is sent.</p>
+
+<p>Write operations must be exclusive. If concurrent writes are attempted a
+StreamLockedException is thrown.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$buffer</td>
+                <td>The data to write to the stream.</td>
+            </tr>
+                    <tr>
+                <td>integer|null</td>
+                <td>$length</td>
+                <td>The maximum number of bytes to write.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The number of bytes written.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="StreamClosedException">StreamClosedException</abbr></td>
+                <td>if the stream is already closed.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="StreamLockedException">StreamLockedException</abbr></td>
+                <td>if concurrent writes are unsupported.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="StreamWriteException">StreamWriteException</abbr></td>
+                <td>if an error occurs while writing to the stream.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_writeAll">
+        <div class="location">at line 105</div>
+        <code>            public            
+    <strong>writeAll</strong>(string $buffer)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Write all data from the given buffer to this stream.</p>
+        <p>Execution of the current strand is suspended until the data is sent.</p>
+
+<p>Write operations must be exclusive. If concurrent writes are attempted a
+StreamLockedException is thrown.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$buffer</td>
+                <td>The data to write to the stream.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="StreamClosedException">StreamClosedException</abbr></td>
+                <td>if the stream is already closed.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="StreamLockedException">StreamLockedException</abbr></td>
+                <td>if concurrent writes are unsupported.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="StreamWriteException">StreamWriteException</abbr></td>
+                <td>if an error occurs while writing to the stream.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_close">
+        <div class="location">at line 119</div>
+        <code>            public            
+    <strong>close</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Close this stream.</p>
+        <p>Closing a stream indicates that no more data will be written to the
+stream.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isClosed">
+        <div class="location">at line 144</div>
+        <code>            public            boolean
+    <strong>isClosed</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if this stream is closed.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if the stream has been closed; otherwise, false.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

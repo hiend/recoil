@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Recoil\Channel\Serialization\PhpUnserializer | recoil/recoil API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">recoil/recoil API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Recoil/Channel/Serialization.html">Recoil\Channel\Serialization</a>\PhpUnserializer</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>PhpUnserializer</strong>        implements
+        <a href="../../../Recoil/Channel/Serialization/UnserializerInterface.html"><abbr title="Recoil\Channel\Serialization\UnserializerInterface">UnserializerInterface</abbr></a></p>
+
+            <div class="description">
+            <p>An unserializer that uses the built-in PHP serialization protocol.</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>PACKET_SIZE_LENGTH</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_feed">feed</a>(string $buffer)
+                    <p>Parse data received from the stream.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasValue">hasValue</a>()
+                    <p>Check if enough data has been received to parse a full value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_unserialize">unserialize</a>()
+                    <p>Unserialize the next value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_finalize">finalize</a>()
+                    <p>Finalize the unserialization process.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 13</div>
+        <code>            public            
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_feed">
+        <div class="location">at line 25</div>
+        <code>            public            
+    <strong>feed</strong>(string $buffer)</code>
+    </h3>
+    <div class="details">
+        <p>Parse data received from the stream.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$buffer</td>
+                <td>The data received from the stream.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasValue">
+        <div class="location">at line 53</div>
+        <code>            public            boolean
+    <strong>hasValue</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if enough data has been received to parse a full value.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>True if a value is available; otherwise, false.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unserialize">
+        <div class="location">at line 65</div>
+        <code>            public            mixed
+    <strong>unserialize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Unserialize the next value.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The decoded value.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>if there is insufficient data to unserialize a value.</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if the data is unable to be unserialized.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_finalize">
+        <div class="location">at line 98</div>
+        <code>            public            
+    <strong>finalize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Finalize the unserialization process.</p>
+        <p>Indicates that no further calls will be made to feed() and asserts that
+there is no partial values on the internal buffer.</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if there are partial values on the internal buffer.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
