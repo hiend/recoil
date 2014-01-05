@@ -22,7 +22,8 @@
     <h1><a href="../../Recoil/Coroutine.html">Recoil\Coroutine</a>\CoroutineInterface</h1>
     </div>
         <div class="content">
-                <p>interface    <strong>CoroutineInterface</strong></p>
+                <p>interface    <strong>CoroutineInterface</strong>        implements
+        <abbr title="Evenement\EventEmitterInterface">EventEmitterInterface</abbr></p>
 
             <div class="description">
             <p>A coroutine represents a unit of work that can be suspended and resumed.</p>
@@ -101,7 +102,7 @@
         <h2>Details</h2>
 
                         <h3 id="method_initialize">
-        <div class="location">at line 19</div>
+        <div class="location">at line 23</div>
         <code>            public            
     <strong>initialize</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -126,7 +127,7 @@
     </div>
 
                 <h3 id="method_call">
-        <div class="location">at line 26</div>
+        <div class="location">at line 30</div>
         <code>            public            
     <strong>call</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -152,7 +153,7 @@
     </div>
 
                 <h3 id="method_resumeWithValue">
-        <div class="location">at line 34</div>
+        <div class="location">at line 38</div>
         <code>            public            
     <strong>resumeWithValue</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, mixed $value)</code>
     </h3>
@@ -183,7 +184,7 @@
     </div>
 
                 <h3 id="method_resumeWithException">
-        <div class="location">at line 42</div>
+        <div class="location">at line 46</div>
         <code>            public            
     <strong>resumeWithException</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
@@ -214,7 +215,7 @@
     </div>
 
                 <h3 id="method_terminate">
-        <div class="location">at line 49</div>
+        <div class="location">at line 53</div>
         <code>            public            
     <strong>terminate</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -240,7 +241,7 @@
     </div>
 
                 <h3 id="method_finalize">
-        <div class="location">at line 58</div>
+        <div class="location">at line 62</div>
         <code>            public            
     <strong>finalize</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
