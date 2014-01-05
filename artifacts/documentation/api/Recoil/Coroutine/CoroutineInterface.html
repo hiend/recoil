@@ -40,8 +40,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_tick">tick</a>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)
-                    <p>Execute the next unit of work.</p>
+                    <a href="#method_initialize">initialize</a>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)
+                    <p>Initialize the coroutine.</p>
                 </td>
                 <td></td>
             </tr>
@@ -50,8 +50,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_sendOnNextTick">sendOnNextTick</a>(mixed $value)
-                    <p>Store a value to send to the coroutine on the next tick.</p>
+                    <a href="#method_call">call</a>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)
+                    <p>Start the coroutine.</p>
                 </td>
                 <td></td>
             </tr>
@@ -60,8 +60,8 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_throwOnNextTick">throwOnNextTick</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Store an exception to send to the coroutine on the next tick.</p>
+                    <a href="#method_resumeWithValue">resumeWithValue</a>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, mixed $value)
+                    <p>Resume execution of a suspended coroutine by passing it a value.</p>
                 </td>
                 <td></td>
             </tr>
@@ -70,8 +70,28 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_terminateOnNextTick">terminateOnNextTick</a>()
-                    <p>Instruct the coroutine to terminate execution on the next tick.</p>
+                    <a href="#method_resumeWithException">resumeWithException</a>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
+                    <p>Resume execution of a suspended coroutine by passing it an exception.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_terminate">terminate</a>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)
+                    <p>Inform the coroutine that the executing strand is being terminated.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_finalize">finalize</a>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)
+                    <p>Finalize the coroutine.</p>
                 </td>
                 <td></td>
             </tr>
@@ -80,13 +100,38 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method_tick">
-        <div class="location">at line 17</div>
+                        <h3 id="method_initialize">
+        <div class="location">at line 19</div>
         <code>            public            
-    <strong>tick</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
+    <strong>initialize</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
     <div class="details">
-        <p>Execute the next unit of work.</p>
+        <p>Initialize the coroutine.</p>
+        <p>This method is invoked before the coroutine is pushed onto the call stack.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the coroutine.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_call">
+        <div class="location">at line 26</div>
+        <code>            public            
+    <strong>call</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
+    </h3>
+    <div class="details">
+        <p>Start the coroutine.</p>
         <p>
 </p>
         <div class="tags">
@@ -106,23 +151,28 @@
                     </div>
     </div>
 
-                <h3 id="method_sendOnNextTick">
-        <div class="location">at line 24</div>
+                <h3 id="method_resumeWithValue">
+        <div class="location">at line 34</div>
         <code>            public            
-    <strong>sendOnNextTick</strong>(mixed $value)</code>
+    <strong>resumeWithValue</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, mixed $value)</code>
     </h3>
     <div class="details">
-        <p>Store a value to send to the coroutine on the next tick.</p>
+        <p>Resume execution of a suspended coroutine by passing it a value.</p>
         <p>
 </p>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table>
+                    <tr>
+                <td><a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the coroutine.</td>
+            </tr>
                     <tr>
                 <td>mixed</td>
                 <td>$value</td>
-                <td>The value to send.</td>
+                <td>The value to send to the coroutine.</td>
             </tr>
             </table>
 
@@ -132,13 +182,13 @@
                     </div>
     </div>
 
-                <h3 id="method_throwOnNextTick">
-        <div class="location">at line 31</div>
+                <h3 id="method_resumeWithException">
+        <div class="location">at line 42</div>
         <code>            public            
-    <strong>throwOnNextTick</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
+    <strong>resumeWithException</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Store an exception to send to the coroutine on the next tick.</p>
+        <p>Resume execution of a suspended coroutine by passing it an exception.</p>
         <p>
 </p>
         <div class="tags">
@@ -146,9 +196,14 @@
 
                     <table>
                     <tr>
+                <td><a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the coroutine.</td>
+            </tr>
+                    <tr>
                 <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>$exception</td>
-                <td>The exception to send.</td>
+                <td>The exception to send to the coroutine.</td>
             </tr>
             </table>
 
@@ -158,16 +213,51 @@
                     </div>
     </div>
 
-                <h3 id="method_terminateOnNextTick">
-        <div class="location">at line 36</div>
+                <h3 id="method_terminate">
+        <div class="location">at line 49</div>
         <code>            public            
-    <strong>terminateOnNextTick</strong>()</code>
+    <strong>terminate</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
     <div class="details">
-        <p>Instruct the coroutine to terminate execution on the next tick.</p>
+        <p>Inform the coroutine that the executing strand is being terminated.</p>
         <p>
 </p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the coroutine.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_finalize">
+        <div class="location">at line 58</div>
+        <code>            public            
+    <strong>finalize</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
+    </h3>
+    <div class="details">
+        <p>Finalize the coroutine.</p>
+        <p>This method is invoked after the coroutine is popped from the call stack.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a></td>
+                <td>$strand</td>
+                <td>The strand that is executing the coroutine.</td>
+            </tr>
+            </table>
+
             
             
             

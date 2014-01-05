@@ -142,7 +142,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_resumeWithValue">resumeWithValue</a>($value)
+                    <a href="#method_resumeWithValue">resumeWithValue</a>(mixed $value)
                     <p>Resume execution of this strand and send a value to the current coroutine.</p>
                 </td>
                 <td></td>
@@ -153,7 +153,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_resumeWithException">resumeWithException</a>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)
-                    <p>Resume execution of this strand and throw an excption to the current coroutine.</p>
+                    <p>Resume execution of this strand and throw an exception to the current coroutine.</p>
                 </td>
                 <td></td>
             </tr>
@@ -193,7 +193,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 25</div>
+        <div class="location">at line 26</div>
         <code>            public            
     <strong>__construct</strong>(<a href="../../../Recoil/Kernel/KernelInterface.html"><abbr title="Recoil\Kernel\KernelInterface">KernelInterface</abbr></a> $kernel)</code>
     </h3>
@@ -220,7 +220,7 @@
     </div>
 
                 <h3 id="method_kernel">
-        <div class="location">at line 41</div>
+        <div class="location">at line 42</div>
         <code>            public            <a href="../../../Recoil/Kernel/KernelInterface.html"><abbr title="Recoil\Kernel\KernelInterface">KernelInterface</abbr></a>
     <strong>kernel</strong>()</code>
     </h3>
@@ -245,7 +245,7 @@
     </div>
 
                 <h3 id="method_current">
-        <div class="location">at line 51</div>
+        <div class="location">at line 52</div>
         <code>            public            <a href="../../../Recoil/Coroutine/CoroutineInterface.html"><abbr title="Recoil\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>
     <strong>current</strong>()</code>
     </h3>
@@ -270,7 +270,7 @@
     </div>
 
                 <h3 id="method_push">
-        <div class="location">at line 65</div>
+        <div class="location">at line 66</div>
         <code>            public            <a href="../../../Recoil/Coroutine/CoroutineInterface.html"><abbr title="Recoil\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>
     <strong>push</strong>(mixed $coroutine)</code>
     </h3>
@@ -304,7 +304,7 @@
     </div>
 
                 <h3 id="method_pop">
-        <div class="location">at line 82</div>
+        <div class="location">at line 85</div>
         <code>            public            <a href="../../../Recoil/Coroutine/CoroutineInterface.html"><abbr title="Recoil\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>
     <strong>pop</strong>()</code>
     </h3>
@@ -330,7 +330,7 @@
     </div>
 
                 <h3 id="method_call">
-        <div class="location">at line 96</div>
+        <div class="location">at line 103</div>
         <code>            public            <a href="../../../Recoil/Coroutine/CoroutineInterface.html"><abbr title="Recoil\Coroutine\CoroutineInterface">CoroutineInterface</abbr></a>|null
     <strong>call</strong>(mixed $coroutine)</code>
     </h3>
@@ -364,7 +364,7 @@
     </div>
 
                 <h3 id="method_returnValue">
-        <div class="location">at line 112</div>
+        <div class="location">at line 126</div>
         <code>            public            
     <strong>returnValue</strong>(mixed $value = null)</code>
     </h3>
@@ -390,7 +390,7 @@
     </div>
 
                 <h3 id="method_throwException">
-        <div class="location">at line 123</div>
+        <div class="location">at line 137</div>
         <code>            public            
     <strong>throwException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
@@ -416,7 +416,7 @@
     </div>
 
                 <h3 id="method_suspend">
-        <div class="location">at line 132</div>
+        <div class="location">at line 146</div>
         <code>            public            
     <strong>suspend</strong>()</code>
     </h3>
@@ -432,7 +432,7 @@
     </div>
 
                 <h3 id="method_resume">
-        <div class="location">at line 148</div>
+        <div class="location">at line 162</div>
         <code>            public            
     <strong>resume</strong>()</code>
     </h3>
@@ -448,9 +448,9 @@
     </div>
 
                 <h3 id="method_resumeWithValue">
-        <div class="location">at line 164</div>
+        <div class="location">at line 180</div>
         <code>            public            
-    <strong>resumeWithValue</strong>($value)</code>
+    <strong>resumeWithValue</strong>(mixed $value)</code>
     </h3>
     <div class="details">
         <p>Resume execution of this strand and send a value to the current coroutine.</p>
@@ -461,10 +461,9 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>mixed</td>
                 <td>$value</td>
-                <td>
-</td>
+                <td>The value to send to the coroutine.</td>
             </tr>
             </table>
 
@@ -475,12 +474,12 @@
     </div>
 
                 <h3 id="method_resumeWithException">
-        <div class="location">at line 173</div>
+        <div class="location">at line 195</div>
         <code>            public            
     <strong>resumeWithException</strong>(<a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception)</code>
     </h3>
     <div class="details">
-        <p>Resume execution of this strand and throw an excption to the current coroutine.</p>
+        <p>Resume execution of this strand and throw an exception to the current coroutine.</p>
         <p>
 </p>
         <div class="tags">
@@ -490,8 +489,7 @@
                     <tr>
                 <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>$exception</td>
-                <td>
-</td>
+                <td>The exception to send to the coroutine.</td>
             </tr>
             </table>
 
@@ -502,7 +500,7 @@
     </div>
 
                 <h3 id="method_terminate">
-        <div class="location">at line 182</div>
+        <div class="location">at line 208</div>
         <code>            public            
     <strong>terminate</strong>()</code>
     </h3>
@@ -518,7 +516,7 @@
     </div>
 
                 <h3 id="method_hasExited">
-        <div class="location">at line 193</div>
+        <div class="location">at line 232</div>
         <code>            public            boolean
     <strong>hasExited</strong>()</code>
     </h3>
@@ -543,7 +541,7 @@
     </div>
 
                 <h3 id="method_tick">
-        <div class="location">at line 201</div>
+        <div class="location">at line 240</div>
         <code>            public            
     <strong>tick</strong>()</code>
     </h3>
