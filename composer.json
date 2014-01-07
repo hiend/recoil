@@ -23,7 +23,6 @@
         }
     ],
     "require": {
-        "php": ">=5.5",
         "evenement/evenement": "~2",
         "icecave/repr": "~1",
         "react/react": "dev-master"
