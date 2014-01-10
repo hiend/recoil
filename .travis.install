@@ -5,6 +5,8 @@
  * and as such must be included in each project as part of the skeleton.
  */
 
+echo 'Reported PHP Version: ' . PHP_VERSION . PHP_EOL;
+
 $config = array(
     'config' => array(
         'notify-on-install' => false

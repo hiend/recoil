@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "5a0bd4468ae929f32d6c46a740a36bc1",
+    "hash": "cde582a6b258be46bc20e95f57624694",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -241,12 +241,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/react.git",
-                "reference": "5e5cc70f2bbe6d3804187edcc4924714da8ee432"
+                "reference": "9d927565beb1948ac6c898372b920d5e239f0869"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/react/zipball/5e5cc70f2bbe6d3804187edcc4924714da8ee432",
-                "reference": "5e5cc70f2bbe6d3804187edcc4924714da8ee432",
+                "url": "https://api.github.com/repos/reactphp/react/zipball/9d927565beb1948ac6c898372b920d5e239f0869",
+                "reference": "9d927565beb1948ac6c898372b920d5e239f0869",
                 "shasum": ""
             },
             "require": {
@@ -292,7 +292,7 @@
                 "event-loop",
                 "reactor"
             ],
-            "time": "2014-01-07 04:43:03"
+            "time": "2014-01-09 19:33:29"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1188,9 +1188,9 @@
     "stability-flags": {
         "react/react": 20
     },
-    "platform": {
-        "php": ">=5.5"
-    },
+    "platform": [
+
+    ],
     "platform-dev": [
 
     ]
