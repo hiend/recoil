@@ -5,9 +5,6 @@
  * and as such must be included in each project as part of the skeleton.
  */
 
-echo 'Reported PHP Version: ' . PHP_VERSION . PHP_EOL;
-echo 'PHP_BINARY: ' . var_export(getenv('PHP_BINARY'), true) . PHP_EOL;
-
 $config = array(
     'config' => array(
         'notify-on-install' => false
