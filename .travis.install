@@ -6,6 +6,7 @@
  */
 
 echo 'Reported PHP Version: ' . PHP_VERSION . PHP_EOL;
+echo 'PHP_BINARY: ' . var_export(getenv('PHP_BINARY'), true) . PHP_EOL;
 
 $config = array(
     'config' => array(
