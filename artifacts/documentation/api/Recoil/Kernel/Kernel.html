@@ -127,13 +127,23 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_onTick">onTick</a>()
+                    <p>Step each of the strands attached to this kernel.</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 26</div>
+        <div class="location">at line 25</div>
         <code>            public            
     <strong>__construct</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null, <a href="../../Recoil/Kernel/Api/KernelApiInterface.html"><abbr title="Recoil\Kernel\Api\KernelApiInterface">KernelApiInterface</abbr></a> $api = null, <a href="../../Recoil/Coroutine/CoroutineAdaptorInterface.html"><abbr title="Recoil\Coroutine\CoroutineAdaptorInterface">CoroutineAdaptorInterface</abbr></a> $coroutineAdaptor = null, <a href="../../Recoil/Kernel/Strand/StrandFactoryInterface.html"><abbr title="Recoil\Kernel\Strand\StrandFactoryInterface">StrandFactoryInterface</abbr></a> $strandFactory = null)</code>
     </h3>
@@ -175,7 +185,7 @@
     </div>
 
                 <h3 id="method_execute">
-        <div class="location">at line 66</div>
+        <div class="location">at line 65</div>
         <code>            public            <a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a>
     <strong>execute</strong>(mixed $coroutine)</code>
     </h3>
@@ -210,7 +220,7 @@ the kernel's coroutine adaptor.</p>
     </div>
 
                 <h3 id="method_attachStrand">
-        <div class="location">at line 79</div>
+        <div class="location">at line 78</div>
         <code>            public            
     <strong>attachStrand</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -236,7 +246,7 @@ the kernel's coroutine adaptor.</p>
     </div>
 
                 <h3 id="method_detachStrand">
-        <div class="location">at line 93</div>
+        <div class="location">at line 92</div>
         <code>            public            
     <strong>detachStrand</strong>(<a href="../../Recoil/Kernel/Strand/StrandInterface.html"><abbr title="Recoil\Kernel\Strand\StrandInterface">StrandInterface</abbr></a> $strand)</code>
     </h3>
@@ -262,7 +272,7 @@ the kernel's coroutine adaptor.</p>
     </div>
 
                 <h3 id="method_api">
-        <div class="location">at line 103</div>
+        <div class="location">at line 106</div>
         <code>            public            <a href="../../Recoil/Kernel/Api/KernelApiInterface.html"><abbr title="Recoil\Kernel\Api\KernelApiInterface">KernelApiInterface</abbr></a>
     <strong>api</strong>()</code>
     </h3>
@@ -287,7 +297,7 @@ the kernel's coroutine adaptor.</p>
     </div>
 
                 <h3 id="method_coroutineAdaptor">
-        <div class="location">at line 113</div>
+        <div class="location">at line 116</div>
         <code>            public            <a href="../../Recoil/Coroutine/CoroutineAdaptorInterface.html"><abbr title="Recoil\Coroutine\CoroutineAdaptorInterface">CoroutineAdaptorInterface</abbr></a>
     <strong>coroutineAdaptor</strong>()</code>
     </h3>
@@ -312,7 +322,7 @@ the kernel's coroutine adaptor.</p>
     </div>
 
                 <h3 id="method_strandFactory">
-        <div class="location">at line 123</div>
+        <div class="location">at line 126</div>
         <code>            public            <a href="../../Recoil/Kernel/Strand/StrandFactoryInterface.html"><abbr title="Recoil\Kernel\Strand\StrandFactoryInterface">StrandFactoryInterface</abbr></a>
     <strong>strandFactory</strong>()</code>
     </h3>
@@ -337,7 +347,7 @@ the kernel's coroutine adaptor.</p>
     </div>
 
                 <h3 id="method_eventLoop">
-        <div class="location">at line 133</div>
+        <div class="location">at line 136</div>
         <code>            public            <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
     <strong>eventLoop</strong>()</code>
     </h3>
@@ -362,7 +372,7 @@ the kernel's coroutine adaptor.</p>
     </div>
 
                 <h3 id="method_stop">
-        <div class="location">at line 181</div>
+        <div class="location">at line 149</div>
         <code>            public            
     <strong>stop</strong>(boolean $stopEventLoop = true)</code>
     </h3>
@@ -381,6 +391,22 @@ terminated.</p>
             </tr>
             </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_onTick">
+        <div class="location">at line 160</div>
+        <code>            public            
+    <strong>onTick</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Step each of the strands attached to this kernel.</p>
+        <p>
+</p>
+        <div class="tags">
             
             
             
