@@ -59,13 +59,173 @@ operations that are available; some kernels may provide additional features.</p>
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_strand">strand</a>()
+                    <p>[COROUTINE] Get the strand the coroutine is executing on.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_kernel">kernel</a>()
+                    <p>[COROUTINE] Get the coroutine kernel that the current strand is executing on.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_eventLoop">eventLoop</a>()
+                    <p>[COROUTINE] Get the React event-loop that the coroutine kernel is executing on.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_return_">return_</a>($value)
+                    <p>[COROUTINE] Return a value to the calling coroutine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_throw_">throw_</a>(<abbr title="Exception ">Exception </abbr> $exception)
+                    <p>[COROUTINE] Throw an exception to the calling coroutine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_finally_">finally_</a>(<abbr title="callable ">callable </abbr> $callback)
+                    <p>[COROUTINE] Register a callback to be invoked when the current coroutine ends.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_terminate">terminate</a>()
+                    <p>[COROUTINE] Terminate execution of this strand.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_sleep">sleep</a>(<abbr title="float ">float </abbr> $timeout)
+                    <p>[COROUTINE] Suspend execution for a specified period of time.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_suspend">suspend</a>(<abbr title="callable ">callable </abbr> $callback)
+                    <p>[COROUTINE] Suspend execution of the strand until it is resumed manually.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_timeout">timeout</a>(<abbr title="float ">float </abbr> $timeout, $coroutine)
+                    <p>[COROUTINE] Execute a coroutine with a time limit.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_all">all</a>(<abbr title="array ">array </abbr> $coroutines)
+                    <p>[COROUTINE] Execute the given coroutines concurrently.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_noop">noop</a>()
+                    <p>[COROUTINE] Resume the strand immediately.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_cooperate">cooperate</a>()
+                    <p>[COROUTINE] Suspend the strand until the next tick.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_execute">execute</a>($coroutine)
+                    <p>[COROUTINE] Execute a coroutine on its own strand.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_select">select</a>(<abbr title="StrandInterface ">StrandInterface </abbr> $strand, <abbr title="array ">array </abbr> $strands)
+                    <p>[COROUTINE] Wait for one or more of the given strands to exit.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="static">static</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_stop">stop</a>(<abbr title="bool ">bool </abbr> $stopEventLoop = true)
+                    <p>[COROUTINE] Stop the coroutine kernel / event-loop.</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method___callStatic">
-        <div class="location">at line 29</div>
+        <div class="location">at line 47</div>
         <code>        static    public            
     <strong>__callStatic</strong>(string $name, array $arguments)</code>
     </h3>
@@ -109,7 +269,7 @@ operations that are available; some kernels may provide additional features.</p>
     </div>
 
                 <h3 id="method_run">
-        <div class="location">at line 43</div>
+        <div class="location">at line 61</div>
         <code>        static    public            
     <strong>run</strong>(<abbr title="Recoil\callable">callable</abbr> $entryPoint, <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $eventLoop = null)</code>
     </h3>
@@ -124,18 +284,554 @@ It should generally not be invoked from inside other coroutines.</p>
                     <tr>
                 <td><abbr title="Recoil\callable">callable</abbr></td>
                 <td>$entryPoint</td>
-                <td>
-</td>
+                <td>The coroutine to invoke.</td>
             </tr>
                     <tr>
                 <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
                 <td>$eventLoop</td>
+                <td>The React event-loop, or null to use the default.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_strand">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>strand</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Get the strand the coroutine is executing on.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_kernel">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>kernel</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Get the coroutine kernel that the current strand is executing on.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_eventLoop">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>eventLoop</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Get the React event-loop that the coroutine kernel is executing on.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_return_">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>return_</strong>($value)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Return a value to the calling coroutine.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$value</td>
                 <td>
 </td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_throw_">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>throw_</strong>(<abbr title="Exception ">Exception </abbr> $exception)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Throw an exception to the calling coroutine.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Exception ">Exception </abbr></td>
+                <td>$exception</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_finally_">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>finally_</strong>(<abbr title="callable ">callable </abbr> $callback)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Register a callback to be invoked when the current coroutine ends.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="callable ">callable </abbr></td>
+                <td>$callback</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_terminate">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>terminate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Terminate execution of this strand.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sleep">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>sleep</strong>(<abbr title="float ">float </abbr> $timeout)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Suspend execution for a specified period of time.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="float ">float </abbr></td>
+                <td>$timeout</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_suspend">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>suspend</strong>(<abbr title="callable ">callable </abbr> $callback)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Suspend execution of the strand until it is resumed manually.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="callable ">callable </abbr></td>
+                <td>$callback</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_timeout">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>timeout</strong>(<abbr title="float ">float </abbr> $timeout, $coroutine)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Execute a coroutine with a time limit.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="float ">float </abbr></td>
+                <td>$timeout</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$coroutine</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_all">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>all</strong>(<abbr title="array ">array </abbr> $coroutines)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Execute the given coroutines concurrently.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="array ">array </abbr></td>
+                <td>$coroutines</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_noop">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>noop</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Resume the strand immediately.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cooperate">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>cooperate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Suspend the strand until the next tick.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_execute">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>execute</strong>($coroutine)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Execute a coroutine on its own strand.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$coroutine</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_select">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>select</strong>(<abbr title="StrandInterface ">StrandInterface </abbr> $strand, <abbr title="array ">array </abbr> $strands)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Wait for one or more of the given strands to exit.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="StrandInterface ">StrandInterface </abbr></td>
+                <td>$strand</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="array ">array </abbr></td>
+                <td>$strands</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_stop">
+        <div class="location">at line 36</div>
+        <code>                        <abbr title="static">static</abbr>
+    <strong>stop</strong>(<abbr title="bool ">bool </abbr> $stopEventLoop = true)</code>
+    </h3>
+    <div class="details">
+        <p>[COROUTINE] Stop the coroutine kernel / event-loop.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="bool ">bool </abbr></td>
+                <td>$stopEventLoop</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="static">static</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>
